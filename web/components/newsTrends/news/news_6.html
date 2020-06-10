@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/web/css/news/news_1.css">
+    <link rel="stylesheet" href="/web/common/header/header.css">
+    <link rel="stylesheet" href="/web/css/reset.css">
+    <link rel="stylesheet" href="/web/css/common.css">
+    <script src="/web/js/jquery-1.11.3.js"></script>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+
+<body>
+     <div class="center-erweima" id="box1" style="bottom:50%;right:10px;">
+        <div class="p">
+            <img src="/web/images/qrcode_for_gh_df993352a9a3_344.jpg" alt="">
+        <p>关注此公众号</p>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+   <div class="zheceng" id="zheceng">
+</div>
+<div class="popup">
+    <div class="err">
+        <img src="/web/images/error.png" alt="">
+    </div>
+    <div class="popup-top">
+        <ul>
+            <li>登录</li>
+            <!-- <li>注册</li> -->
+        </ul>
+    </div>
+    <div class="popup-bottom">
+        <div class="tab-item">
+            <p>
+                <span>*</span><label for="ipone"></label>
+                <input type="text" id="ipone" placeholder="请输入手机号"></p>
+            <p><span>*</span><label for="passwodes"></label>
+                <input type="text" id="passwodes" placeholder="请输入密码"></p>
+            <div class="agree"><input type="checkbox" checked>我已经阅读并同意<span>用户协议</span><span class="wangji">忘记密码
+                </span></div>
+            <button type="button" id="btn">登录</button>
+        </div>
+        <!-- <div class="tab-item">注册</div> -->
+    </div>
+    <div class="popup-footer">
+        <p>使用第三方账号登录</p>
+        <p>
+            <a href="/wexin.html">
+                <img src="/web/images/wx.png" alt="">
+            </a>
+        </p>
+    </div>
+</div>
+<div class="header">
+    <div class="container">
+        <div class="header-top">
+            <div class="header-left">
+                <marquee scrollAmount=3 height=25 direction="up" onmouseover=stop() onmouseout=start()>
+                    <div class="img"></div>
+                    <div class="text">
+                        <span>欢迎访问 --中国医师协会放射医师分会</span>
+                    </div>
+                </marquee>
+            </div>
+            <div class="header-right">
+                <div class="right-img">
+                    <img id="headerImg" src="/web/images/icon/my.png" alt="">
+                </div>
+                <div class="right-text">
+                    <div class="username">
+                        <ul>
+                            <li><a href="#">登录&nbsp;&nbsp;/注册</a></li>
+                        </ul>
+                        <img class="dengluImg" src="/web/images/icon/triangle.png" alt="">
+                    </div>
+                    <div class="personage">
+                        <div class="personage-top">
+                                <p><a href="">个人中心</a></p>
+                                <p><a href="">个人中心</a></p>
+                                <p><a href="">个人中心</a></p>
+                                <p><a href="">个人中心</a></p>
+                        </div>
+                        <div class="quit">
+                            <p class="quitCode"><a href="">退出登录</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="logo">
+    <div class="container">
+        <a href="/index.html">
+            <img src="/web/images/logo.jpg" alt="">
+        </a>
+    </div>
+
+</div>
+<div class="nav-li">
+    <div class="container">
+        <div class="lis">
+            <ul>
+                <li>
+                    <h3><a href="/index.html">首页</a></h3>
+                </li>
+                <li class="hover-organization">
+                    <h3><a href="/web/components/organization/organization.html" target="_parent">组织架构</a></h3>
+                    <ul class="sub">
+                        <li><a href="/web/components/organization/organization.html">全国委员会</a></li>
+                            <li><a href="/web/components/organization/organization.html">专业委员会</a></li>
+                            <li><a href="/web/components/organization/organization.html">青年委员会</a></li>
+                            <li><a href="/web/components/organization/organization.html">历届委员会</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3><a href="/web/components/newsTrends/newsTrends.html" target="_parent">新闻动态</a></h3>
+                </li>
+                <li>
+                    <h3><a href="/web/components/notification/notification.html" target="_parent">通知公告</a></h3>
+                </li>
+                <li>
+                    <h3><a href="/web/components/education/education.html">继续教育</a></h3>
+                    <ul class="sub-1">
+                        <li><a href="/web/components/education/education.html">典型案例</a></li>
+                            <li><a href="/web/components/Video/video.html">视频培训</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3><a href="/web/components/cooperation/cooperation.html" target="_parent">战略合作</a></h3>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <div class="content">
+        <div class="show">
+            <div class="show-lf">
+                <div class="text-lf">
+                    <span style="color:#333">新闻动态</span>&nbsp;>> &nbsp;正文
+                </div>
+                <h1 class="title">中青年影像医生“攀登计划”</h1>
+                <div class="info">
+                    发布日期：2020-04-22&nbsp;&nbsp;
+                    <!-- 浏览次数：<span id="hits">2087</span> -->
+                </div>
+                <div class="introduce">
+                    核心提示：为了配合国家提出的住院医师规范化培训工作，尽快开展中国放射科住院医师规范化培训工作中国医师协会放射医师分会为此专门成立中国医师协会住院医师规范化培训放射科专业委员会（简称：放射科住培专委会）开展住培教材编写、场地考察、课程设计等工作。
+                </div>
+                <div class="conter">
+                    <h1 style="text-align: center;"><b>中华国际医学交流基金会</b></h1>
+                    <h1 style="text-align: center;"><b>中国医师协会放射医师分会</b></h1>
+                    <h1 style="text-align: center;"><b>中青年影像医生“攀登计划”</b></h1>
+                    <p>为了配合国家提出的住院医师规范化培训工作，尽快开展中国放射科住院医师规范化培训工作中国医师协会放射医师分会为此专门成立中国医师协会住院医师规范化培训放射科专业委员会（简称：放射科住培专委会）开展住培教材编写、场地考察、课程设计等工作。&nbsp;
+                    </p>
+                    <p>欧美发达国家的住院医师规范化培训已经有非常成熟的模式，为了更好的学习发达国家的规培经验，使我们的规培工作尽快步入正轨，由中华国际医学交流基金会与中国医师协会放射医师分会共同发起江苏恒瑞医药有限公司独家支持的中青年影像医生“<b>攀登</b><b>计划</b>”（Capacity
+                        Upgrading Program，简称CUP），旨在为中国医学影像领域培养具有规范化诊断思维能力的放射科住院医生规范化培训师。</p>
+                    <p>该项目培训合作机构是美国放射学院（American College of Radiology
+                        ACR）。入选医生将在2018年3月19日-4月13日到位于马里兰州银泉市的美国放射病理研究所（American Institute for Radiologic Pathology AIRP
+                        ACR下属培训机构）参加为期4周的规范化诊断思维培训。&nbsp;&nbsp;</p>
+                    <p>培训结束后回国协助中国医师协会放射医师分会开展全国放射科住院医师规范化培训基地所需培训师的培训工作，与美国放射学院（American College of Radiology
+                        ACR）合作把美国的培训模式引入中国，以便尽早开展中国放射科医师的规范化培训工作，提高放射科医师的诊断水平，为广大患者带来福祉。&nbsp;&nbsp;</p>
+                    <p>前两期项目共计31位医生参加了培训，取得了非常好的效果。在此我们诚邀您参加2017项目的报名工作。&nbsp;&nbsp;</p>
+                    <p><b>报名</b><b>要求</b><b>如下</b><b>：</b></p>
+                    <p>1、 影像医学专业的医学博士学位&nbsp;&nbsp;</p>
+                    <p>2、 年龄35～45岁之间</p>
+                    <p>3、 在大型三甲教学医院从事一线临床影像诊断工作5年以上。</p>
+                    <p>4、 具有副高级以上专业技术职称</p>
+                    <p>5、 具有一定的行政管理经验优先考虑（科室主任、副主任等）</p>
+                    <p>6、 英语水平高，能用英语就业务或研究领域进行交流；/p>
+                        <p>7、 有既往的海外留学或培训经历</p>
+                        <p>8、 教学能力强，担任《医学影像学》本科、研究生课程的主讲授课教师，有留学生授课经验者优先考虑；或参与国家级、省级本行业协会/学会的继续教育培训讲师</p>
+                        <p>9、 在本专业具有一定的科研能力</p>
+                        <p><b>报名及</b><b>遴</b><b>选</b><b>流程如下：</b></p>
+                        <p>1、&nbsp;请登录网站<a href="http://www.lhjj.org"
+                                target="_blank"><u>www.lhjj</u><u>.org</u></a>点击右下角弹窗进入报名链接网站，根据提示注册报名，请记住自己的用户名和密码。</p>
+                        <p>2、&nbsp;报名咨询电话：1850 023 0303</p>
+                        <p>3、&nbsp;纸质版盖章报名表及相关支撑材料请快递至：上海市浦东新区东方路800号宝安大厦35楼，李文卿收，电话：13918128931。或交恒瑞公司当地销售代表转寄。</p>
+                        <p>4、&nbsp;<b>报名截止</b><b>日期为：</b><b>20</b><b>2</b><b>0年4月21日。</b></p>
+                        <p>5、 经郭启勇会长提名放射医师分会专家成立项目评审委员会审核各位候选人资格</p>
+                        <p>6、 7月24日至8月4日进行网评，网评结果将于8月11日前在中医师协会放射医师分会网站公布或者登录系统查询。</p>
+                        <p>7、 8月26日将在杭州中国医师协会放射医师分会年会期间进行面试选拔。</p>
+                        <p>8、 面试环节由郭启勇会长提名成立专家评审团担任评委，现场面试将以分组抽签的方式进行，当场打分并统计成绩，按照总成绩排名从最高到低择优录取，入围结果将在8月27日上午年会闭幕式上公布。
+                        </p>
+                        <p>9、 各阶段入围候选人信息将在中国医师协会放射医师分会网站公布。</p>
+
+                        <p align="right">中华国际医学交流基金会</p>
+                        <p align="right">中国医师协会放射医师分会</p>
+                        <p align="right">2017年5月25日</p>
+                        <div style="text-align: left;">请下载报名表报名：<br>
+                            <br>
+                            &nbsp;&nbsp;<img
+                                src="http://www.chinaradiologists.org/member/fckeditor/editor/images/ext/doc.gif"
+                                width="16" height="16" border="0" alt="" align="absmiddle"> <a
+                                href="http://www.chinaradiologists.org/api/attach.php?url=http://www.chinaradiologists.org/file/upload/201707/17/14-58-15-58-1.docx&amp;name=%E9%99%84%E4%BB%B6%EF%BC%9A%E6%8A%A5%E5%90%8D%E8%A1%A8.docx"
+                                class="attach" rel="nofollow">附件：报名表.docx</a></div>
+                        <div class="b10 c_b">&nbsp;</div>
+                        <div class="np">
+                            <ul>
+                                <li><strong>下一篇：</strong><a
+                                        href="/web/components/newsTrends/news/news_4.html"
+                                        title="中青年影像医生“攀登计划”2017项目（第三期）第二轮遴选结果">中青年影像医生“攀登计划”2017项目（第三期）第二轮遴选结果</a>
+                                </li>
+                                <li><strong>上一篇：</strong><a href="/web/components/newsTrends/news/news_1.html"
+                                        title="关于中青年影像医生“攀登计划”紧急通知及温馨提醒">关于中青年影像医生“攀登计划”紧急通知及温馨提醒</a>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+              
+            <div class="show-rg">
+                <div class="show-text">
+                    <div><strong>推荐图文</strong></div>
+                </div>
+                <div class="box_body">
+                    <table width="100%">
+                        <tbody>
+                            <tr align="center">
+                                <td width="50%" valign="top"><a href="/web/components/newsTrends/news/news_7.html">
+                                        <img src="http://www.chinaradiologists.org/file/upload/201706/14/11-12-11-96-1.jpg"
+                                            width="120" height="90" alt="中华国际医学交流基金会中国医师协会放射医师分会中青年影像医生“攀登计划”"></a>
+                                    <ul>
+                                        <li><a href="/web/components/newsTrends/news/news_7.html"
+                                                title="中华国际医学交流基金会中国医师协会放射医师分会中青年影像医生“攀登计划”">中华国际医学交流基金</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box_head">
+                    <div><strong>推荐资讯</strong></div>
+                </div>
+                <div class="box_body">
+                    <ul class="ul">
+                        <li>
+                            <a href="/web/components/newsTrends/news/news_1.html"
+                                title="中青年影像医生“攀登计划”2017项目（第三期）第二轮遴选结果">中青年影像医生“攀登计划”2017项目（第三期）第二轮遴选结果</a>
+                        </li>
+                        <li>
+                            <a href="/web/components/newsTrends/news/news_2.html"
+                                title="关于中青年影像医生“攀登计划”紧急通知及温馨提醒">关于中青年影像医生“攀登计划”紧急通知及温馨提醒</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class="box_head"><div><strong>点击排行</strong></div></div>
+                <div class="box_body">
+                    <div class="rank_list"><ul class="ul">
+                    </ul>
+                    </div>
+                    </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <iframe src="/web/common/footer/footer.html" width="100%" ; height="127px" frameborder="0" scrolling="no"
+        name="footerFrame"></iframe>
+    <script src="/web/common/header/header.js"></script>
+<script src="/web/common/header/header.js"></script>
+</body>
+
+</html>

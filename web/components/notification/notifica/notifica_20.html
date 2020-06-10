@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/web/css/notification/notifica/notifica_1.css">
+    <link rel="stylesheet" href="/web/common/header/header.css">
+    <link rel="stylesheet" href="/web/css/reset.css">
+    <link rel="stylesheet" href="/web/css/common.css">
+    <script src="/web/js/jquery-1.11.3.js"></script>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+
+<body>
+      <div class="center-erweima" id="box1" style="bottom:50%;right:10px;">
+        <div class="p">
+            <img src="/web/images/qrcode_for_gh_df993352a9a3_344.jpg" alt="">
+        <p>关注此公众号</p>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="zheceng" id="zheceng">
+    </div>
+    <div class="popup">
+        <div class="err">
+            <img src="/web/images/error.png" alt="">
+        </div>
+        
+        <div class="popup-bottom">
+            <div class="popup-footer">
+                <p> 
+                    <img src="/web/images/wx.png" alt="">
+                微信安全登录</p>
+            </div>
+            <div class="tab-item">
+                <div id="login_container">啊啊啊</div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-left">
+                    <marquee scrollAmount=3 height=25 direction="up" onmouseover=stop() onmouseout=start()>
+                        <div class="img"></div>
+                        <div class="text">
+                            <span>欢迎访问 --中国医师协会放射医师分会</span>
+                        </div>
+                    </marquee>
+                </div>
+                <div class="header-right">
+                    <div class="right-img">
+                        <img id="headerImg" src="/web/images/icon/my.png" alt="">
+                    </div>
+                    <div class="right-text">
+                        <div class="username">
+                            <ul>
+                                <li><a href="#">登录&nbsp;&nbsp;/注册</a></li>
+                            </ul>
+                            <img class="dengluImg" src="/web/images/icon/triangle.png" alt="">
+                        </div>
+                        <div class="personage">
+                            <div class="personage-top">
+                                    <!-- <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p> -->
+                            </div>
+                            <div class="quit">
+                                <p class="quitCode"><a href="">退出登录</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="logo">
+        <div class="container">
+            <a href="/index.html">
+                <img src="/web/images/logo.jpg" alt="">
+            </a>
+        </div>
+
+    </div>
+    <div class="nav-li">
+        <div class="container">
+            <div class="lis">
+                <ul>
+                    <li>
+                        <h3><a href="/index.html">首页</a></h3>
+                    </li>
+                    <li class="hover-organization">
+                        <h3><a href="/web/components/organization/organization.html" target="_parent">组织架构</a></h3>
+                          
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/newsTrends/newsTrends.html" target="_parent">新闻动态</a></h3>
+                    </li>
+                    <li>
+                        <h3><a  class="click-color"  href="/web/components/notification/notification.html" target="_parent">通知公告</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/education/education.html">继续教育</a></h3>
+                        <ul class="sub-1">
+                            <li><a href="/web/components/education/education.html">典型案例</a></li>
+                            <li><a href="/web/components/Video/video.html">视频培训</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/cooperation/cooperation.html" target="_parent">战略合作</a></h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div class="content">
+            <div class="container">
+                <div class="show-lf">
+                    <div class="text-lf">
+                        <span style="color:#333">通知公告</span>&nbsp;>> &nbsp;正文
+                    </div>
+                    <h1 class="title">中国医师协会放射医师分会2014广州年会</h1>
+                    <div class="info">
+                        发布日期：2020-04-22&nbsp;&nbsp;
+                        <!-- 浏览次数：<span id="hits">2087</span> -->
+                    </div>
+                    <div class="introduce">
+                        核心提示：中国医师协会放射医师分会2014广州年会暨第八届全国放射医师论坛会议通知（第2轮）由中国医师协会主办的中国医师协会放射医师分
+                    </div>
+                    <!-- <div class="conter">
+                    <div class="np">
+                        <ul>
+                            <li><strong>下一篇：</strong><a
+                                    href="/web/components/notification/notifica/notifica_21.html"
+                                    title="第十七届全国介入心脏病学论坛在兰州成功举办">第十七届全国介入心脏病学论坛在兰州成功举办</a>
+                            </li>
+                            <li><strong>上一篇：</strong><a
+                                    href="/web/components/notification/notifica/notifica_19.html"
+                                    title="第9届肌骨影像论坛（MIF）暨“第五届肌骨影响诊断进展”学习班通知及日程安排">第9届肌骨影像论坛（MIF）暨“第五届肌骨影响诊断进展”学习班通知及日程安排</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> -->
+                <div class="conter" id="article">&nbsp;<b>中国医师协会放射医师分会</b><b>2014</b><b>广州年会</b>
+                    <p align="center"><b>暨第八届全国放射医师论坛</b></p>
+                    <p align="center"><b>会议通知（第</b><b>2</b><b>轮）</b></p>
+                    <p align="center"><b>&nbsp;</b></p>
+                    <p>由中国医师协会主办的“中国医师协会放射医师分会2014广州年会暨第八届全国放射医师论坛”将于2014年8月22~24日在广东省广州市召开。本次大会将围绕医学影像学最新发展动向，着重于放射医师的基础知识更新教育、医疗质量控制和学科管理人才建设等方面展开研讨。同期，携手中国放射医师学院举办一期“放射学科主任培训项目（Program of Training Radiology Leadership,&nbsp; PTRL ）”，旨在提高学科带头人的管理素质。</p>
+                    <p>大会内容丰富，形式新颖，将有众多国内著名放射学专家、一流放射科管理者参会。新一届中国放射医师协会的当选委员请组织本单位及本地区的放射科医师踊跃参与。拟报名参会及参与“放射学科主任培训项目”的学科主任、学术骨干及管理人员请填写报名表格（见附件1、2）。</p>
+                    <p><b>&nbsp;</b></p>
+                    <p align="right">中国医师协会放射医师分会</p>
+                    <p align="right">2014年5月4日</p>
+                    <p><b>报到需知</b></p>
+                    <p>请参会人员填写附件里相应的报名表，以短信、电子邮件或邮寄形式在2014年8月15日前送出。（附件1参会代表报名表，附件2 放射科主任培训项目报名表）</p>
+                    <p>&nbsp;</p>
+                    <p><b>报到时间：</b>2014年8月22日08:00 ～ <span>24:00</span></p>
+                    <p>&nbsp;&nbsp; （1）<u>请全体委员在</u><u>22</u><u>日</u><u>14:00</u><u>前完成报到注册；</u></p>
+                    <p>&nbsp;&nbsp; （2）请参加“放射科主任培训项目”的学员在22日12:00前完成报到注册。</p>
+                    <p><b>报到地点：</b>广州白云国际会议中心酒店大堂</p>
+                    <p><b>住宿安排：</b>广州白云国际会议中心酒店&nbsp;&nbsp;&nbsp; <b>&nbsp;500</b>元/天</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 广州鸣泉居度假村酒店&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>&nbsp;330</b>元/天</p>
+                    <p><b>会议时间：</b>2014年08月23-24日</p>
+                    <p><b>会议地点：</b>白云国际会议中心 2号楼四楼广东大会堂</p>
+                    <p><b>会议注册费：</b></p>
+                    <p>（1）参会代表：<b>800</b>元/人</p>
+                    <p>（2）参加“放射科主任培训项目”的学员：<b>900</b>元/人</p>
+                    <p><b>继教学分：</b>注册参会者将获得国家级<b><span>I</span></b>类学分 <b>6</b>分。</p>
+                    <p>&nbsp;</p>
+                    <p>联系人：</p>
+                    <p>孟晓春：18922102879</p>
+                    <p>刘&nbsp;&nbsp;&nbsp; 芳：13810898706</p>
+                    <p>邮&nbsp; &nbsp;&nbsp;箱：<a href="mailto:hyhz2014@126.com" target="_blank"><span>hyhz2014@126.com</span></a></p>
+                    <p>联系地址：510630 广州市天河路600号</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 中山大学附属第三医院放射科</p>
+                    <p><b>大会简要日程</b></p>
+                    <p><b>8</b><b>月</b><b>22</b><b>日</b><b> </b></p>
+                    <p>1.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>16:00 -17:00&nbsp; &nbsp;&nbsp;全体委员会议（2号楼三层湛江厅）</p>
+                    <p>2.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>15:00 -18:00&nbsp; &nbsp;&nbsp;科主任培训项目（2号楼三层江门厅）</p>
+                    <p>3.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>18:30 - 20:30&nbsp; &nbsp;欢迎酒会</p>
+                    <p>&nbsp;</p>
+                    <p><b>8</b><b>月</b><b>23</b><b>日</b><b>全天</b><b>&nbsp;&nbsp;&nbsp; </b><b>&nbsp;</b><b>四层广东大会堂</b><b> </b></p>
+                    <p>1.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>08:00 - 09:30 &nbsp;&nbsp;&nbsp;大会主题讲座</p>
+                    <p><a name="_GoBack" target="_blank"></a>2.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>09:30 - 10:00&nbsp;&nbsp;&nbsp; 医疗器材展开启仪式</p>
+                    <p>3.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>10:00 - 11:00&nbsp;&nbsp;&nbsp; 大会开幕式</p>
+                    <p>4.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>11:00 - 12:00 &nbsp;&nbsp;&nbsp;大会主题讲座</p>
+                    <p>5.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>13:00 - 17:00&nbsp;&nbsp;&nbsp; 大会专题讲座</p>
+                    <p>6.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>13:30 - 17:00&nbsp; &nbsp;&nbsp;科主任培训项目（2号楼三层江门厅）</p>
+                    <p>7.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>18:30 - 20:30&nbsp;&nbsp; &nbsp;答谢酒会</p>
+                    <p><b>8</b><b>月</b><b>24</b><b>日</b><b>上午</b><b> <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b><b>四层广东大会堂</b><b>&nbsp;</b></p>
+                    <p>1.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>08:00 - 11:00&nbsp;&nbsp;&nbsp; 大会主题讲座；</p>
+                    <p>2.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>11:00 -12:00&nbsp;&nbsp;&nbsp;&nbsp; 闭幕式兼培训项目结业礼</p>
+                    <p align="right">&nbsp;</p>
+                    <p><b>附件</b><b>1</b></p>
+                    <p align="center"><b>中国医师协会放射医师分会</b><b>2014</b><b>广州年会</b></p>
+                    <p align="center"><b>暨第八届全国放射医师论坛</b></p>
+                    <p align="center"><b>参会代表报名表</b></p>
+                    <table border="1" cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <tr>
+                                <td width="568" colspan="5">
+                                <p align="center"><b>中国医师协会放射医师分会</b><b>2014</b><b>广州年会暨第八届全国放射医师论坛</b></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="97">
+                                <p align="center">姓&nbsp;&nbsp;&nbsp; 名</p>
+                                </td>
+                                <td width="168">
+                                <p align="center">&nbsp;</p>
+                                </td>
+                                <td width="86">
+                                <p align="center">性&nbsp;&nbsp;&nbsp; 别</p>
+                                </td>
+                                <td width="217" colspan="2">
+                                <p align="center">&nbsp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="97">
+                                <p align="center">年&nbsp;&nbsp;&nbsp; 龄</p>
+                                </td>
+                                <td width="168">
+                                <p align="center">&nbsp;</p>
+                                </td>
+                                <td width="86">
+                                <p align="center">专&nbsp;&nbsp;&nbsp; 业</p>
+                                </td>
+                                <td width="217" colspan="2">
+                                <p align="center">&nbsp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="97">
+                                <p align="center">职&nbsp;&nbsp;&nbsp; 称</p>
+                                </td>
+                                <td width="168">
+                                <p align="center">&nbsp;</p>
+                                </td>
+                                <td width="86">
+                                <p align="center">职&nbsp;&nbsp;&nbsp; 务</p>
+                                </td>
+                                <td width="217" colspan="2">
+                                <p align="center">&nbsp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="97">
+                                <p align="center">单位及科室</p>
+                                </td>
+                                <td width="471" colspan="4">
+                                <p align="center">&nbsp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="97">
+                                <p align="center">联系电话</p>
+                                </td>
+                                <td width="168">
+                                <p align="center">&nbsp;</p>
+                                </td>
+                                <td width="89" colspan="2">
+                                <p align="center">Email</p>
+                                </td>
+                                <td width="214">
+                                <p align="center">&nbsp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="97">
+                                <p align="center">通讯地址</p>
+                                </td>
+                                <td width="471" colspan="4">
+                                <p align="center">&nbsp;</p>
+                                </td>
+                            </tr>
+                            <tr height="0">
+                                <td width="97">&nbsp;</td>
+                                <td width="168">&nbsp;</td>
+                                <td width="86">&nbsp;</td>
+                                <td width="3">&nbsp;</td>
+                                <td width="214">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>联系人：</p>
+                    <p>孟晓春：18922102879</p>
+                    <p>刘&nbsp;&nbsp;&nbsp; 芳：13810898706</p>
+                    <p>邮&nbsp; &nbsp;&nbsp;箱：<a href="mailto:hyhz2014@126.com" target="_blank"><span>hyhz2014@126.com</span></a></p>
+                    <p>联系地址：广州市天河路600号 中山大学附属第三医院放射科&nbsp;510630</p>
+                    <p>&nbsp;</p>
+                    <p>附件2</p>
+                    <p align="center"><b>中国医师协会放射医师分会2014广州年会</b></p>
+                    <p align="center"><b>暨第八届全国放射医师论坛</b></p>
+                    <p align="center"><b>放射科主任培训项目报名表</b></p>
+                    <table border="1" cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <tr>
+                                <td width="568" colspan="5">
+                                <p align="center"><b>中国医师协会放射医师分会</b><b>2014</b><b>广州年会暨第八届全国放射医师论坛</b></p>
+                                <p align="center"><b>放射科主任培训项目</b></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="97">
+                                <p align="center">姓&nbsp;&nbsp;&nbsp; 名</p>
+                                </td>
+                                <td width="168">
+                                <p align="center">&nbsp;</p>
+                                </td>
+                                <td width="86">
+                                <p align="center">性&nbsp;&nbsp;&nbsp; 别</p>
+                                </td>
+                                <td width="217" colspan="2">
+                                <p align="center">&nbsp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="97">
+                                <p align="center">年&nbsp;&nbsp;&nbsp; 龄</p>
+                                </td>
+                                <td width="168">
+                                <p align="center">&nbsp;</p>
+                                </td>
+                                <td width="86">
+                                <p align="center">专&nbsp;&nbsp;&nbsp; 业</p>
+                                </td>
+                                <td width="217" colspan="2">
+                                <p align="center">&nbsp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="97">
+                                <p align="center">职&nbsp;&nbsp;&nbsp; 称</p>
+                                </td>
+                                <td width="168">
+                                <p align="center">&nbsp;</p>
+                                </td>
+                                <td width="86">
+                                <p align="center">行政职务</p>
+                                </td>
+                                <td width="217" colspan="2">
+                                <p align="center">&nbsp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="97">
+                                <p align="center">单位及科室</p>
+                                </td>
+                                <td width="471" colspan="4">
+                                <p align="center">&nbsp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="97">
+                                <p align="center">联系电话</p>
+                                </td>
+                                <td width="168">
+                                <p align="center">&nbsp;</p>
+                                </td>
+                                <td width="89" colspan="2">
+                                <p align="center">Email</p>
+                                </td>
+                                <td width="214">
+                                <p align="center">&nbsp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="97">
+                                <p align="center">通讯地址</p>
+                                </td>
+                                <td width="471" colspan="4">
+                                <p align="center">&nbsp;</p>
+                                </td>
+                            </tr>
+                            <tr height="0">
+                                <td width="97">&nbsp;</td>
+                                <td width="168">&nbsp;</td>
+                                <td width="86">&nbsp;</td>
+                                <td width="3">&nbsp;</td>
+                                <td width="214">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>&nbsp;</p>
+                    <p>联系人：</p>
+                    <p>孟晓春：18922102879</p>
+                    <p>刘&nbsp;&nbsp;&nbsp; 芳：13810898706</p>
+                    <p>邮&nbsp; &nbsp;&nbsp;箱：<a href="mailto:hyhz2014@126.com" target="_blank"><span>hyhz2014@126.com</span></a></p>
+                    <p>联系地址：广州市天河路600号 中山大学附属第三医院放射科&nbsp;510630</p>
+                    <br>
+                    <div class="np">
+                        <ul>
+                            <li><strong>下一篇：</strong><a
+                                    href="/web/components/notification/notifica/notifica_21.html"
+                                    title="第十七届全国介入心脏病学论坛在兰州成功举办">第十七届全国介入心脏病学论坛在兰州成功举办</a>
+                            </li>
+                            <li><strong>上一篇：</strong><a
+                                    href="/web/components/notification/notifica/notifica_18.html"
+                                    title="第9届肌骨影像论坛（MIF）暨“第五届肌骨影响诊断进展”学习班通知及日程安排">第9届肌骨影像论坛（MIF）暨“第五届肌骨影响诊断进展”学习班通知及日程安排</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                  
+                <div class="show-rg">
+                    <div class="show-text">
+                        <div><strong>推荐图文</strong></div>
+                    </div>
+                    <div class="box_body">
+                        <table width="100%">
+                            <tbody>
+                                <tr align="center">
+                                    <td width="50%" valign="top"><a
+                                            href="/web/components/notification/notifica/notifica_1.html">
+                                            <img src="http://www.chinaradiologists.org/file/upload/201706/14/11-12-11-96-1.jpg"
+                                                width="120" height="90" alt="中青年影像医生“攀登计划”第四期第一轮遴选结果”"></a>
+                                        <ul>
+                                            <li><a href="/web/components/notification/notifica/notifica_1.html"
+                                                    title="中青年影像医生“攀登计划”第四期第一轮遴选结果">中华国际医学交流基金</a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                     
+                </div>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <iframe src="/web/common/footer/footer.html" width="100%" ; height="127px" frameborder="0" scrolling="no"
+            name="footerFrame"></iframe>
+        <script src="/web/common/header/header.js"></script>
+<script src="/web/common/header/header.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/web/common/header/header.css">
+    <link rel="stylesheet" href="./educationDetail.css">
+    <link rel="stylesheet" href="/web/css/reset.css">
+    <link rel="stylesheet" href="/web/css/common.css">
+    <script src="/web/js/jquery-1.11.3.js"></script>
+
+
+    <script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+
+<body>
+    <div class="submit">
+        <p>请选择后再提交</p>
+        <button type="button">确定</button>
+    </div>
+    <div class="center-erweima" id="box1" style="bottom:50%;right:10px;">
+        <div class="p">
+            <img src="/web/images/qrcode_for_gh_df993352a9a3_344.jpg" alt="">
+            <p>关注此公众号</p>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="zheceng" id="zheceng">
+    </div>
+    <div class="popup">
+        <div class="err">
+            <img src="/web/images/error.png" alt="">
+        </div>
+
+        <div class="popup-bottom">
+            <div class="popup-footer">
+                <p>
+                    <img src="/web/images/wx.png" alt="">
+                    微信安全登录</p>
+            </div>
+            <div class="tab-item">
+                <div id="login_container">啊啊啊</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-left">
+                    <marquee scrollAmount=3 height=25 direction="up" onmouseover=stop() onmouseout=start()>
+                        <div class="img"></div>
+                        <div class="text">
+                            <span>欢迎访问 --中国医师协会放射医师分会</span>
+                        </div>
+                    </marquee>
+                </div>
+                <div class="header-right">
+                    <div class="right-img">
+                        <img id="headerImg" src="/web/images/icon/my.png" alt="">
+                    </div>
+                    <div class="right-text">
+                        <div class="username">
+                            <ul>
+                                <li><a href="#">登录&nbsp;&nbsp;/注册</a></li>
+                            </ul>
+                            <img class="dengluImg" src="/web/images/icon/triangle.png" alt="">
+                        </div>
+                        <div class="personage">
+                            <div class="personage-top">
+                                <p><a href="">个人中心</a></p>
+                                <p><a href="">个人中心</a></p>
+                                <p><a href="">个人中心</a></p>
+                                <p><a href="">个人中心</a></p>
+                            </div>
+                            <div class="quit">
+                                <p class="quitCode"><a href="">退出登录</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="logo">
+        <div class="container">
+            <a href="/index.html">
+                <img src="/web/images/logo.jpg" alt="">
+            </a>
+        </div>
+
+    </div>
+    <div class="nav-li">
+        <div class="container">
+            <div class="lis">
+                <ul>
+                    <li>
+                        <h3><a href="/index.html">首页</a></h3>
+                    </li>
+                    <li class="hover-organization">
+                        <h3><a href="/web/components/organization/organization.html" target="_parent">组织架构</a></h3>
+
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/newsTrends/newsTrends.html" target="_parent">新闻动态</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/notification/notification.html" target="_parent">通知公告</a></h3>
+                    </li>
+                    <li>
+                        <h3><a class="click-color" href="/web/components/education/education.html">继续教育</a></h3>
+                        <ul class="sub-1">
+                            <li><a href="/web/components/education/education.html">典型案例</a></li>
+                            <li><a href="/web/components/Video/video.html">视频培训</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/cooperation/cooperation.html" target="_parent">战略合作</a></h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" style="width: 1200px;margin: 30px auto;">
+        <div id="textId"></div>
+        <div id="imageData"></div>
+        <div class="topic" id="topicId">
+            <div id="topicTitle"></div>
+            <ul id="topicBottom">
+            </ul>
+            <div id="commit"></div>
+            <div id="flag"></div>
+            <div id="analysis"></div>
+        </div>
+        <div class="purple" id="pinglun">
+            <h2 class="">评论</h2>
+            <p><textarea id="textarea" placeholder="请发表评论..."></textarea><span class="commitpinglun">提交评论</span></p>
+        </div>
+        <ul id="pinglun_text"></ul>
+    </div>
+    <!-- 底部 -->
+    <iframe src="/web/common/footer/footer.html" width="100%" ; height="127px" frameborder="0" scrolling="no"
+        name="footerFrame"></iframe>
+
+    <script type="text/javascript">
+        //获取地址栏参数，name:参数名称
+        function getUrlParms(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null)
+                return unescape(r[2]);
+            return null;
+        }
+        var detailChoice = Boolean
+        var more = Number
+        var submitIdsArr = []
+        var detail
+        var id = getUrlParms("id");
+        $.ajax({
+            url: "http://114.115.216.211/qlib/showFirst",
+            type: 'get',
+            data: {
+                id
+            },
+            dataType: 'json',
+            success: function (data) {
+                localStorage.getItem('5_data')
+                var userinfo = JSON.parse(localStorage.getItem('userinfo'));
+                // 获取需要的数据
+                detail = data.rows;
+                var detailId = data.rows.questions.id;
+                var imageData = data.rows.imageData;
+                var questions = data.rows.questions;
+                var text = "";
+                var imageData_text = "";
+                var topicText = "";
+                var questions_text = "";
+                var topicBottom_text = "";
+                var questions_commit = "";
+                var pinglun_text = "";
+                detailChoice = detail.questions.choice === "单选题" ? false : true
+                var opIds = '';
+                // if (detailChoice === false && more === 2) {
+                $("#topicBottom").on("click", "li", function (itemId) {
+                    if (detailChoice == "单选题" || detailChoice == "多选题") {
+                        detailChoice = detailChoice === "单选题" ? false : true
+                    }
+                    if (detailChoice === false) {
+                        let index = $(this).index();
+                        $(this).css('background-color', 'green').siblings().css('background-color',
+                            '#F1F1F1');
+                        let Arr1 = []
+                        for (var i in option) {
+                            Arr1.push(i)
+                        }
+                        if (opIds == Arr1[index]) {
+                            opIds = ''
+                            $(this).css('background-color', '#F1F1F1')
+                        } else {
+                            opIds = Arr1[index];
+                        }
+
+                    } else if (detailChoice === true) {
+                        var answerArr = [];
+                        let index = $(this).index();
+                        let Arr1 = []
+                        for (var i in option) {
+                            Arr1.push(i)
+                        }
+                        var answerId = Arr1[index]
+                        var liId = index;
+                        var idIndex = $.inArray(answerId, submitIdsArr)
+                        if (idIndex === -1) {
+                            submitIdsArr.push(answerId)
+                            $('#topicBottom').find('li').eq(index).css('background-color', 'green')
+                        } else if (idIndex !== -1) {
+                            submitIdsArr.splice(idIndex, 1)
+                            $('#topicBottom').find('li').eq(index).css('background-color',
+                                '#F1F1F1')
+                        }
+
+                        // opIds = detail.questions.option[index].id
+                        opIds = submitIdsArr.join(',')
+                    }
+
+                })
+                // }
+                $("#textarea").blur(function () {
+                    var text = $('#textarea').val();
+
+                    var userinfo = JSON.parse(localStorage.getItem('userinfo'));
+                    $(".commitpinglun").click(function () {
+                        $.ajax({
+                            type: "get",
+                            url: "http://114.115.216.211/qlib/add",
+                            data: {
+                                userId: userinfo.unionid,
+                                // userId: "oeGxTwWB_n5ubjk0UJnlbOiWRlz0",
+                                caseId: id,
+                                content: text
+                            },
+                            success: function (data) {
+                                if (data.flag === true) {
+                                    window.location.reload(true);
+                                    $.ajax({
+                                        url: "http://114.115.216.211/qlib/comm",
+                                        type: "get",
+                                        data: {
+                                            caseId: detailId
+                                        },
+                                        success: function (data) {
+                                            var pinglun = data.rows;
+                                            for (let i = 0; i <
+                                                pinglun.length; i++
+                                            ) {
+                                                pinglun_text +=
+                                                    '<li>' +
+                                                    '<div class="li_top">' +
+                                                    '<div class="pinglun-left">' +
+                                                    '<img src="' +
+                                                    pinglun[i]
+                                                    .img +
+                                                    '" alt="">' +
+                                                    '</div>' +
+                                                    '<div class="pinglun-right">' +
+                                                    '<div class="username">' +
+                                                    pinglun[i]
+                                                    .userName +
+                                                    '</div>' +
+                                                    '</div>' +
+                                                    '</div>' +
+                                                    '<div class="pinglun_content">' +
+                                                    pinglun[i]
+                                                    .content +
+                                                    '</div>' +
+                                                    '<div class="creatTime">' +
+                                                    pinglun[i]
+                                                    .createTime +
+                                                    '</div>' +
+                                                    '</li>'
+
+                                            }
+                                            $('#pinglun_text').html(
+                                                pinglun_text)
+                                        }
+
+                                    })
+
+                                }
+                            }
+                        })
+                    })
+                })
+                $.ajax({
+                    url: "http://114.115.216.211/qlib/comm",
+                    type: "get",
+                    data: {
+                        caseId: id
+                    },
+                    success: function (data) {
+                        var pinglun = data.rows;
+                        for (let i = 0; i < pinglun.length; i++) {
+                            pinglun_text += '<li>' +
+                                '<div class="li_top">' +
+                                '<div class="pinglun-left">' +
+                                '<img src="' + pinglun[i].img + '" alt="">' + '</div>' +
+                                '<div class="pinglun-right">' +
+                                '<div class="username">' + pinglun[i].userName + '</div>' +
+                                '</div>' +
+                                '</div>' +
+
+                                '<div class="pinglun_content">' + pinglun[i].content +
+                                '</div>' +
+                                '<div class="creatTime">' +
+                                pinglun[i].createTime +
+                                '</div>' +
+                                '</li>' +
+                                '</li>'
+
+                        }
+                        $('#pinglun_text').html(pinglun_text)
+                    }
+
+                })
+
+                text +=
+                    '<div class="w_text_top">' +
+                    '<h2 class="purple">' + detail.caseDetails.name + '</h2>' +
+                    '<h3 class="purple">' + '<span>' + "患者" + '</span>' + '<span>' +
+                    detail.caseDetails.sex + '</span>' + '<span>' + detail.caseDetails.age + '</span>' +
+                    '</h3>' +
+                    '<h2 class="purple">' + "主诉" + '</h2>' +
+                    '<pre>' + detail.caseDetails.mainSuit + '</pre>'
+                $('#textId').html(text)
+                if (questions.choice === "单选题") {
+                    questions_text += '<h2 class="purple">' + "单选题" + '</h2>' + '<h2>' + '<h2>' + questions
+                        .show + '</h2>'
+                    var option = JSON.parse(questions.option)
+                    for (let i in option) {
+                        topicBottom_text += '<li>' + '<span>' + i + '&nbsp;' + '</span>' + option[i] +
+                            '</li>'
+                    }
+                    questions_commit += '<button type="button" class="button_last">' + "上一题" +
+                        '</button>' +
+                        '<button type="button" class="button_tijiao">' + "提交" + '</button>' +
+                        '<button type="button" class="button_next">' + "下一题" + '</button>'
+                    // ============提交==============
+                    var flag_text = "";
+                    $("#commit").on("click", ".button_tijiao", function () {
+                        submitIdsArr = []
+                        flag_text = "";
+                        if (opIds === "") {
+                            $(".submit").css('display', 'block')
+                            $(".submit button").click(function () {
+                                $(this).parent().css('display', 'none')
+                            })
+                        } else {
+
+                            $.ajax({
+                                type: 'get',
+                                url: "http://114.115.216.211/qlib/showAnswer",
+                                data: {
+                                    id: detailId,
+                                    opIds: opIds
+                                },
+                                success: function (data) {
+                                    if (data.rows.flag === "NO") {
+                                        flag_text += '<h3>' + "回答错误" + '</h3>' +
+                                            '<h3>' + "正确答案是：" + '</h3>' +
+                                            '<p>' + data.rows.rightOption + '</p>' +
+                                            '<h3>' + "答案解析" + '</h3>' +
+                                            '<p>' + data.rows.rightDes + '</p>'
+                                    } else {
+                                        flag_text += '<h3>' + "回答正确" + '</h3>' +
+                                            '<h3>' + "正确答案是：" + '</h3>' +
+                                            '<p>' + data.rows.rightOption + '</p>' +
+                                            '<h3>' + "答案解析" + '</h3>' +
+                                            '<p>' + data.rows.rightDes + '</p>'
+                                    }
+                                    $('#flag').html(flag_text)
+                                }
+                            })
+                        }
+                    })
+                    // ============下一题==============
+                    $("#commit").on("click", ".button_next", function () {
+                        topicBottom_text = "";
+                        questions_commit = "";
+                        questions_text = "";
+                        submitIdsArr = []
+                        $('#flag').html("")
+                        $.ajax({
+                            type: 'get',
+                            url: "http://114.115.216.211/qlib/showNext",
+                            data: {
+                                id: detailId,
+                                caseId: id
+                            },
+                            success: function (data) {
+                                var option = '';
+                                var analysis_text = "";
+                                detailChoice = data.rows.choice
+                                var option = JSON.parse(data.rows.option)
+                                if (data.rows.flag === 1) {
+                                    analysis_text += '<div class="anli">' +
+                                        '<h2 class="purple">' + "当前题目已是最后一题" + '</h2>' +
+                                        '<h2>' + "【案例分析】" + '</h2>' +
+                                        '<h3>' + "【最终结果】" + '</h3>' +
+                                        // '<p>' + commAnaly[0].content + '</p >' +
+                                        '<h3>' + "【诊断要点】" + '<h3>' +
+                                        // '<p>' + commAnaly[0].identifyDiag + '</p >' +
+                                        '<h3>' + "【鉴别诊断】" + '</h3>' +
+                                        // '<p>' + commAnaly[0].diagPoint + '</p >' +
+                                        '</div>' +
+                                        '<div class="zhuanjia">' +
+                                        '<h2>' + "专家点评" + '</h2>' +
+                                        '<div class="zhunajia_top">' +
+                                        '<div class="zhuanjia-img">' +
+                                        // '<img src = "' + commAnaly[0].expImg + '" alt = "" >' +
+                                        '</div>' +
+                                        // '<div class="zhuanjia">' + '<h2>' + commAnaly[0]
+                                        // .expName + '</h2>' + '<h3>' + commAnaly[0]
+                                        // .expPlace + '</h3>' +
+                                        // '</div>' +
+                                        '</div>' +
+                                        '<div class="zhuanjia_bottom">' +
+                                        // '<p>' + commAnaly[0].diagPoint + '</p >' +
+                                        '</div>' +
+                                        '</div>'
+                                    $('#analysis').val(1111);
+                                }
+                                $('#analysis').html(analysis_text);
+                                detailId = data.rows.id
+                                if (data.rows.choice === "多选题") {
+                                    topicBottom_text = "";
+                                    questions_commit = "";
+                                    questions_text += '<h2  class="purple">' + "多选题" +
+                                        '</h2>' + '<h2>' + data.rows.show + '</h2>'
+                                    for (let i in option) {
+                                        topicBottom_text += '<li>' + '<span>' + i +
+                                            '&nbsp;' + '</span>' + option[i] +
+                                            '</li>'
+                                    }
+                                    questions_commit +=
+                                        '<button type="button" class="button_last">' +
+                                        "上一题" +
+                                        '</button>' +
+                                        '<button type="button" class="button_tijiao">' +
+                                        "提交" + '</button>' +
+                                        '<button type="button" class="button_next">' +
+                                        "下一题" + '</button>'
+
+                                }
+                                $('#analysis').html(analysis_text);
+                                $('#topicTitle').html(questions_text)
+                                $('#commit').html(questions_commit)
+                                $('#topicBottom').html(topicBottom_text)
+                                if (data.rows.choice === "单选题") {
+                                    topicBottom_text = "";
+                                    questions_commit = "";
+                                    questions_text = "";
+                                    questions_text += '<h2  class="purple">' + "单选题" +
+                                        '</h2>' + '<h2>' + data.rows.show + '</h2>'
+                                    for (let i in option) {
+                                        topicBottom_text += '<li>' + '<span>' + i +
+                                            '&nbsp;' + '</span>' + option[i] + '</li>'
+                                    }
+                                    questions_commit +=
+                                        '<button type="button" class="button_last">' +
+                                        "上一题" +
+                                        '</button>' +
+                                        '<button type="button" class="button_tijiao">' +
+                                        "提交" + '</button>' +
+                                        '<button type="button" class="class="button_next">' +
+                                        "下一题" + '</button>'
+                                }
+                                $('#topicTitle').html(questions_text)
+                                $('#commit').html(questions_commit)
+                                $('#topicBottom').html(topicBottom_text)
+
+                            }
+                        })
+                    })
+                    //  ============上一题==============
+                    $("#commit").on("click", ".button_last", function () {
+                        topicBottom_text = "";
+                        questions_commit = "";
+                        submitIdsArr = []
+                        questions_text = "";
+                        analysis_text = "";
+                        $('#analysis').html("");
+                        $('#flag').html("")
+                        // let showFirst = JSON.parse(localStorage.userinfo);
+                        $.ajax({
+                            type: 'get',
+                            url: "http://114.115.216.211/qlib/showLast",
+                            data: {
+                                id: detailId,
+                                caseId: id
+                            },
+                            success: function (data) {
+                                detailChoice = data.rows.choice;
+                                detailId = data.rows.id
+                                var option = JSON.parse(data.rows.option)
+                                if (data.rows.choice === "多选题") {
+                                    topicBottom_text = "";
+                                    questions_commit = "";
+                                    questions_text += '<h2  class="purple">' + "多选题" +
+                                        '</h2>' + '<h2>' + '<h2>' + data.rows.show +
+                                        '</h2>'
+                                    for (let i in option) {
+                                        topicBottom_text += '<li>' + '<span>' + i +
+                                            '&nbsp;' + '</span>' + option[i] + '</li>'
+                                    }
+                                    questions_commit +=
+                                        '<button type="button" class="button_last">' +
+                                        "上一题" +
+                                        '</button>' +
+                                        '<button type="button" class="button_tijiao">' +
+                                        "提交" + '</button>' +
+                                        '<button type="button" class="button_next">' +
+                                        "下一题" + '</button>'
+                                }
+                                $('#topicTitle').html(questions_text)
+                                $('#commit').html(questions_commit)
+                                $('#topicBottom').html(topicBottom_text)
+                                if (data.rows.choice === "单选题") {
+                                    topicBottom_text = "";
+                                    questions_commit = "";
+                                    questions_text = "";
+                                    questions_text += '<h2  class="purple">' + "单选题" +
+                                        '</h2>' + '<h2>' + data.rows.show + '</h2>'
+                                    for (let i in option) {
+                                        topicBottom_text += '<li>' + '<span>' + i +
+                                            '&nbsp;' + '</span>' + option[i] + '</li>'
+                                    }
+                                    questions_commit +=
+                                        '<button type="button" class="button_last">' +
+                                        "上一题" +
+                                        '</button>' +
+                                        '<button type="button" class="button_tijiao">' +
+                                        "提交" + '</button>' +
+                                        '<button type="button" class="button_next">' +
+                                        "下一题" + '</button>'
+                                }
+                                $('#topicTitle').html(questions_text)
+                                $('#commit').html(questions_commit)
+                                $('#topicBottom').html(topicBottom_text)
+                            }
+                        })
+                    })
+
+                }
+                $('#commit').html(questions_commit)
+                $('#topicBottom').html(topicBottom_text)
+                $('#commit').html(questions_commit)
+                // $('#imageData').html(imageData_text)
+                if (questions.choice === "多选题") {
+                    questions_text += '<h2 class="purple">' + "多选题" + '</h2>' + '<h2>' + '<h2>' + questions
+                        .show + '</h2>'
+                    var option = JSON.parse(questions.option)
+                    for (let i in option) {
+                        topicBottom_text += '<li>' + '<span>' + i + '&nbsp;' + '</span>' + option[i] +
+                            '</li>'
+                    }
+                    questions_commit += '<button type="button" class="button_last">' + "上一题" +
+                        '</button>' +
+                        '<button type="button" class="button_tijiao">' + "提交" + '</button>' +
+                        '<button type="button" class="button_next">' + "下一题" + '</button>'
+
+
+                    // ============提交==============
+                    var flag_text = "";
+                    $("#commit").on("click", ".button_tijiao", function () {
+
+                        submitIdsArr = []
+                        flag_text = "";
+                        if (opIds === "") {
+                            $(".submit").css('display', 'block')
+                            $(".submit button").click(function () {
+                                $(this).parent().css('display', 'none')
+                            })
+                        } else {
+
+                            $.ajax({
+                                type: 'get',
+                                url: "http://114.115.216.211/qlib/showAnswer",
+                                data: {
+                                    id: detailId,
+                                    opIds: opIds
+                                },
+                                success: function (data) {
+                                    if (data.rows.flag === "NO") {
+                                        flag_text += '<h3>' + "回答错误" + '</h3>' +
+                                            '<h3>' + "正确答案是：" + '</h3>' +
+                                            '<p>' + data.rows.rightOption + '</p>' +
+                                            '<h3>' + "答案解析" + '</h3>' +
+                                            '<p>' + data.rows.rightDes + '</p>'
+                                        '<h3>' + "答案解析" + '</h3>' +
+                                        '<p>' + data.rows.rightDes + '</p>'
+                                    } else {
+                                        flag_text += '<h3>' + "回答正确" + '</h3>' +
+                                            '<h3>' + "正确答案是：" + '</h3>' +
+                                            '<p>' + data.rows.rightOption + '</p>' +
+                                            '<h3>' + "答案解析" + '</h3>' +
+                                            '<p>' + data.rows.rightDes + '</p>'
+                                    }
+                                    $('#flag').html(flag_text)
+                                }
+                            })
+                        }
+                    })
+                    // ============下一题==============
+                    $("#commit").on("click", ".button_next", function () {
+                        topicBottom_text = "";
+                        questions_commit = "";
+                        questions_text = "";
+                        submitIdsArr = []
+                        $('#flag').html("")
+                        $.ajax({
+                            type: 'get',
+                            url: "http://114.115.216.211/qlib/showNext",
+                            data: {
+                                id: detailId,
+                                caseId: id
+                            },
+                            success: function (data) {
+                                var option = '';
+                                var analysis_text = "";
+                                detailChoice = data.rows.choice === "单选题" ? false : true
+                                more = data.rows.choice === "单选题" ? 2 : 1;
+                                var option = JSON.parse(data.rows.option)
+                                if (data.rows.flag === 1) {
+                                    analysis_text += '<div class="anli">' +
+                                        '<h2 class="purple">' + "当前题目已是最后一题" + '</h2>' +
+                                        '<h2>' + "【案例分析】" + '</h2>' +
+                                        '<h3>' + "【最终结果】" + '</h3>' +
+                                        // '<p>' + commAnaly[0].content + '</p >' +
+                                        '<h3>' + "【诊断要点】" + '<h3>' +
+                                        // '<p>' + commAnaly[0].identifyDiag + '</p >' +
+                                        '<h3>' + "【鉴别诊断】" + '</h3>' +
+                                        // '<p>' + commAnaly[0].diagPoint + '</p >' +
+                                        '</div>' +
+                                        '<div class="zhuanjia">' +
+                                        '<h2>' + "专家点评" + '</h2>' +
+                                        '<div class="zhunajia_top">' +
+                                        '<div class="zhuanjia-img">' +
+                                        // '<img src = "' + commAnaly[0].expImg + '" alt = "" >' +
+                                        '</div>' +
+                                        // '<div class="zhuanjia">' + '<h2>' + commAnaly[0]
+                                        // .expName + '</h2>' + '<h3>' + commAnaly[0]
+                                        // .expPlace + '</h3>' +
+                                        // '</div>' +
+                                        '</div>' +
+                                        '<div class="zhuanjia_bottom">' +
+                                        // '<p>' + commAnaly[0].diagPoint + '</p >' +
+                                        '</div>' +
+                                        '</div>'
+                                    $('#analysis').val(1111);
+                                }
+                                $('#analysis').html(analysis_text);
+                                detailId = data.rows.id
+                                if (data.rows.choice === "多选题") {
+                                    topicBottom_text = "";
+                                    questions_commit = "";
+                                    questions_text += '<h2  class="purple">' + "多选题" +
+                                        '</h2>' + '<h2>' + data.rows.show + '</h2>'
+                                    for (let i in option) {
+                                        topicBottom_text += '<li>' + '<span>' + i +
+                                            '&nbsp;' + '</span>' + option[i] +
+                                            '</li>'
+                                    }
+                                    questions_commit +=
+                                        '<button type="button" class="button_last">' +
+                                        "上一题" +
+                                        '</button>' +
+                                        '<button type="button" class="button_tijiao">' +
+                                        "提交" + '</button>' +
+                                        '<button type="button" class="button_next">' +
+                                        "下一题" + '</button>'
+
+                                }
+                                $('#analysis').html(analysis_text);
+                                $('#topicTitle').html(questions_text)
+                                $('#commit').html(questions_commit)
+                                $('#topicBottom').html(topicBottom_text)
+                                if (data.rows.choice === "单选题") {
+                                    topicBottom_text = "";
+                                    questions_commit = "";
+                                    questions_text = "";
+                                    questions_text += '<h2  class="purple">' + "单选题" +
+                                        '</h2>' + '<h2>' + data.rows.show + '</h2>'
+                                    for (let i in option) {
+                                        topicBottom_text += '<li>' + '<span>' + i +
+                                            '&nbsp;' + '</span>' + option[i] + '</li>'
+                                    }
+                                    questions_commit +=
+                                        '<button type="button" class="button_last">' +
+                                        "上一题" +
+                                        '</button>' +
+                                        '<button type="button" class="button_tijiao">' +
+                                        "提交" + '</button>' +
+                                        '<button type="button" class="class="button_next">' +
+                                        "下一题" + '</button>'
+                                }
+                                $('#topicTitle').html(questions_text)
+                                $('#commit').html(questions_commit)
+                                $('#topicBottom').html(topicBottom_text)
+
+                            }
+                        })
+                    })
+                    //  ============上一题==============
+                    $("#commit").on("click", ".button_last", function () {
+                        topicBottom_text = "";
+                        questions_commit = "";
+                        submitIdsArr = []
+                        questions_text = "";
+                        analysis_text = "";
+                        $('#analysis').html("");
+                        $('#flag').html("")
+                        // let showFirst = JSON.parse(localStorage.userinfo);
+                        $.ajax({
+                            type: 'get',
+                            url: "http://114.115.216.211/qlib/showLast",
+                            data: {
+                                id: detailId,
+                                caseId: id
+                            },
+                            success: function (data) {
+                                detailChoice = data.rows.choice;
+                                detailId = data.rows.id
+                                var option = JSON.parse(data.rows.option)
+                                if (data.rows.choice === "多选题") {
+                                    topicBottom_text = "";
+                                    questions_commit = "";
+                                    questions_text += '<h2  class="purple">' + "多选题" +
+                                        '</h2>' + '<h2>' + '<h2>' + data.rows.show +
+                                        '</h2>'
+                                    for (let i in option) {
+                                        topicBottom_text += '<li>' + '<span>' + i +
+                                            '&nbsp;' + '</span>' + option[i] + '</li>'
+                                    }
+                                    questions_commit +=
+                                        '<button type="button" class="button_last">' +
+                                        "上一题" +
+                                        '</button>' +
+                                        '<button type="button" class="button_tijiao">' +
+                                        "提交" + '</button>' +
+                                        '<button type="button" class="button_next">' +
+                                        "下一题" + '</button>'
+                                }
+                                $('#topicTitle').html(questions_text)
+                                $('#commit').html(questions_commit)
+                                $('#topicBottom').html(topicBottom_text)
+                                if (data.rows.choice === "单选题") {
+                                    topicBottom_text = "";
+                                    questions_commit = "";
+                                    questions_text = "";
+                                    questions_text += '<h2  class="purple">' + "单选题" +
+                                        '</h2>' + '<h2>' + data.rows.show + '</h2>'
+                                    // for (let i = 0; i < data.rows.option.length; i++) {
+                                    //     topicBottom_text += '<li class="">' + data.rows
+                                    //         .option[i].option + '</li>'
+                                    // }
+                                    for (let i in option) {
+                                        topicBottom_text += '<li>' + '<span>' + i +
+                                            '&nbsp;' + '</span>' + option[i] + '</li>'
+                                    }
+                                    questions_commit +=
+                                        '<button type="button" class="button_last">' +
+                                        "上一题" +
+                                        '</button>' +
+                                        '<button type="button" class="button_tijiao">' +
+                                        "提交" + '</button>' +
+                                        '<button type="button" class="button_next">' +
+                                        "下一题" + '</button>'
+                                }
+                                $('#topicTitle').html(questions_text)
+                                $('#commit').html(questions_commit)
+                                $('#topicBottom').html(topicBottom_text)
+                            }
+                        })
+                    })
+                }
+                $('#commit').html(questions_commit)
+                $('#topicBottom').html(topicBottom_text)
+                $('#commit').html(questions_commit)
+                $('#topicBottom').html(topicBottom_text)
+                $('#topicTitle').html(questions_text)
+            },
+            error: function (data) {}
+        })
+    </script>
+    <script>
+        if (JSON.parse(localStorage.getItem('userinfo'))) {
+            let userinfo = JSON.parse(localStorage.userinfo);
+            var userinfo = JSON.parse(localStorage.getItem('userinfo'));
+            let headimgurl = userinfo.headimgurl;
+            $("#headerImg").attr('src', headimgurl);
+            $('.href1').html('')
+            $('.href2').html('')
+        }
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $.ajax({
+                url: "http://114.115.216.211/qlib/showFirst",
+                type: "get",
+                dataType: "json",
+                success: function (data) {
+                    var caseInPointData = data.rows;
+                    var caseInPoint_text = "";
+                    for (i = 0; i < caseInPointData.length; i++) {
+                        caseInPoint_text += '<li>' +
+                            '<div class="caseInPoint-left">' +
+                            '<img src="' + caseInPointData[i].caseDetails.imageData + '" alt="">' +
+                            '</div>' +
+                            '<div class="caseInPoint-right">' + caseInPointData[i].caseDetails
+                            .name + '</div>' +
+                            '</li>'
+                    }
+                    $("#caseInPoint").html(caseInPoint_text)
+                    $("#caseInPoint li").click(function () {
+                        let index = $(this).index();
+                        window.location.href = "./educationDetail.html=" +
+                            caseInPointData[index].caseDetails.id
+                    })
+                },
+                error: function (jqXHHR) {
+                    //请求失败函数内容
+                }
+            })
+        })
+    </script>
+    <script type="text/javascript">
+        if (localStorage.userinfo === undefined) {
+            $(".err").click(function () {})
+            $(".popup").css('display', 'block')
+            $(".zheceng").css('display', 'block')
+            var local = window.location.href;
+            // getUrlCode().code
+            function getUrlCode() {
+                var url = location.search;
+                this.winUrl = url;
+                var theRequest = new Object();
+                if (url.indexOf("?") != -1) {
+                    var str = url.substr(1);
+                    var strs = str.split("&");
+                    for (var i = 0; i < strs.length; i++) {
+                        theRequest[strs[i].split("=")[0]] = strs[i].split("=")[1];
+                    }
+                }
+                return theRequest;
+            }
+            getUrlCode(local)
+            var code = getUrlCode(local).code;
+            var state = getUrlCode(local).state;
+            $.ajax({
+                type: 'get',
+                url: 'http://114.115.216.211/scan/scanBack',
+                data: {
+                    code: code,
+                    state: state
+                },
+                success: function (data) {
+                    if (data.rows.headimgurl != null) {
+                        localStorage.userinfo = JSON.stringify(data.rows);
+                        var headimgurl = data.rows.headimgurl;
+                        var username = data.rows.username;
+                        $("#headerImg").attr('src', headimgurl);
+                        $(".right-text .username ul li").html(username)
+                        $('.dengluImg').css('display', 'block')
+                        window.location.href = window.location.href;
+                        $(".popup").css('display', 'none')
+                        $(".zheceng").css('display', 'none')
+                        $('.quitCode').click(function () {
+                            window.localStorage.removeItem('userinfo')
+                        })
+                    }
+                    $('.right-text').mouseenter(function () {
+                        $('.personage').css('display', 'block')
+                    })
+                    $('.right-text').mouseleave(function () {
+                        $('.personage').css('display', 'none')
+                    })
+
+                }
+            })
+        } else {
+            let userinfo = JSON.parse(localStorage.userinfo);
+            let headimgurl = userinfo.headimgurl;
+            let username = userinfo.username
+            $("#headerImg").attr('src', headimgurl);
+            $(".right-text .username ul li").html(username)
+            $('.dengluImg').css('display', 'block')
+
+            // $('.personage').css('display', 'block')
+            $('.right-text').mouseenter(function () {
+                $('.personage').css('display', 'block')
+            })
+            $('.right-text').mouseleave(function () {
+                $('.personage').css('display', 'none')
+            })
+            $(".popup").css('display', 'none')
+            $(".zheceng").css('display', 'none')
+        }
+    </script>
+    <script type="text/javascript">
+        //扫码登录代码
+        $(document).ready(function () {
+            var obj = new WxLogin({
+                id: "login_container", //div的id
+                appid: "wxab72ceaf1de3a381",
+                scope: "snsapi_login", //写死
+                redirect_uri: "http%3A%2F%2Fwww.crahim.cn%3A8080%2F",
+                state: "",
+                style: "black", //二维码黑白风格        
+                href: "data:text/css;base64,LmltcG93ZXJCb3ggLnFyY29kZSB7CiAgICB3aWR0aDogMjgwcHg7CiAgICBtYXJnaW4tdG9wOiAxNXB4OwogICAgYm9yZGVyOiAxcHggc29saWQgI0UyRTJFMjsKfQoKLmltcG93ZXJCb3ggLnRpdGxlIHsKICAgIHRleHQtYWxpZ246IGNlbnRlcjsKICAgIGZvbnQtc2l6ZTogMjBweDsKICAgIGNvbG9yOiAjZmZmOwp9CgouaW1wb3dlckJveCAuaW5mbyB7CiAgICB3aWR0aDogMjE5cHg7Cn0KCi5zdGF0dXNfaWNvbiB7CiAgICBkaXNwbGF5OiBub25lCn0KCi5pbXBvd2VyQm94IC5zdGF0dXMgewogICAgdGV4dC1hbGlnbjogY2VudGVyOwogICAgbWFyZ2luLXRvcDogMTFweDsKICAgIGJhY2tncm91bmQtY29sb3I6ICMyMzIzMjM7CiAgICBib3JkZXItcmFkaXVzOiAxMDBweDsKICAgIC1tb3otYm9yZGVyLXJhZGl1czogMTAwcHg7CiAgICAtd2Via2l0LWJvcmRlci1yYWRpdXM6IDEwMHB4OwogICAgYm94LXNoYWRvdzogaW5zZXQgMCA1cHggMTBweCAtNXB4ICMxOTE5MTksIDAgMXB4IDAgMCAjNDQ0OwogICAgLW1vei1ib3gtc2hhZG93OiBpbnNldCAwIDVweCAxMHB4IC01cHggIzE5MTkxOSwgMCAxcHggMCAwICM0NDQ7CiAgICAtd2Via2l0LWJveC1zaGFkb3c6IGluc2V0IDAgNXB4IDEwcHggLTVweCAjMTkxOTE5LCAwIDFweCAwIDAgIzQ0NDsKICAgIHdpZHRoOiAxOTZweDsKICAgIGhlaWdodDogMzZweDsKICAgIGNvbG9yOiAjZmZmOwp9Cgpib2R5IHsKICAgIC8qIGJhY2tncm91bmQtY29sb3I6IHJnYig1MSwgNTEsIDUxKTsKICAgIHBhZGRpbmc6IDUwcHg7CiAgICBmb250LWZhbWlseTogIk1pY3Jvc29mdCBZYWhlaSI7CiAgICBjb2xvcjogI2ZmZjsgKi8KfQoKLm9sZC10ZW1wbGF0ZSB7CiAgICBjb2xvcjogI2ZmZiAhaW1wb3J0YW50Owp9"
+            });
+        });
+    </script>
+</body>
+
+</html>

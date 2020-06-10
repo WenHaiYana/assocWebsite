@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/web/css/news/news_1.css">
+    <link rel="stylesheet" href="/web/common/header/header.css">
+    <link rel="stylesheet" href="/web/css/reset.css">
+    <link rel="stylesheet" href="/web/css/common.css">
+    <script src="/web/js/jquery-1.11.3.js"></script>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+
+<body>
+      <div class="center-erweima" id="box1" style="bottom:50%;right:10px;">
+        <div class="p">
+            <img src="/web/images/qrcode_for_gh_df993352a9a3_344.jpg" alt="">
+        <p>关注此公众号</p>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="zheceng" id="zheceng">
+    </div>
+    <div class="popup">
+        <div class="err">
+            <img src="/web/images/error.png" alt="">
+        </div>
+        <div class="popup-top">
+            <ul>
+                <li>登录</li>
+                <!-- <li>注册</li> -->
+            </ul>
+        </div>
+        <div class="popup-bottom">
+            <div class="tab-item">
+                <p>
+                    <span>*</span><label for="ipone"></label>
+                    <input type="text" id="ipone" placeholder="请输入手机号"></p>
+                <p><span>*</span><label for="passwodes"></label>
+                    <input type="text" id="passwodes" placeholder="请输入密码"></p>
+                <div class="agree"><input type="checkbox" checked>我已经阅读并同意<span>用户协议</span><span class="wangji">忘记密码
+                    </span></div>
+                <button type="button" id="btn">登录</button>
+            </div>
+            <!-- <div class="tab-item">注册</div> -->
+        </div>
+        <div class="popup-footer">
+            <p>使用第三方账号登录</p>
+            <p>
+                <a href="./wexin.html">
+                    <img src="/web/images/wx.png" alt="">
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-left">
+                    <marquee scrollAmount=3 height=25 direction="up" onmouseover=stop() onmouseout=start()>
+                        <div class="img"></div>
+                        <div class="text">
+                            <span>欢迎访问 --中国医师协会放射医师分会</span>
+                        </div>
+                    </marquee>
+                </div>
+                <div class="header-right">
+                    <div class="right-img">
+                        <img id="headerImg" src="/web/images/icon/my.png" alt="">
+                    </div>
+                    <div class="right-text">
+                        <div class="username">
+                            <ul>
+                                <li><a href="#">登录&nbsp;&nbsp;/注册</a></li>
+                            </ul>
+                            <img class="dengluImg" src="/web/images/icon/triangle.png" alt="">
+                        </div>
+                        <div class="personage">
+                            <div class="personage-top">
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                            </div>
+                            <div class="quit">
+                                <p class="quitCode"><a href="">退出登录</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="logo">
+        <div class="container">
+            <a href="/index.html">
+                <img src="/web/images/logo.jpg" alt="">
+            </a>
+        </div>
+
+    </div>
+    <div class="nav-li">
+        <div class="container">
+            <div class="lis">
+                <ul>
+                    <li>
+                        <h3><a href="/index.html">首页</a></h3>
+                    </li>
+                    <li class="hover-organization">
+                        <h3><a href="/web/components/organization/organization.html" target="_parent">组织架构</a></h3>
+                        <ul class="sub">
+                            <li><a href="/web/components/organization/organization.html">全国委员会</a></li>
+                            <li><a href="/web/components/organization/organization.html">专业委员会</a></li>
+                            <li><a href="/web/components/organization/organization.html">青年委员会</a></li>
+                            <li><a href="/web/components/organization/organization.html">历届委员会</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/newsTrends/newsTrends.html" target="_parent">新闻动态</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/notification/notification.html" target="_parent">通知公告</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/education/education.html">继续教育</a></h3>
+                        <ul class="sub-1">
+                            <li><a href="/web/components/education/education.html">case in point</a></li>
+                            <li><a href="/web/components/Video/video.html">视频培训</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/cooperation/cooperation.html" target="_parent">战略合作</a></h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="show">
+            <div class="show-lf">
+                <div class="text-lf">
+                    <span style="color:#333">新闻动态</span>&nbsp;>> &nbsp;正文
+                </div>
+                <h1 class="title">积水潭骨关节核磁高级研修班在银川顺利举行</h1>
+                <div class="info">
+                    发布日期：2020-04-22&nbsp;&nbsp;
+                    <!-- 浏览次数：<span id="hits">2087</span> -->
+                </div>
+                <div class="introduce">
+                    核心提示：积水潭医院的骨关节核磁研究和临床水平居国内领先水平，为扩大积水潭医院放射科的学术影响，帮助宁夏地区提高骨关节核磁诊断水平，由积水潭医院联合宁夏医科大学附属医院联合举办的骨关节MR高级研修班暨宁夏放射学分会第九次年会于2014年10月25日在银川顺利举行。本次会议由放射科主任程晓光教授带队，讲师包括白荣杰教授、张晶副主任医师和程克斌医师。
+                </div>
+                <!-- <div class="conter" id="article"></div> -->
+                <div class="conter" id="article"><p><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span>&nbsp;</p>
+                    <p class="p0" style="margin-bottom: 0pt; margin-top: 0pt; line-height: 150%; text-indent: 24pt"><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">积水潭医院的骨关节核磁研究和临床水平居国内领先水平，为扩大积水潭医院放射科的学术影响，帮助宁夏地区提高骨关节核磁诊断水平，由积水潭医院联合宁夏医科大学附属医院联合举办的骨关节MR高级研修班暨宁夏放射学分会第九次年会于2014年10月25日在银川顺利举行。<br>
+                    <br>
+                    <img alt="会场" width="700" height="525" src="http://www.chinaradiologists.org/file/upload/201501/07/22-10-23-79-1.jpg"><br>
+                    <br>
+                    </span></p>
+                    <p class="p0" style="margin-bottom: 0pt; margin-top: 0pt; line-height: 150%; text-indent: 24pt"><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">本次会议由放射科主任程晓光教授带队，讲师包括白荣杰教授、张晶副主任医师和程克斌医师。四位讲师针对骨关节肿瘤、腕骨及腕关节损伤、膝关节软骨及韧带损伤、肩关节损伤的MR诊断和临床应用的进行精彩讲座，受到与会代表的一致好评。<br>
+                    <br>
+                    <img alt="程晓光 教授讲课" width="700" height="525" src="http://www.chinaradiologists.org/file/upload/201501/07/22-10-42-74-1.jpg"><br>
+                    <br>
+                    <img alt="白荣杰教授讲课" width="700" height="525" src="http://www.chinaradiologists.org/file/upload/201501/07/22-12-03-75-1.jpg"><br>
+                    <br>
+                    <img alt="张晶讲课" width="700" height="525" src="http://www.chinaradiologists.org/file/upload/201501/07/22-12-20-88-1.jpg"><br>
+                    <br>
+                    </span></p>
+                    <p class="p0" style="margin-bottom: 0pt; margin-top: 0pt; line-height: 150%; text-indent: 24pt"><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">参加本次会议的代表除宁夏自治区全区从事放射专业的医师外，还邀请了包括宁夏骨科、风湿科的临床医师共320余人，是宁夏放射年会参会人员最多的一次，宁夏医学会放射分会主任委员郭玉林教授高度评价这个以专科特色的核磁高级研修班，希望以后能更多开展这种形式的学术交流。<br>
+                    <br>
+                    <img alt="会场座无虚席" width="700" height="525" src="http://www.chinaradiologists.org/file/upload/201501/07/22-12-44-89-1.jpg"><br>
+                    <br>
+                    </span></p>
+                    <p class="p0" style="margin-bottom: 0pt; text-align: right; margin-top: 0pt; line-height: 150%; text-indent: 24pt"><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'"><br>
+                    </span></p>
+                    <p class="p0" style="margin-bottom: 0pt; text-align: right; margin-top: 0pt; line-height: 150%; text-indent: 24pt"><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+                    <br>
+                    <div class="np">
+                        <ul>
+                            <li><strong>下一篇：</strong><a href="/web/components/newsTrends/news/news_38.html"
+                                    title="“磁共振兼容心脏植入器械应用培训项目”第一站在北京国宾酒店圆满召开">“磁共振兼容心脏植入器械应用培训项目”第一站在北京国宾酒店圆满召开</a>
+                            </li>
+                            <li><strong>上一篇：</strong><a href="/web/components/newsTrends/news/news_36.html"
+                                    title="“基层关爱”磁共振专题培训项目启动会圆满举行">“基层关爱”磁共振专题培训项目启动会圆满举行</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 20px;float: left;">&nbsp</div>
+            <div class="show-rg">
+                <div class="show-text">
+                    <div><strong>推荐图文</strong></div>
+                </div>
+                <div class="box_body">
+                    <table width="100%">
+                        <tbody>
+                            <tr align="center">
+                                <td width="50%" valign="top"><a
+                                        href="http://www.chinaradiologists.org/news/show.php?itemid=87">
+                                        <img src="http://www.chinaradiologists.org/file/upload/201706/14/11-12-11-96-1.jpg"
+                                            width="120" height="90" alt="中华国际医学交流基金会中国医师协会放射医师分会中青年影像医生“攀登计划”"></a>
+                                    <ul>
+                                        <li><a href="http://www.chinaradiologists.org/news/show.php?itemid=87"
+                                                title="中华国际医学交流基金会中国医师协会放射医师分会中青年影像医生“攀登计划”">中华国际医学交流基金</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box_head">
+                    <div><strong>推荐资讯</strong></div>
+                </div>
+                <div class="box_body">
+                    <ul class="ul">
+                        <li>
+                            <a href="/web/components/newsTrends/news/news_1.html"
+                                title="第十二次放射医师年会论文汇编">第十二次放射医师年会论文汇编</a>
+                        </li>
+                        <li>
+                            <a href="/web/components/newsTrends/news/news_2.html"
+                                title="2019中青年影像医生“攀登计划”报名通知">2019中青年影像医生“攀登计划”报名通知</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <iframe src="/web/common/footer/footer.html" width="100%" ; height="127px" frameborder="0" scrolling="no"
+        name="footerFrame"></iframe>
+    <script src="/web/common/header/header.js"></script>
+</body>
+
+</html>

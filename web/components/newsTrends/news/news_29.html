@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/web/css/news/news_1.css">
+    <link rel="stylesheet" href="/web/common/header/header.css">
+    <link rel="stylesheet" href="/web/css/reset.css">
+    <link rel="stylesheet" href="/web/css/common.css">
+    <script src="/web/js/jquery-1.11.3.js"></script>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+
+<body>
+      <div class="center-erweima" id="box1" style="bottom:50%;right:10px;">
+        <div class="p">
+            <img src="/web/images/qrcode_for_gh_df993352a9a3_344.jpg" alt="">
+        <p>关注此公众号</p>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="zheceng" id="zheceng">
+    </div>
+    <div class="popup">
+        <div class="err">
+            <img src="/web/images/error.png" alt="">
+        </div>
+        <div class="popup-top">
+            <ul>
+                <li>登录</li>
+                <!-- <li>注册</li> -->
+            </ul>
+        </div>
+        <div class="popup-bottom">
+            <div class="tab-item">
+                <p>
+                    <span>*</span><label for="ipone"></label>
+                    <input type="text" id="ipone" placeholder="请输入手机号"></p>
+                <p><span>*</span><label for="passwodes"></label>
+                    <input type="text" id="passwodes" placeholder="请输入密码"></p>
+                <div class="agree"><input type="checkbox" checked>我已经阅读并同意<span>用户协议</span><span class="wangji">忘记密码
+                    </span></div>
+                <button type="button" id="btn">登录</button>
+            </div>
+            <!-- <div class="tab-item">注册</div> -->
+        </div>
+        <div class="popup-footer">
+            <p>使用第三方账号登录</p>
+            <p>
+                <a href="./wexin.html">
+                    <img src="/web/images/wx.png" alt="">
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-left">
+                    <marquee scrollAmount=3 height=25 direction="up" onmouseover=stop() onmouseout=start()>
+                        <div class="img"></div>
+                        <div class="text">
+                            <span>欢迎访问 --中国医师协会放射医师分会</span>
+                        </div>
+                    </marquee>
+                </div>
+                <div class="header-right">
+                    <div class="right-img">
+                        <img id="headerImg" src="/web/images/icon/my.png" alt="">
+                    </div>
+                    <div class="right-text">
+                        <div class="username">
+                            <ul>
+                                <li><a href="#">登录&nbsp;&nbsp;/注册</a></li>
+                            </ul>
+                            <img class="dengluImg" src="/web/images/icon/triangle.png" alt="">
+                        </div>
+                        <div class="personage">
+                            <div class="personage-top">
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                            </div>
+                            <div class="quit">
+                                <p class="quitCode"><a href="">退出登录</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="logo">
+        <div class="container">
+            <a href="/index.html">
+                <img src="/web/images/logo.jpg" alt="">
+            </a>
+        </div>
+
+    </div>
+    <div class="nav-li">
+        <div class="container">
+            <div class="lis">
+                <ul>
+                    <li>
+                        <h3><a href="/index.html">首页</a></h3>
+                    </li>
+                    <li class="hover-organization">
+                        <h3><a href="/web/components/organization/organization.html" target="_parent">组织架构</a></h3>
+                        <ul class="sub">
+                            <li><a href="/web/components/organization/organization.html">全国委员会</a></li>
+                            <li><a href="/web/components/organization/organization.html">专业委员会</a></li>
+                            <li><a href="/web/components/organization/organization.html">青年委员会</a></li>
+                            <li><a href="/web/components/organization/organization.html">历届委员会</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/newsTrends/newsTrends.html" target="_parent">新闻动态</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/notification/notification.html" target="_parent">通知公告</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/education/education.html">继续教育</a></h3>
+                        <ul class="sub-1">
+                            <li><a href="/web/components/education/education.html">case in point</a></li>
+                            <li><a href="/web/components/Video/video.html">视频培训</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/cooperation/cooperation.html" target="_parent">战略合作</a></h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="show">
+            <div class="show-lf">
+                <div class="text-lf">
+                    <span style="color:#333">新闻动态</span>&nbsp;>> &nbsp;正文
+                </div>
+                <h1 class="title">2015中国放射住院医师规范化培训七方峰会</h1>
+                <div class="info">
+                    发布日期：2020-04-22&nbsp;&nbsp;
+                    <!-- 浏览次数：<span id="hits">2087</span> -->
+                </div>
+                <div class="introduce">
+                    核心提示：2015年8月28日，住院医师规范化培训七方峰会在中国医师协会放射医师年会的前一天，于南京胜利召开。2015年，全国范围内全面启动了住院医师规范化培训工作，在国家政策的引导下，中国医师协会放射医师分会组织召开了本次七方峰会，会议由拜耳医药保健有限公司独家赞助。七方峰会的目的是了解和学习国外成熟的放射科住院医师规范化培训体系及相关经验，为建立有中国特色的住院医
+                </div>
+                <!-- <div class="conter" id="article"></div> -->
+                <div class="conter" id="article">&nbsp;<span lang="EN-US" style="text-indent: 2em;">2015</span><span style="text-indent: 2em; font-family: 宋体;">年</span><span lang="EN-US" style="text-indent: 2em;">8</span><span style="text-indent: 2em; font-family: 宋体;">月</span><span lang="EN-US" style="text-indent: 2em;">28</span><span style="text-indent: 2em; font-family: 宋体;">日，<b>住院医师规范化培训七方峰会</b>在<b><i>中国医师协会放射医师年会</i></b>的前一天，于南京胜利召开。</span>
+                    <p class="MsoNormal" style="text-indent:22.0pt;mso-char-indent-count:2.0"><span lang="EN-US">2015</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+                    mso-hansi-font-family:Calibri">年，全国范围内全面启动了住院医师规范化培训工作，在国家政策的引导下，中国医师协会放射医师分会组织召开了本次七方峰会，会议由拜耳医药保健有限公司独家赞助。</span></p>
+                    <p class="MsoNormal" style="text-indent:22.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">七方峰会的目的是了解和学习国外成熟的放射科住院医师规范化培训体系及相关经验，为建立有中国特色的住院医师规范化培训体系积累知识并听取国外专家意见。会议的成功举办标志着中国放射住院医师规范化培训项目的正式启动，对我国放射科医学人才的培养有划时代的重要意义。</span></p>
+                    <p class="MsoNormal" style="text-indent:22.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">中国放射医师协会与拜耳医药保健有限公司通力合作，邀请了来自美国、德国、日本、韩国、香港和台湾的</span><span lang="EN-US">6</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+                    mso-hansi-font-family:Calibri">位重量级嘉宾讲者：</span></p>
+                    <p class="MsoNormal" style="margin-left:36.0pt"><span style="font-family:宋体;
+                    mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">美国放射学会（</span><span lang="EN-US">ACR</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+                    mso-hansi-font-family:Calibri">）现任总裁</span><span lang="EN-US">David Kushner</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">教授</span></p>
+                    <p class="MsoNormal" style="margin-left:36.0pt"><span style="font-family:宋体;
+                    mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">德国放射学会副主席</span><span lang="EN-US">Michael Forsting</span><span style="font-family:宋体;mso-ascii-font-family:
+                    Calibri;mso-hansi-font-family:Calibri">教授</span></p>
+                    <p class="MsoNormal" style="margin-left:36.0pt"><span style="font-family:宋体;
+                    mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">日本放射学会总事务主席</span><span lang="EN-US">Kuni Ohtomo</span><span style="font-family:宋体;mso-ascii-font-family:
+                    Calibri;mso-hansi-font-family:Calibri">教授</span></p>
+                    <p class="MsoNormal" style="margin-left:36.0pt"><span style="font-family:宋体;
+                    mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">香港放射医师学院荣誉院士</span> <span style="font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:
+                    Calibri">梁冯令仪</span> <span style="font-family:宋体;mso-ascii-font-family:Calibri;
+                    mso-hansi-font-family:Calibri">教授</span></p>
+                    <p class="MsoNormal" style="margin-left:36.0pt"><span style="font-family:宋体;
+                    mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">中华台北放射学会主席</span> <span style="font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">郭万佑</span> <span style="font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:
+                    Calibri">教授</span></p>
+                    <p class="MsoNormal" style="margin-left:36.0pt"><span style="font-family:宋体;
+                    mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">韩国放射学会培训委员会主委</span><span lang="EN-US">Seung-Koo Lee</span><span style="font-family:宋体;mso-ascii-font-family:
+                    Calibri;mso-hansi-font-family:Calibri">教授</span></p>
+                    <p class="MsoNormal" style="text-indent:22.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">中国医师协会前任副会长蔡忠军及主任刑立颖代表医师协会参与了此次峰会。</span></p>
+                    <p class="MsoNormal" style="text-indent:22.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">中国放射医师协会郭启勇会长致峰会开幕辞，表达了对外国专家的欢迎与感谢，并叮嘱与会专家教授认真听取国外成熟经验，为今后的工作做充足的准备。宋彬教授、卢再鸣教授、滕皋军教授和程晓光教授代表中国放射医师协会分别主持了上下半场的专家讲座。</span><span lang="EN-US">6</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+                    mso-hansi-font-family:Calibri">位嘉宾讲者分别介绍了各自国家和地区的放射科住院医师培训体系以及放射科人才培养的发展历程，在很短的时间内向大家展示了美国、德国、英国及日韩的住院医培训体系构架和区别。</span></p>
+                    <p class="MsoNormal" style="text-indent:22.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">滕皋军和宋彬教授还主持了长达一个小时的专家讨论环节。</span><span lang="EN-US">6</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+                    mso-hansi-font-family:Calibri">位嘉宾共同上台，解答了来自听众和主持人关于住院医培训的最佳时间、住院医培训与学位授予的关系、培训机构评估系统、住院医师培训经费与待遇、如何保证不同地区的培训一致性以及对未来放射住院医培训的看法等诸多与规范化培训改革切实相关的问题。</span></p>
+                    <p class="MsoNormal" style="text-indent:22.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">郭启勇会长对峰会作最后总结，他提到各个国家和地区培训体系的相似于差异，提出了在中国建立规范化培训体系的政策、地域和生源等巨大挑战，希望在座的中国专家共同思考，携手努力创造并建立起适合中国实际情况的放射科住院医师规范化培训体系。最后，郭院长代表协会和个人感谢了所有嘉宾讲者的到来，也感谢了拜耳医药保健有限公司全程的支持，更加感谢了所有在座专家教授的全情参与！</span></p>
+                    <p class="MsoNormal" style="text-indent:22.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">未来放射科住院医师培训规范化的建立需要政府、协会与医生的协同合作。这次峰会为协会和放射科医师教授指明了方向，中国放射医师协会成立了放射住院医师规培委员会，委员会将会制定系统化的培训内容与准入标准，响应国家政策要求，力争在</span><span lang="EN-US">2020</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+                    mso-hansi-font-family:Calibri">年基本建立起完善的放射住院医师与专科医师规范化培训体系。请广大的放射科专家学者共同加入我们，携手共进，为建设中国放射住院医师规范化培训体系而努力！</span></p>
+                    <p class="MsoNormal" style="text-indent:22.0pt;mso-char-indent-count:2.0"><img src="http://www.chinaradiologists.org/file/upload/201508/31/15-03-38-11-1.jpg" width="576" height="384" alt=""><br>
+                    &nbsp;</p>
+                    <p class="MsoNormal" style="text-indent:22.0pt;mso-char-indent-count:2.0"><img src="http://www.chinaradiologists.org/file/upload/201508/31/15-04-10-72-1.jpg" width="600" height="400" alt=""></p>
+                    <br>
+                    <p class="MsoNormal" style="text-indent:22.0pt;mso-char-indent-count:2.0"><span lang="EN-US">&nbsp;<img src="http://www.chinaradiologists.org/file/upload/201508/31/15-04-23-96-1.jpg" width="600" height="400" alt=""></span></p>
+                    <div class="np">
+                        <ul>
+                            <li><strong>下一篇：</strong><a href="/web/components/newsTrends/news/news_30.html"
+                                    title="中国医师协会放射医师分会2015年年会暨第九届全国放射医师论坛—大会总结">中国医师协会放射医师分会2015年年会暨第九届全国放射医师论坛—大会总结</a>
+                            </li>
+                            <li><strong>上一篇：</strong><a href="/web/components/newsTrends/news/news_28.html"
+                                    title="“中青年影像医生攀登计划”第二轮遴选面试结果">“中青年影像医生攀登计划”第二轮遴选面试结果</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 20px;float: left;">&nbsp</div>
+            <div class="show-rg">
+                <div class="show-text">
+                    <div><strong>推荐图文</strong></div>
+                </div>
+                <div class="box_body">
+                    <table width="100%">
+                        <tbody>
+                            <tr align="center">
+                                <td width="50%" valign="top"><a
+                                        href="http://www.chinaradiologists.org/news/show.php?itemid=87">
+                                        <img src="http://www.chinaradiologists.org/file/upload/201706/14/11-12-11-96-1.jpg"
+                                            width="120" height="90" alt="中华国际医学交流基金会中国医师协会放射医师分会中青年影像医生“攀登计划”"></a>
+                                    <ul>
+                                        <li><a href="http://www.chinaradiologists.org/news/show.php?itemid=87"
+                                                title="中华国际医学交流基金会中国医师协会放射医师分会中青年影像医生“攀登计划”">中华国际医学交流基金</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box_head">
+                    <div><strong>推荐资讯</strong></div>
+                </div>
+                <div class="box_body">
+                    <ul class="ul">
+                        <li>
+                            <a href="/web/components/newsTrends/news/news_1.html"
+                                title="第十二次放射医师年会论文汇编">第十二次放射医师年会论文汇编</a>
+                        </li>
+                        <li>
+                            <a href="/web/components/newsTrends/news/news_2.html"
+                                title="2019中青年影像医生“攀登计划”报名通知">2019中青年影像医生“攀登计划”报名通知</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <iframe src="/web/common/footer/footer.html" width="100%" ; height="127px" frameborder="0" scrolling="no"
+        name="footerFrame"></iframe>
+    <script src="/web/common/header/header.js"></script>
+</body>
+
+</html>

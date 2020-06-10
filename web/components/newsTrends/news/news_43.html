@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/web/css/news/news_1.css">
+    <link rel="stylesheet" href="/web/common/header/header.css">
+    <link rel="stylesheet" href="/web/css/reset.css">
+    <link rel="stylesheet" href="/web/css/common.css">
+    <script src="/web/js/jquery-1.11.3.js"></script>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+
+<body>
+      <div class="center-erweima" id="box1" style="bottom:50%;right:10px;">
+        <div class="p">
+            <img src="/web/images/qrcode_for_gh_df993352a9a3_344.jpg" alt="">
+        <p>关注此公众号</p>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="zheceng" id="zheceng">
+    </div>
+    <div class="popup">
+        <div class="err">
+            <img src="/web/images/error.png" alt="">
+        </div>
+        <div class="popup-top">
+            <ul>
+                <li>登录</li>
+                <!-- <li>注册</li> -->
+            </ul>
+        </div>
+        <div class="popup-bottom">
+            <div class="tab-item">
+                <p>
+                    <span>*</span><label for="ipone"></label>
+                    <input type="text" id="ipone" placeholder="请输入手机号"></p>
+                <p><span>*</span><label for="passwodes"></label>
+                    <input type="text" id="passwodes" placeholder="请输入密码"></p>
+                <div class="agree"><input type="checkbox" checked>我已经阅读并同意<span>用户协议</span><span class="wangji">忘记密码
+                    </span></div>
+                <button type="button" id="btn">登录</button>
+            </div>
+            <!-- <div class="tab-item">注册</div> -->
+        </div>
+        <div class="popup-footer">
+            <p>使用第三方账号登录</p>
+            <p>
+                <a href="./wexin.html">
+                    <img src="/web/images/wx.png" alt="">
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-left">
+                    <marquee scrollAmount=3 height=25 direction="up" onmouseover=stop() onmouseout=start()>
+                        <div class="img"></div>
+                        <div class="text">
+                            <span>欢迎访问 --中国医师协会放射医师分会</span>
+                        </div>
+                    </marquee>
+                </div>
+                <div class="header-right">
+                    <div class="right-img">
+                        <img id="headerImg" src="/web/images/icon/my.png" alt="">
+                    </div>
+                    <div class="right-text">
+                        <div class="username">
+                            <ul>
+                                <li><a href="#">登录&nbsp;&nbsp;/注册</a></li>
+                            </ul>
+                            <img class="dengluImg" src="/web/images/icon/triangle.png" alt="">
+                        </div>
+                        <div class="personage">
+                            <div class="personage-top">
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                            </div>
+                            <div class="quit">
+                                <p class="quitCode"><a href="">退出登录</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="logo">
+        <div class="container">
+            <a href="/index.html">
+                <img src="/web/images/logo.jpg" alt="">
+            </a>
+        </div>
+
+    </div>
+    <div class="nav-li">
+        <div class="container">
+            <div class="lis">
+                <ul>
+                    <li>
+                        <h3><a href="/index.html">首页</a></h3>
+                    </li>
+                    <li class="hover-organization">
+                        <h3><a href="/web/components/organization/organization.html" target="_parent">组织架构</a></h3>
+                        <ul class="sub">
+                            <li><a href="/web/components/organization/organization.html">全国委员会</a></li>
+                            <li><a href="/web/components/organization/organization.html">专业委员会</a></li>
+                            <li><a href="/web/components/organization/organization.html">青年委员会</a></li>
+                            <li><a href="/web/components/organization/organization.html">历届委员会</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/newsTrends/newsTrends.html" target="_parent">新闻动态</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/notification/notification.html" target="_parent">通知公告</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/education/education.html">继续教育</a></h3>
+                        <ul class="sub-1">
+                            <li><a href="/web/components/education/education.html">case in point</a></li>
+                            <li><a href="/web/components/Video/video.html">视频培训</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/cooperation/cooperation.html" target="_parent">战略合作</a></h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="show">
+            <div class="show-lf">
+                <div class="text-lf">
+                    <span style="color:#333">新闻动态</span>&nbsp;>> &nbsp;正文
+                </div>
+                <h1 class="title">湖南省医学会影像技术专业委员会成立</h1>
+                <div class="info">
+                    发布日期：2020-04-22&nbsp;&nbsp;
+                    <!-- 浏览次数：<span id="hits">2087</span> -->
+                </div>
+                <div class="introduce">
+                    核心提示：2月28日-3月1日，湖南省医学会影像技术专业委员会成立大会在长沙召开，我院放射科胡鹏志副主任技师当选为该专业委员会首届主任委员。继成为湖南省医学会放射学专业委员会主任单位后，我院放射科又成为湖南省医学会影像技术专业委员会主任单位，这是王维主任担任湖南省医学会放射学专业委员会主任委员、影像医学成功申报国家临床重点专科后，湘雅三医院医学影像专业的又一殊荣
+                </div>
+                <!-- <div class="conter" id="article"></div> -->
+                <div class="conter" id="article"><div align="left">&nbsp; 2月<span>28日-3月1日，湖南省医学会影像技术专业委员会成立大会在长沙召开，我院放射科胡鹏志副主任技师当选为该专业委员会首届主任委员。继成为湖南省医学会放射学专业委员会主任单位后，我院放射科又成为湖南省医学会影像技术专业委员会主任单位，这是王维主任担任湖南省医学会放射学专业委员会主任委员、影像医学成功申报国家临床重点专科后，湘雅三医院医学影像专业的又一殊荣，形成了全国影像界为数不多的“一重点学科两主委”的格局，充分展示了我院影像医学科的雄厚实力。<br>
+                    <br>
+                    </span></div>
+                    <div style="text-align: center"><span><img alt="clip_image002" width="500" height="375" src="http://www.chinaradiologists.org/file/upload/201411/27/15-36-45-76-1.jpg"><br>
+                    <br>
+                    </span></div>
+                    &nbsp; 湖南省医学会影像技术专业委员会的成立是我省影像技术界的里程碑事件，标志着我省医学影像技术学术组织工作迈上了新的台阶。来自全省各地市州影像技术界及部分外省同道约<span>300余名代表参加了此次成立大会，湖南省医学会放射学分会主任委员王维教授、卫生部北京医院杨正汉教授等多名影像专家进行了多场精彩纷呈的学术讲座。<br>
+                    <br>
+                    </span><img alt="" width="716" align="middle" height="476" src="http://www.chinaradiologists.org/file/upload/201411/27/16-20-23-30-1.jpg" title="点击打开原图"><br>
+                    <div align="left">&nbsp; <br>
+                    &nbsp; 中华医学会影像技术分会现任主任委员石明国教授，前任主任委员王鸣鹏教授，候任主任委员余建明教授，中华医学会放射学分会副主任委员梁长虹教授，湖南省医学会刘家望会长、朱建华秘书长，民政厅、湖南省科学技术协会相关领导，中南大学湘雅三医院罗爱静书记到会祝贺。<br>
+                    <br>
+                    &nbsp; 中华医学会影像技术分会三位主任委员先后在大会上致辞，对我省影像技术专业委员会的成立表示衷心祝贺，并一致认为我省影像技术人才有<span>“学历高、氛围好、技术硬”的特点，相信在胡鹏志主委的带领下，我省影像技术水平一定会稳步发展、不断创新。省医学会、省民政厅以及湘雅三医院等领导表达祝贺的同时也对湖南省医学会影像技术专业委员会提出了殷切的期望，希望该专业委员会能坚持致力于提高基层医院的影像技术水平、推动我省影像技术整体学术水平，确保更好的服务于人民群众。</span></div>
+                    <div class="np">
+                        <ul>
+                            <li><strong>下一篇：</strong><a href="/web/components/newsTrends/news/news_44.html"
+                                    title="“肌骨影像进展学习班暨大连医学会放射分会2014年会”顺利召开">“肌骨影像进展学习班暨大连医学会放射分会2014年会”顺利召开</a>
+                            </li>
+                            <li><strong>上一篇：</strong><a href="/web/components/newsTrends/news/news_42.html"
+                                    title="第十四届全国磁共振学术年会暨湖南省第十六次放射学术年会胜利闭幕">第十四届全国磁共振学术年会暨湖南省第十六次放射学术年会胜利闭幕</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 20px;float: left;">&nbsp</div>
+            <div class="show-rg">
+                <div class="show-text">
+                    <div><strong>推荐图文</strong></div>
+                </div>
+                <div class="box_body">
+                    <table width="100%">
+                        <tbody>
+                            <tr align="center">
+                                <td width="50%" valign="top"><a
+                                        href="http://www.chinaradiologists.org/news/show.php?itemid=87">
+                                        <img src="http://www.chinaradiologists.org/file/upload/201706/14/11-12-11-96-1.jpg"
+                                            width="120" height="90" alt="中华国际医学交流基金会中国医师协会放射医师分会中青年影像医生“攀登计划”"></a>
+                                    <ul>
+                                        <li><a href="http://www.chinaradiologists.org/news/show.php?itemid=87"
+                                                title="中华国际医学交流基金会中国医师协会放射医师分会中青年影像医生“攀登计划”">中华国际医学交流基金</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box_head">
+                    <div><strong>推荐资讯</strong></div>
+                </div>
+                <div class="box_body">
+                    <ul class="ul">
+                        <li>
+                            <a href="/web/components/newsTrends/news/news_1.html"
+                                title="第十二次放射医师年会论文汇编">第十二次放射医师年会论文汇编</a>
+                        </li>
+                        <li>
+                            <a href="/web/components/newsTrends/news/news_2.html"
+                                title="2019中青年影像医生“攀登计划”报名通知">2019中青年影像医生“攀登计划”报名通知</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <iframe src="/web/common/footer/footer.html" width="100%" ; height="127px" frameborder="0" scrolling="no"
+        name="footerFrame"></iframe>
+    <script src="/web/common/header/header.js"></script>
+</body>
+
+</html>

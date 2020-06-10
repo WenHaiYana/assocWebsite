@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国医师协会放射医师分会</title>
+    <link rel="stylesheet" href="/web/common/header/header.css">
+    <link rel="stylesheet" href="./web/css/index.css">
+    <link rel="stylesheet" href="./web/css/reset.css">
+    <link rel="stylesheet" href="./web/css/common.css">
+    <link rel="stylesheet" href="/web/css/popup.css">
+    <script src="/web/js/jquery-1.11.3.js"></script>
+    <script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+    <script src="/web/common/header/header.js"></script>
+    
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+
+<body>
+    <div class="center-erweima" id="box1" style="bottom:50%;right:10px;">
+        <div class="p">
+            <img src="/web/images/qrcode_for_gh_df993352a9a3_344.jpg" alt="">
+            <p>关注此公众号</p>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="zheceng" id="zheceng">
+    </div>
+    <div class="popup">
+        <div class="err">
+            <img src="/web/images/error.png" alt="">
+        </div>
+        
+        <div class="popup-bottom">
+            <div class="popup-footer">
+                <p> 
+                    <img src="/web/images/wx.png" alt="">
+                微信安全登录</p>
+            </div>
+            <div class="tab-item">
+                <div id="login_container">啊啊啊</div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-left">
+                    <marquee scrollAmount=3 height=25 direction="up" onmouseover=stop() onmouseout=start()>
+                        <div class="img"></div>
+                        <div class="text">
+                            <span>欢迎访问 --中国医师协会放射医师分会</span>
+                        </div>
+                    </marquee>
+                </div>
+                <div class="header-right">
+                    <div class="right-img">
+                        <img id="headerImg" src="/web/images/icon/my.png" alt="">
+                    </div>
+                    <div class="right-text">
+                        <div class="username">
+                            <ul>
+                                <li><a href="#">登录&nbsp;&nbsp;/注册</a></li>
+                            </ul>
+                            <img class="dengluImg" src="/web/images/icon/triangle.png" alt="">
+                        </div>
+                        <div class="personage">
+                            <div class="personage-top">
+                                <!-- <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p> -->
+                            </div>
+                            <div class="quit">
+                                <p class="quitCode"><a href="">退出登录</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="logo">
+        <div class="container">
+            <a href="/index.html">
+                <img src="/web/images/logo.jpg" alt="">
+            </a>
+        </div>
+
+    </div>
+    <div class="nav-li">
+        <div class="container">
+            <div class="lis">
+                <ul>
+                    <li>
+                        <h3><a class="click-color" href="/index.html">首页</a></h3>
+                    </li>
+                    <li class="hover-organization">
+                        <h3><a href="/web/components/organization/organization.html" target="_parent">组织架构</a></h3>
+                        <!--    -->
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/newsTrends/newsTrends.html" target="_parent">新闻动态</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/notification/notification.html" target="_parent">通知公告</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/education/education.html">继续教育</a></h3>
+                        <ul class="sub-1">
+                            <li><a href="/web/components/education/education.html">典型案例</a></li>
+                            <li><a href="/web/components/Video/video.html">视频培训</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/cooperation/cooperation.html" target="_parent">战略合作</a></h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="swiper">
+        <img src="/web/images/index/swiper.png" alt="">
+    </div>
+    <div class="banner">
+        <div class="container">
+            <div class="banner-top">
+                <div class="top-left">
+                    <div class="title">
+                        <img src="/web/images/f1-pic3.jpg" alt="">
+                        <div class="more"><a href="/web/components/notification/notification.html">更多</a></div>
+                    </div>
+                    <div class="newest">
+                        <div class="newest-1">
+                            <div class="newest-left-1">
+                                <img src="/web/images/e6635d47d86b9109168811e66a3d11c2.png" alt="">
+                            </div>
+                            <div class="newest-left-2">
+                                <div class="new-inform">最新通知公告</div>
+                                <div class="text"></div>
+                            </div>
+                        </div>
+                        <div class="newest-2">
+                            <ul>
+                                <li><a
+                                        href="/web/components/notification/notifica/notifica_1.html">第十三次放射医师年会【参会攻略】</a><span>2019-05-30
+                                        17:05</span></li>
+                                <li><a
+                                        href="/web/components/notification/notifica/notifica_2.html">第十二次放射医师年会论文汇编</a><span>2018-06-05
+                                        20:16</span></li>
+                                <li><a
+                                        href="/web/components/notification/notifica/notifica_3.html">中国医师协会第十二次放射医师年会</a><span>2018-02-23
+                                        09:55</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-right">
+                    <div class="title">
+                        <span class="h3">典型案例</span>
+                        <span class="more"><a href="/web/components/education/education.html">更多</a></span>
+                    </div>
+                    <ul id="caseInPoint"></ul>
+                </div>
+            </div>
+            <div class="banner-bottom">
+                <div class="banner-bottom-left">
+                    <div class="title">
+                        <span class="h3">视频培训</span>
+                        <span class="more"><a href="/web/components/Video/video.html">更多</a></span>
+                    </div>
+                    <div class="">
+                        <ul class="banner-bottom-left-1"></ul>
+                    </div>
+
+                </div>
+                <div class="banner-bottom-right">
+                    <div class="title">
+                        <span class="h3">新闻动态</span>
+                        <span class="more"><a href="/web/components/newsTrends/newsTrends.html">更多</a></span>
+                    </div>
+                    <div class="banner-bottom-left-2">
+                        <div class="banner-bottom-left-f1">
+                            <a href="/web/components/newsTrends/news/news_6.html">
+                                <img src="/web/images/e7ffe631e6b5af01881c52db8a0dcc39.png" alt="">
+                                <div class="mok">
+                                    <p>中青年影像医生“攀登计划”</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="banner-bottom-left-f2">
+                            <img src="/web/images/3dd52a1358457c39e3841100c0c53cf6.png" alt="">
+                            <img src="/web/images/6c28415706da0b763f9f9b2c51e9b056.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="backcolor">
+        <div class="container">
+            <div class="friendship">
+                <h3>战略合作</h3>
+                <div id="content">
+                    <ul>
+                        <li><a href=""><img src="/web/images/friendship/footer1.jpg" alt=""></a>
+                            <h5>中国影像好医生</h5>
+                        </li>
+                        <li><a href=""><img src="/web/images/friendship/footer2.jpg" alt=""></a>
+                            <h5>恒瑞</h5>
+                        </li>
+                        <li><a href=""><img src="/web/images/friendship/footer3.jpg" alt=""></a>
+                            <h5>飞利浦</h5>
+                        </li>
+                        <li><a href=""><img src="/web/images/friendship/footer4.jpg" alt=""></a>
+                            <h5>中国医师协会</h5>
+                        </li>
+                        <li><a href=""><img src="/web/images/friendship/footer5.jpg" alt=""></a>
+                            <h5>药智网</h5>
+                        </li>
+                        <li><a href=""><img src="/web/images/friendship/footer1.jpg" alt=""></a>
+                            <h5>中国影像好医生</h5>
+                        </li>
+                        <li><a href=""><img src="/web/images/friendship/footer2.jpg" alt=""></a>
+                            <h5>恒瑞</h5>
+                        </li>
+                        <li><a href=""><img src="/web/images/friendship/footer3.jpg" alt=""></a>
+                            <h5>飞利浦</h5>
+                        </li>
+                        <li><a href=""><img src="/web/images/friendship/footer4.jpg" alt=""></a>
+                            <h5>中国医师协会</h5>
+                        </li>
+                        <li><a href=""><img src="/web/images/friendship/footer5.jpg" alt=""></a>
+                            <h5>药智网</h5>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <iframe src="/web/common/footer/footer.html" width="100%" ; height="127px" frameborder="0" scrolling="no"
+        name="footerFrame"></iframe>
+    <script src="/web/common/header/header.js"></script>
+    <!-- 病例请求 -->
+    <script type="text/javascript">
+        $(function () {
+            $.ajax({
+                url: "http://114.115.216.211/qlib/showFirst",
+                type: "get",
+                dataType: "json",
+                success: function (data) {
+                    var caseInPointData = data.rows;
+                    console.log(caseInPointData, "请求病例的数据")
+                    var caseInPoint_text = "";
+                    for (i = 0; i < caseInPointData.length; i++) {
+                        caseInPoint_text +=
+                            '<li class="caseInPointLi">' +
+                            '<div class="caseInPoint-left">' +
+                            '<img src="' + caseInPointData[i].caseDetails.img + '" alt="">' +
+                            '</div>' +
+                            '<div class="caseInPoint-right">' + caseInPointData[i].caseDetails
+                            .name + '</div>' +
+                            '</li>'
+                    }
+                    $("#caseInPoint").html(caseInPoint_text)
+                    $("#caseInPoint li").click(function () {
+                        let index = $(this).index();
+                        console.log(index, "index")
+                        window.location.href =
+                            "/web/components/education/educationDetail.html?id=" +
+                            caseInPointData[index].caseDetails.id
+                    })
+                },
+                error: function (jqXHHR) {
+                    //请求失败函数内容
+                }
+            })
+        })
+    </script>
+    <!-- 视频请求 -->
+    <script type="text/javascript">
+        $.ajax({
+            url: "http://114.115.216.211/video/getVideoWithType",
+            type: "get",
+            dataType: "json",
+            success: function (data) {
+                var video_text = "";
+                // var videoData = data.rows;
+                var videoData = data;
+                for (var i = 0; i < videoData.length; i++) {
+                    for (var j = 0; j < videoData[i].vedioList.length; j++) {
+                        console.log(videoData[i].vedioList[j].id, "videoData[i].vedioList[j].id")
+                        video_text += "<li class='video'>" +
+                            '<a href="/web/components/Video/videoDetail.html?id=' + videoData[i].vedioList[
+                                j].id + '">' +
+                            "<img src='" + videoData[i].vedioList[j].videoImg +
+                            "'  style='width: 115px;height: 146.33px;' />" +
+                            "<p class='video-title'>" + videoData[i].vedioList[j].videoTitle + "</p>" +
+                            // " <p class='video-time'>" + "发布时间&nbsp;2018.09.06 " + "</p>" +
+                            '</a>' +
+                            "</li>"
+                    }
+                }
+                // for (let i = 0; i < videoData.length; i++) {
+                console.log(videoData[i], "videoData")
+                // video_text += "<li class='video'>" +
+                //     "<img src='" + videoData[i].videoImg +
+                //     "'  style='width: 115px;height: 146.33px;' />" +
+                //     "<p class='video-title'>" +
+                //     "</p>" +
+                //     " <p class='video-time'>" + "发布时间&nbsp;2018.09.06 " + "</p>" +
+                //     "</li>"
+                // }
+                $(".banner-bottom-left-1").html(video_text)
+                // $(".banner-bottom-left-1 li").click(function () {
+                //     let index = $(this).index();
+                //     window.location.href = "/web/components/education/educationDetail.html?id=" + data[index].id
+                // })
+            }
+        })
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var content = document.getElementById("content")
+            var ul = content.getElementsByTagName("ul")[0]
+            var li = ul.getElementsByTagName("li")
+            var speed = 1;
+
+            ul.innerHTML += ul.innerHTML
+            ul.style.width = li.length * li[0].offsetWidth + "px"
+
+            function run() {
+                if (ul.offsetLeft < -ul.offsetWidth / 2) {
+                    ul.style.left = 0
+                } else if (ul.offsetLeft > 0) {
+                    ul.style.left = -ul.offsetWidth / 2 + "px"
+                }
+
+                ul.style.left = ul.offsetLeft + speed + "px"
+            }
+            timer = setInterval(run, 20)
+
+            content.onmouseover = function () {
+                clearInterval(timer)
+            }
+
+            content.onmouseout = function () {
+                timer = setInterval(run, 20)
+            }
+
+
+        }
+    </script>
+
+    <script src="/web/common/header/header.js"></script>
+</body>
+
+</html>

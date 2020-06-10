@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/web/css/notification/notifica/notifica_1.css">
+    <link rel="stylesheet" href="/web/common/header/header.css">
+    <link rel="stylesheet" href="/web/css/reset.css">
+    <link rel="stylesheet" href="/web/css/common.css">
+    <script src="/web/js/jquery-1.11.3.js"></script>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+
+<body>
+    
+      <div class="center-erweima" id="box1" style="bottom:50%;right:10px;">
+        <div class="p">
+            <img src="/web/images/qrcode_for_gh_df993352a9a3_344.jpg" alt="">
+        <p>关注此公众号</p>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="zheceng" id="zheceng">
+    </div>
+    <div class="popup">
+        <div class="err">
+            <img src="/web/images/error.png" alt="">
+        </div>
+        
+        <div class="popup-bottom">
+            <div class="popup-footer">
+                <p> 
+                    <img src="/web/images/wx.png" alt="">
+                微信安全登录</p>
+            </div>
+            <div class="tab-item">
+                <div id="login_container">啊啊啊</div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-left">
+                    <marquee scrollAmount=3 height=25 direction="up" onmouseover=stop() onmouseout=start()>
+                        <div class="img"></div>
+                        <div class="text">
+                            <span>欢迎访问 --中国医师协会放射医师分会</span>
+                        </div>
+                    </marquee>
+                </div>
+                <div class="header-right">
+                    <div class="right-img">
+                        <img id="headerImg" src="/web/images/icon/my.png" alt="">
+                    </div>
+                    <div class="right-text">
+                        <div class="username">
+                            <ul>
+                                <li><a href="#">登录&nbsp;&nbsp;/注册</a></li>
+                            </ul>
+                            <img class="dengluImg" src="/web/images/icon/triangle.png" alt="">
+                        </div>
+                        <div class="personage">
+                            <div class="personage-top">
+                                    <!-- <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p> -->
+                            </div>
+                            <div class="quit">
+                                <p class="quitCode"><a href="">退出登录</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="logo">
+        <div class="container">
+            <a href="/index.html">
+                <img src="/web/images/logo.jpg" alt="">
+            </a>
+        </div>
+
+    </div>
+    <div class="nav-li">
+        <div class="container">
+            <div class="lis">
+                <ul>
+                    <li>
+                        <h3><a href="/index.html">首页</a></h3>
+                    </li>
+                    <li class="hover-organization">
+                        <h3><a href="/web/components/organization/organization.html" target="_parent">组织架构</a></h3>
+                          
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/newsTrends/newsTrends.html" target="_parent">新闻动态</a></h3>
+                    </li>
+                    <li>
+                        <h3><a  class="click-color"  href="/web/components/notification/notification.html" target="_parent">通知公告</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/education/education.html">继续教育</a></h3>
+                        <ul class="sub-1">
+                            <li><a href="/web/components/education/education.html">典型案例</a></li>
+                            <li><a href="/web/components/Video/video.html">视频培训</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/cooperation/cooperation.html" target="_parent">战略合作</a></h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div class="content">
+            <div class="container">
+                <div class="show">
+                    <div class="show-lf">
+                        <div class="text-lf">
+                            <span style="color:#333">通知公告</span>&nbsp;>> &nbsp;正文
+                        </div>
+                        <h1 class="title">第二届全国运动损伤磁共振诊断学习班简章</h1>
+                        <div class="info">
+                            发布日期：2020-04-22&nbsp;&nbsp;
+                            <!-- 浏览次数：<span id="hits">2087</span> -->
+                        </div>
+                        <div class="introduce">
+                            核心提示：随着运动损伤相关的病例越来越多，各医院已基本普及磁共振成像设备，磁共振（MRI）检查已经成为运动损伤诊断的主要依据。针对MRI成像检查技术要求高，运动系统解剖和损伤MRI诊断复杂，为提高运动损伤MRI检查和诊断水平，在北京积水潭医院放射科等单位的学术支持下，《磁共振成像》杂志社拟于2016年3月25日到27日在重庆市举办第二届全国运动损伤磁共振诊断学习班。
+                        </div>
+                        <!-- <div class="conter">
+                          <div class="np">
+                            <ul>
+                                <li><strong>下一篇：</strong><a
+                                        href="/web/components/notification/notifica/notifica_11.html"
+                                        title="中国影像好医生收官战—11月21日海口站会议圆满落幕">中国影像好医生收官战—11月21日海口站会议圆满落幕</a>
+                                </li>
+                                <li><strong>上一篇：</strong><a
+                                        href="/web/components/notification/notifica/notifica_10.html"
+                                        title="中国医师协会放射医师分会年会暨第十届全国放射医师论坛">中国医师协会放射医师分会年会暨第十届全国放射医师论坛</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    <div class="conter" id="article"><p style="text-align: left"><span><br>
+                        尊敬的各位同仁：</span></p>
+                        <div>&nbsp;&nbsp;&nbsp; 随着运动损伤相关的病例越来越多，各医院已基本普及磁共振成像设备，磁共振（<span>MRI）检查已经成为运动损伤诊断的主要依据。针对MRI成像检查技术要求高，运动系统解剖和损伤MRI诊断复杂，为提高运动损伤MRI检查和诊断水平，在北京积水潭医院放射科等单位的学术支持下，《磁共振成像》杂志社拟于2016年3月25日到27日在重庆市举办第二届全国运动损伤磁共振诊断学习班。 <br>
+                        </span></div>
+                        <div>&nbsp;&nbsp;&nbsp; 学习班课程由全国著名骨科<span>MRI专家——北京积水医院放射科<b>程晓光教授</b>设计并担任学术组长，专家阵容以骨科特长的全国著名医院—<b>北京积水潭医院</b>为班底，并邀请全国著名的运动损伤影像和临床专家，就常见运动损伤的MRI扫描方法，正常解剖和损伤的MRI诊断进行详细讲解和病例讨论，努力将学习班办为全国最具特色、最为权威、最为实用、对学员帮助最大的运动损伤MRI专业课程。<br>
+                        <br>
+                        </span></div>
+                        <div><strong>一、课程计划<br>
+                        </strong>
+                        <table width="626">
+                            <tbody>
+                                <tr class="firstRow" style="height: 32px">
+                                    <td style="border-top: windowtext 1px dotted; border-right: windowtext 1px dotted; border-bottom: windowtext 1px dotted; padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: windowtext 1px dotted; padding-right: 7px" valign="middle" width="45"><br>
+                                    &nbsp;</td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="284">
+                                    <p style="text-align: center; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun; font-weight: bold">学习内容</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="130">
+                                    <p style="text-align: center; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun; font-weight: bold">主讲专家</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="168">
+                                    <p style="text-align: center; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun; font-weight: bold">专家单位</span></p>
+                                    </td>
+                                </tr>
+                                <tr style="height: 32px">
+                                    <td style="border-top: medium none; border-right: windowtext 1px dotted; padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: windowtext 1px dotted; padding-right: 7px" valign="middle" width="45">
+                                    <p style="text-align: center; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">1</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="284">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 华文细黑">髋关节撞击综合征MRI扫描与诊断</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="130">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 华文细黑">程晓光&nbsp;&nbsp;教授</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="168">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">北京积水潭医院</span></p>
+                                    </td>
+                                </tr>
+                                <tr style="height: 32px">
+                                    <td style="border-top: medium none; border-right: windowtext 1px dotted; padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: windowtext 1px dotted; padding-right: 7px" valign="middle" width="45">
+                                    <p style="text-align: center; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">2</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="284">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">肩关节运动损伤影像诊断</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="130">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">姚伟武&nbsp;&nbsp;教授</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="168">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">上海交大第六医院</span></p>
+                                    </td>
+                                </tr>
+                                <tr style="height: 32px">
+                                    <td style="border-top: medium none; border-right: windowtext 1px dotted; padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: windowtext 1px dotted; padding-right: 7px" valign="middle" width="45">
+                                    <p style="text-align: center; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">3</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="284">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">膝关节运动损伤机制与治疗</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="130">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">刘&nbsp;&nbsp;心&nbsp;&nbsp;博士</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="168">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">北京积水潭医院</span></p>
+                                    </td>
+                                </tr>
+                                <tr style="height: 32px">
+                                    <td style="border-top: medium none; border-right: windowtext 1px dotted; padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: windowtext 1px dotted; padding-right: 7px" valign="middle" width="45">
+                                    <p style="text-align: center; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">4</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="284">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">髋关节撞击综合症的临床与治疗</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="130">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">王雪松&nbsp;&nbsp;教授</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="168">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">北京积水潭医院</span></p>
+                                    </td>
+                                </tr>
+                                <tr style="height: 32px">
+                                    <td style="border-top: medium none; border-right: windowtext 1px dotted; padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: windowtext 1px dotted; padding-right: 7px" valign="middle" width="45">
+                                    <p style="text-align: center; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">5</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="284">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">磁共振成像原理</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="130">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 华文细黑">杨正汉&nbsp;&nbsp;教授</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="168">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">北京友谊医院</span></p>
+                                    </td>
+                                </tr>
+                                <tr style="height: 32px">
+                                    <td style="border-top: medium none; border-right: windowtext 1px dotted; padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: windowtext 1px dotted; padding-right: 7px" valign="middle" width="45">
+                                    <p style="text-align: center; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">6</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="284">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 华文细黑">腕关节运动损伤的MR扫描与诊断</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="130">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 华文细黑">陆&nbsp;&nbsp;勇&nbsp;&nbsp;教授</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="168">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">上海交大瑞金医院</span></p>
+                                    </td>
+                                </tr>
+                                <tr style="height: 32px">
+                                    <td style="border-top: medium none; border-right: windowtext 1px dotted; padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: windowtext 1px dotted; padding-right: 7px" valign="middle" width="45">
+                                    <p style="text-align: center; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">7</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="284">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">脊柱骨折与脊髓损伤MRI</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="130">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 华文细黑">查云飞&nbsp;&nbsp;教授</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="168">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">武汉大学人民医院</span></p>
+                                    </td>
+                                </tr>
+                                <tr style="height: 32px">
+                                    <td style="border-top: medium none; border-right: windowtext 1px dotted; padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: windowtext 1px dotted; padding-right: 7px" valign="middle" width="45">
+                                    <p style="text-align: center; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">8</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="284">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">膝关节半月板损伤MR扫描与诊断</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="130">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 华文细黑">龚向阳&nbsp;&nbsp;教授</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="168">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">浙江省人民医院</span></p>
+                                    </td>
+                                </tr>
+                                <tr style="height: 32px">
+                                    <td style="border-top: medium none; border-right: windowtext 1px dotted; padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: windowtext 1px dotted; padding-right: 7px" valign="middle" width="45">
+                                    <p style="text-align: center; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">9</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="284">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">膝关节侧副韧带损伤的MR检查与诊断</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="130">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">张&nbsp;&nbsp;晶&nbsp;&nbsp;副教授</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="168">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">北京积水潭医院</span></p>
+                                    </td>
+                                </tr>
+                                <tr style="height: 32px">
+                                    <td style="border-top: medium none; border-right: windowtext 1px dotted; padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: windowtext 1px dotted; padding-right: 7px" valign="middle" width="45">
+                                    <p style="text-align: center; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">10</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="284">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">膝关节韧带损伤MR扫描与诊断</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="130">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 华文细黑">程克斌&nbsp;&nbsp;博士</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="168">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">北京积水潭医院</span></p>
+                                    </td>
+                                </tr>
+                                <tr style="height: 32px">
+                                    <td style="border-top: medium none; border-right: windowtext 1px dotted; padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: windowtext 1px dotted; padding-right: 7px" valign="middle" width="45">
+                                    <p style="text-align: center; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">11</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="284">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">肘关节损伤的MR扫描与诊断</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="130">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 华文细黑">杨海涛&nbsp;&nbsp;副教授</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="168">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 华文细黑">重庆医科大学附一院</span></p>
+                                    </td>
+                                </tr>
+                                <tr style="height: 32px">
+                                    <td style="border-top: medium none; border-right: windowtext 1px dotted; padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: windowtext 1px dotted; padding-right: 7px" valign="middle" width="45">
+                                    <p style="text-align: center; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">12</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="284">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">踝关节韧带损伤MR扫描与诊断</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="130">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 华文细黑">娄&nbsp;&nbsp;昕&nbsp;&nbsp;副教授</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="168">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">解放军总医院</span></p>
+                                    </td>
+                                </tr>
+                                <tr style="height: 32px">
+                                    <td style="border-top: medium none; border-right: windowtext 1px dotted; padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: windowtext 1px dotted; padding-right: 7px" valign="middle" width="45">
+                                    <p style="text-align: center; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">13</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="284">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">骨科核磁扫描方法和注意事项</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="130">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">梁&nbsp;&nbsp;伟&nbsp;&nbsp;技师</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="168">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">北京积水潭医院</span></p>
+                                    </td>
+                                </tr>
+                                <tr style="height: 32px">
+                                    <td style="border-top: medium none; border-right: windowtext 1px dotted; padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: windowtext 1px dotted; padding-right: 7px" valign="middle" width="45">
+                                    <p style="text-align: center; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">14</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="284">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">磁共振论文撰写与投稿策略</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="130">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 华文细黑">贺光军&nbsp;&nbsp;社长</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="168">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">《磁共振成像》杂志社</span></p>
+                                    </td>
+                                </tr>
+                                <tr style="height: 32px">
+                                    <td style="border-top: medium none; border-right: windowtext 1px dotted; padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: windowtext 1px dotted; padding-right: 7px" valign="middle" width="45">
+                                    <p style="text-align: center; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">15</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="284">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">肌肉损伤的MR诊断</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="130">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 华文细黑">程晓光&nbsp;&nbsp;教授</span></p>
+                                    </td>
+                                    <td style="padding-bottom: 0px; padding-top: 0px; padding-left: 7px; border-left: medium none; padding-right: 7px" valign="middle" width="168">
+                                    <p style="text-align: left; line-height: 110%"><span style="font-size: 16px; font-family: 宋体,SimSun">北京积水潭医院</span></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        注<span>:①每场课程1小时以上，讲解透彻、明白；②课程单元可能增加。<br>
+                        </span><b><br>
+                        二、时间和地点</b></div>
+                        <div>时间：<span>2016年3月25日—3月27日（24日全天报到, 25—27日学习） </span></div>
+                        <div>地点：重庆市内，具体地点请见第二轮通知<br>
+                        &nbsp;</div>
+                        <div><b>三、其他事项</b></div>
+                        <div>1、参加对象：各医院放射科（<span>MRI室）、骨科及相关科室骨干医师、技师。</span></div>
+                        <div>2、学习费用：培训费<span>1800元（含资料、会议简餐）；住宿统一安排，费用由单位自理。</span></div>
+                        <div>3、继教学分：参会代表报到时提交个人详细资料并参加考试的，可申请<span>2016年国家级医学继续教育I类学分，项目编号2016-09-01-046 (国)。</span></div>
+                        <div>4、报名方式：为保证学习班的质量和教学效果，学习班将限额参加，请参会者先报名确定，于<span>3月10日前将《报名表》（见附件）传真/邮件至会务组，会务组根据报名顺序录取，录取后传发《报到通知》，告知报到地点、乘车路线、食宿安排等。代表凭《报到通知》报到参会。</span></div>
+                        <div>5、联系方式</div>
+                        <div>会务组报名联系人：赵 妍<span><span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>手机：15010316530（可短信报名）</span></div>
+                        <div>报名邮箱：<span>15010316530@163.com</span></div>
+                        <div>报名电话：<span>010- 85762230（兼传真）</span></div>
+                        <div>学术联系人：石光（北京积水潭医院放射科）</div>
+                        <div>手机：<span>15910361366<span>&nbsp;&nbsp; </span>邮箱：jstfsksg@126.com</span></div>
+                        <div>监督电话：<span>010—67113815</span></div>
+                        <div>此通知可在《磁共振成像》杂志社官方网站：<span><a href="http://www.cjmri.cn" target="_blank">www.cjmri.cn</a>下载。</span></div>
+                        <div style="text-align: right"><b><br>
+                        主办：</b><b>《磁共振成像》杂志社</b></div>
+                        <div style="text-align: right"><b>协办：</b><b>北京积水潭医院放射科</b></div>
+                        <div style="text-align: right"><b>重庆医科大学第一附属医院</b></div>
+                        <div style="text-align: right">&nbsp;&nbsp;<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>&nbsp;&nbsp;</b></span><b>二○一六年二月<br>
+                        </b></div>
+                        <div align="center"><b>……………………………………………………………………………………………………<br>
+                        </b></div>
+                        <div><b>附件：第二届全国运动损伤磁共振诊断学习班（重庆）报名表</b></div>
+                        <div align="center">
+                        <table cellspacing="0" cellpadding="0" width="98%" border="1">
+                            <tbody>
+                                <tr>
+                                    <td width="10%">
+                                    <div align="center">姓名</div>
+                                    </td>
+                                    <td width="10%">
+                                    <div align="center">职称</div>
+                                    </td>
+                                    <td width="9%">
+                                    <div align="center">科室</div>
+                                    </td>
+                                    <td width="11%">
+                                    <div align="center">职称</div>
+                                    </td>
+                                    <td width="20%">
+                                    <div align="center">工作单位</div>
+                                    </td>
+                                    <td width="11%">
+                                    <div align="center">手机</div>
+                                    </td>
+                                    <td width="16%">
+                                    <div align="center">邮箱</div>
+                                    </td>
+                                    <td width="9%">
+                                    <div align="center">是否申请学分</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="10%">&nbsp;</td>
+                                    <td width="10%">&nbsp;</td>
+                                    <td width="9%">&nbsp;</td>
+                                    <td width="11%">&nbsp;</td>
+                                    <td width="20%">&nbsp;</td>
+                                    <td width="11%">&nbsp;</td>
+                                    <td width="16%">&nbsp;</td>
+                                    <td valign="top" width="9%">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%">&nbsp;</td>
+                                    <td width="10%">&nbsp;</td>
+                                    <td width="9%">&nbsp;</td>
+                                    <td width="11%">&nbsp;</td>
+                                    <td width="20%">&nbsp;</td>
+                                    <td width="11%">&nbsp;</td>
+                                    <td width="16%">&nbsp;</td>
+                                    <td valign="top" width="9%">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%">&nbsp;</td>
+                                    <td width="10%">&nbsp;</td>
+                                    <td width="9%">&nbsp;</td>
+                                    <td width="11%">&nbsp;</td>
+                                    <td width="20%">&nbsp;</td>
+                                    <td width="11%">&nbsp;</td>
+                                    <td width="16%">&nbsp;</td>
+                                    <td valign="top" width="9%">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%">&nbsp;</td>
+                                    <td width="10%">&nbsp;</td>
+                                    <td width="9%">&nbsp;</td>
+                                    <td width="11%">&nbsp;</td>
+                                    <td width="20%">&nbsp;</td>
+                                    <td width="11%">&nbsp;</td>
+                                    <td width="16%">&nbsp;</td>
+                                    <td valign="top" width="9%">&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        <br>
+                        <div class="np">
+                            <ul>
+                                <li><strong>下一篇：</strong><a
+                                        href="/web/components/notification/notifica/notifica_12.html"
+                                        title="中国影像好医生收官战—11月21日海口站会议圆满落幕">中国影像好医生收官战—11月21日海口站会议圆满落幕</a>
+                                </li>
+                                <li><strong>上一篇：</strong><a
+                                        href="/web/components/notification/notifica/notifica_10.html"
+                                        title="中国医师协会放射医师分会年会暨第十届全国放射医师论坛">中国医师协会放射医师分会年会暨第十届全国放射医师论坛</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                      
+                    <div class="show-rg">
+                        <div class="show-text">
+                            <div><strong>推荐图文</strong></div>
+                        </div>
+                        <div class="box_body">
+                            <table width="100%">
+                                <tbody>
+                                    <tr align="center">
+                                        <td width="50%" valign="top"><a
+                                                href="/web/components/notification/notifica/notifica_1.html">
+                                                <img src="http://www.chinaradiologists.org/file/upload/201706/14/11-12-11-96-1.jpg"
+                                                    width="120" height="90" alt="中青年影像医生“攀登计划”第四期第一轮遴选结果”"></a>
+                                            <ul>
+                                                <li><a href="/web/components/notification/notifica/notifica_1.html"
+                                                        title="中青年影像医生“攀登计划”第四期第一轮遴选结果">中华国际医学交流基金</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="box_head">
+                            <div><strong>推荐资讯</strong></div>
+                        </div>
+                        <div class="box_body">
+                            <ul class="ul">
+                                <li>
+                                    <a href="//web/components/notification/notifica/notifica_1.html"
+                                        title="第十三次放射医师年会【参会攻略】">第十三次放射医师年会【参会攻略】</a>
+                                </li>
+                                <li>
+                                    <a href="/web/components/notification/notifica/notifica_2.html"
+                                        title="第十二次放射医师年会论文汇编">关于中青年影像医生“攀登计划”紧急通知及温馨提醒</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <iframe src="/web/common/footer/footer.html" width="100%" ; height="127px" frameborder="0" scrolling="no"
+            name="footerFrame"></iframe>
+        <script src="/web/common/header/header.js"></script>
+<script src="/web/common/header/header.js"></script>
+</body>
+
+</html>

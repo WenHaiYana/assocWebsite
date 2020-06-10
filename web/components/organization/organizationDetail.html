@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./organizationDetail.css">
+    <link rel="stylesheet" href="/web/common/header/header.css">
+    <link rel="stylesheet" href="/web/css/reset.css">
+    <link rel="stylesheet" href="/web/css/common.css">
+    <script type="text/javascript" src="/web/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/web/js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="/web/layui-v2.5.6/layui/layui.all.js"></script>
+    <script type="text/javascript" src="/web/layui-v2.5.6/layui/layui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/web/layui-v2.5.6/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="/web/layui-v2.5.6/layui/css/layui.mobile.css">
+    <script type="text/javascript" src="/web/layer-v3.1.1/layer/layer.js"></script>
+    <script type="text/javascript" src="/web/js/organization/organization.js"></script>
+
+
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+
+<body>
+      <div class="center-erweima" id="box1" style="bottom:50%;right:10px;">
+        <div class="p">
+            <img src="/web/images/qrcode_for_gh_df993352a9a3_344.jpg" alt="">
+        <p>关注此公众号</p>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="zheceng" id="zheceng">
+    </div>
+    <div class="popup">
+        <div class="err">
+            <img src="/web/images/error.png" alt="">
+        </div>
+        
+        <div class="popup-bottom">
+            <div class="popup-footer">
+                <p> 
+                    <img src="/web/images/wx.png" alt="">
+                微信安全登录</p>
+            </div>
+            <div class="tab-item">
+                <div id="login_container">啊啊啊</div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-left">
+                    <marquee scrollAmount=3 height=25 direction="up" onmouseover=stop() onmouseout=start()>
+                        <div class="img"></div>
+                        <div class="text">
+                            <span>欢迎访问 --中国医师协会放射医师分会</span>
+                        </div>
+                    </marquee>
+                </div>
+                <div class="header-right">
+                    <div class="right-img">
+                        <img id="headerImg" src="/web/images/icon/my.png" alt="">
+                    </div>
+                    <div class="right-text">
+                        <div class="username">
+                            <ul>
+                                <li><a href="#">登录&nbsp;&nbsp;/注册</a></li>
+                            </ul>
+                            <img class="dengluImg" src="/web/images/icon/triangle.png" alt="">
+                        </div>
+                        <div class="personage">
+                            <div class="personage-top">
+                                <!-- <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p> -->
+                            </div>
+                            <div class="quit">
+                                <p class="quitCode"><a href="">退出登录</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="logo">
+        <div class="container">
+            <a href="/index.html">
+                <img src="/web/images/logo.jpg" alt="">
+            </a>
+        </div>
+
+    </div>
+    <div class="nav-li">
+        <div class="container">
+            <div class="lis">
+                <ul>
+                    <li>
+                        <h3><a href="/index.html">首页</a></h3>
+                    </li>
+                    <li class="hover-organization">
+                        <h3><a class="click-color" href="/web/components/organization/organization.html"
+                                target="_parent">组织架构</a></h3>
+
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/newsTrends/newsTrends.html" target="_parent">新闻动态</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/notification/notification.html" target="_parent">通知公告</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/education/education.html">继续教育</a></h3>
+                        <ul class="sub-1">
+                            <li><a href="/web/components/education/education.html">典型案例</a></li>
+                            <li><a href="/web/components/Video/video.html">视频培训</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/cooperation/cooperation.html" target="_parent">战略合作</a></h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="container">
+            <div class="personage">
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <iframe src="/web/common/footer/footer.html" width="100%" ; height="127px" frameborder="0" scrolling="no"
+        name="footerFrame"></iframe>
+    <script src="/web/common/header/header.js"></script>
+    <script src="/web/js/goTop.js"></script>
+    <script type="text/javascript">
+     //获取地址栏参数，name:参数名称
+     function getUrlParms(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null)
+                return unescape(r[2]);
+            return null;
+        }
+        var detailChoice = Boolean
+        var more = Number
+        var submitIdsArr = []
+        var id = getUrlParms("id");
+        $.ajax({
+            type: "get",
+            url: "http://114.115.216.211/doctor/getDoctorById",
+            data: {
+                id
+            },
+            success: function (data) {
+                var personage_text = "";
+                personage_text += "<div class='personage-top'>" +
+                    "<div class='personage-text'>" +
+                    "<h3>" + '<span class="common-weight">'+ "姓名:" + '</span>' + data.name + "</h3>" +
+                    "<p>" + "职务:" + data.professionPosition + "</p>" +
+                    "<p>" + "职称:" + data.association + "</p>" +
+                    "<p>" + "医院:" + data.company + "</p>" +
+                    "</div>" +
+                    "<div class='personage-img'>" +
+                    "<img src='" + data.img + "' alt=''>" +
+                    "</div>" +
+                    "</div>" +
+                    "<div class='personage-bottom'>" +
+                    "<h4>" + "个人简介:" + "</h4>" +
+                    "<p>" + data.des + "</p>" +
+                    "</div>"
+                $(".personage").html(personage_text)
+            },
+
+        })
+    </script>
+<script src="/web/common/header/header.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/web/css/news/news_1.css">
+    <link rel="stylesheet" href="/web/common/header/header.css">
+    <link rel="stylesheet" href="/web/css/reset.css">
+    <link rel="stylesheet" href="/web/css/common.css">
+    <script src="/web/js/jquery-1.11.3.js"></script>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+
+<body>
+       <div class="center-erweima" id="box1" style="bottom:50%;right:10px;">
+        <div class="p">
+            <img src="/web/images/qrcode_for_gh_df993352a9a3_344.jpg" alt="">
+        <p>关注此公众号</p>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="zheceng" id="zheceng">
+    </div>
+    <div class="popup">
+        <div class="err">
+            <img src="/web/images/error.png" alt="">
+        </div>
+        
+        <div class="popup-bottom">
+            <div class="popup-footer">
+                <p> 
+                    <img src="/web/images/wx.png" alt="">
+                微信安全登录</p>
+            </div>
+            <div class="tab-item">
+                <div id="login_container">啊啊啊</div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-left">
+                    <marquee scrollAmount=3 height=25 direction="up" onmouseover=stop() onmouseout=start()>
+                        <div class="img"></div>
+                        <div class="text">
+                            <span>欢迎访问 --中国医师协会放射医师分会</span>
+                        </div>
+                    </marquee>
+                </div>
+                <div class="header-right">
+                    <div class="right-img">
+                        <img id="headerImg" src="/web/images/icon/my.png" alt="">
+                    </div>
+                    <div class="right-text">
+                        <div class="username">
+                            <ul>
+                                <li><a href="#">登录&nbsp;&nbsp;/注册</a></li>
+                            </ul>
+                            <img class="dengluImg" src="/web/images/icon/triangle.png" alt="">
+                        </div>
+                        <div class="personage">
+                            <div class="personage-top">
+                                    <!-- <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p> -->
+                            </div>
+                            <div class="quit">
+                                <p class="quitCode"><a href="">退出登录</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="logo">
+        <div class="container">
+            <a href="/index.html">
+                <img src="/web/images/logo.jpg" alt="">
+            </a>
+        </div>
+
+    </div>
+    <div class="nav-li">
+        <div class="container">
+            <div class="lis">
+                <ul>
+                    <li>
+                        <h3><a href="/index.html">首页</a></h3>
+                    </li>
+                    <li class="hover-organization">
+                        <h3><a href="/web/components/organization/organization.html" target="_parent">组织架构</a></h3>
+                          
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/newsTrends/newsTrends.html" target="_parent">新闻动态</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/notification/notification.html" target="_parent">通知公告</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/education/education.html">继续教育</a></h3>
+                        <ul class="sub-1">
+                            <li><a href="/web/components/education/education.html">典型案例</a></li>
+                            <li><a href="/web/components/Video/video.html">视频培训</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/cooperation/cooperation.html" target="_parent">战略合作</a></h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="show">
+            <div class="show-lf">
+                <div class="text-lf">
+                    <span style="color:#333">新闻动态</span>&nbsp;>> &nbsp;正文
+                </div>
+                <h1 class="title">中青年影像医生“攀登计划”第四期第一轮遴选结果</h1>
+                <div class="info">
+                    发布日期：2020-04-22&nbsp;&nbsp;
+                    <!-- 浏览次数：<span id="hits">2087</span> -->
+                </div>
+                <div class="introduce">
+                    核心提示：中华国际医学交流基金会中国医师协会放射医师分会中青年影像医生攀登计划第四期第一轮遴选结果中青年影像医生攀登计划第四期（2018项目）报名通知自3月13日在中国医师协会放射医师分会网站、微信订阅号上发布后获得了广大中青年影像医生的积极支持，至4月15日报名截止时有近80位影像医生报名参与该项目选拔。还有部分医生记错了截止日期遗憾错过了今年的报名，期待明年继续参与
+                </div>
+                <div class="conter">
+                    <h1 style="text-align: center;"><b>中华国际医学交流基金会</b></h1>
+                    <h1 style="text-align: center;"><b>中国医师协会放射医师分会</b></h1>
+                    <h1 style="text-align: center;"><b>中青年影像医生“攀登计划”第四期第一</b><b>轮遴选结果</b></h1>
+                    <p>“中青年影像医生攀登计划”第四期（2018项目）报名通知自3月13日在中国医师协会放射医师分会网站、微信订阅号上发布后获得了广大中青年影像医生的积极支持，至4月15日报名截止时有近80位影像医生报名参与该项目选拔。还有部分医生记错了截止日期遗憾错过了今年的报名，期待明年继续参与。&nbsp;
+                    </p>
+                    <p>为了能够公平、公开、公正的选出符合条件的中青年影像医生赴美培训，经王振常会长提议成立中青年影像医生<b>“攀登计划”</b>项目评审专家委员会，由项目评审专家委员会专家负责候选人遴选工作。遴选分两轮进行，第一轮为网评环节，第二轮为面试环节。
+                    </p>
+                    <p>为了节省评审专家时间今年采取了网上报名及评审的办法，网址为：<a href="http://www.pandengcup.com"
+                            target="_blank"><u>www.pandengcup.com</u></a>。在网评开始前的资格审查阶段根据组委会要求剔除年龄、职称、学历三项不符合参评条件及未能提供有效支撑材料进行核对者后共计54位候选人进入了网评环节。在网评阶段隐藏报名者姓名及支撑材料中姓名后由24位评委根据网上填报材料结合附件内容进行了网络评分。为公平计分在24位网评评委打分中去掉2个最高分去掉2个最低分后取20位评委的平均分为该候选人的最终得分，同时结合每家单位只能有一人入围等规则后按照得分由高到低顺序选出30位候选人。
+                    </p>
+                    <p>5月30日-6月2日在成都召开的中国医师协会放射医师分会年会暨第十二届全国放射医师论坛期间将举行中青年影像医生<b>“攀登计划”</b>第四期（2018年项目）第二轮遴选的面试环节。现将入围第二轮遴选面试环节名单公布如下（以姓名拼音排序）
+                        &nbsp;&nbsp;</p>
+                    <table width="700" border="1" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p style="text-align: left;">姓名</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>工作单位</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>性别</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>出生年月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>职称</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>陈峰</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>海南省人民医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>女</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1981年8月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>陈唯唯</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>华中科技大学同济医学院附属同济医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>女</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1977年1月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>副主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>初建平</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>中山大学附属第一医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>女</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1979年1月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>副主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>崔湧</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>北京肿瘤医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>男</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1973年2月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>副主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>丁忠祥</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>浙江省人民医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>男</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1973年2月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>高波</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>烟台毓璜顶医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>男</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1974年5月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>副主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>何波</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>昆明医科大学第一附属医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>男</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1977年4月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>副主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>洪国斌</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>中山大学附属第五医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>男</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1975年10月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>姜蕾</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>北京医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>女</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1977年1月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>蒋燕妮</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>江苏省人民医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>女</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1975年11月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>副主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>李欣</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>华中科技大学同济医学院附属协和医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>男</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1973年2月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>副主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>廖承德</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>昆明医科大学第三附属医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>男</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1974年2月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>副主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>刘桂锋</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>吉林大学中日联谊医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>男</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1980年3月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>副主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>刘再毅</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>广东省人民医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>男</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1975年3月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>刘兆会</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>首都医科大学附属北京同仁医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>男</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1977年6月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>副主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>孟延锋</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>太原市中心医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>男</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1977年7月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>副主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>彭鹏</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>广西医科大学第一附属医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>男</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1977年10月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>副主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>汪建华</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>宁波大学医学院附属医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>男</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1978年3月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>王翠艳</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>山东省医学影像学研究所</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>女</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1975年2月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>王渊</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>西安交通大学第一附属医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>男</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1980年3月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>副主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>邬海博</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>北京大学第三医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>女</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1975年3月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>夏爽</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>天津市第一中心医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>女</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1975年10月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>杨海涛</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>重庆医科大学附属第一医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>男</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1977年1月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>副主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>杨蕊梦</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>华南理工大学附属第二医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>女</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1982年7月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>副主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>杨志浩</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>郑州大学第一附属医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>女</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1980年3月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>副主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>张笑春</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>陆军军医大学附属第一医院（西南医院）</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>女</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1974年8月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>张玉珍</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>上海交通大学医学院附属新华医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>女</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1973年3月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>副主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>赵登玲</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>东南大学附属中大医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>女</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1980年12月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>副主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>郑林丰</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>上海交通大学附属第一人民医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>男</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1976年8月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>副主任医师</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="56" valign="center">
+                                    <p>周福庆</p>
+                                </td>
+                                <td width="255" valign="center">
+                                    <p>南昌大学第一附属医院</p>
+                                </td>
+                                <td width="37" valign="center">
+                                    <p>男</p>
+                                </td>
+                                <td width="85" valign="center">
+                                    <p>1980年4月</p>
+                                </td>
+                                <td width="75" valign="center">
+                                    <p>副主任医师</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <p>请上述候选人注意近期邮件通知面试具体时间、地点、要求等细节。</p>
+                    <p>另外：感谢第一轮评审专家的辛苦付出，近期各种学术活动非常多，各位专家克服了时间紧任务重等困难，高质量完成了评审任务，感谢大家对协会人才选拔和培养工作的大力支持！</p>
+                    <p align="right">中华国际医学交流基金会</p>
+                    <p align="right">中国医师协会放射医师分会</p>
+                    <p align="right">2018年5月7日</p>
+                    <div class="b10 c_b">&nbsp;</div>
+                    <div class="np">
+                        <ul>
+                            <li><strong>下一篇：</strong><a href="http://www.chinaradiologists.org/news/show.php?itemid=97"
+                                    title="第十二次放射医师年会论文汇编">第十二次放射医师年会论文汇编</a>
+                            </li>
+                            <li><strong>上一篇：</strong><a href="/web/components/newsTrends/news/news_2.html"
+                                    title="2019中青年影像医生“攀登计划”报名通知">2019中青年影像医生“攀登计划”报名通知</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+              
+            <div class="show-rg">
+                <div class="show-text">
+                    <div><strong>推荐图文</strong></div>
+                </div>
+                <div class="box_body">
+                    <table width="100%">
+                        <tbody>
+                            <tr align="center">
+                                <td width="50%" valign="top"><a href="/web/components/newsTrends/news/news_1.html">
+                                        <img src="http://www.chinaradiologists.org/file/upload/201706/14/11-12-11-96-1.jpg"
+                                            width="120" height="90" alt="中青年影像医生“攀登计划”第四期第一轮遴选结果”"></a>
+                                    <ul>
+                                        <li><a href="/web/components/newsTrends/news/news_1.html"
+                                                title="中青年影像医生“攀登计划”第四期第一轮遴选结果">中华国际医学交流基金</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box_head">
+                    <div><strong>推荐资讯</strong></div>
+                </div>
+                <div class="box_body">
+                    <ul class="ul">
+                        <li>
+                            <a href="/web/components/newsTrends/news/news_1.html"
+                                title="中青年影像医生“攀登计划”第四期第一轮遴选结果">中青年影像医生“攀登计划”第四期第一轮遴选结果</a>
+                        </li>
+                        <li>
+                            <a href="/web/components/newsTrends/news/news_2.html"
+                                title="2019中青年影像医生“攀登计划”报名通知">2019中青年影像医生“攀登计划”报名通知</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <iframe src="/web/common/footer/footer.html" width="100%" ; height="127px" frameborder="0" scrolling="no"
+        name="footerFrame"></iframe>
+    <script src="/web/common/header/header.js"></script>
+<script src="/web/common/header/header.js"></script>
+</body>
+
+</html>

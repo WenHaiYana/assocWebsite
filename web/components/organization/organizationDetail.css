@@ -1,0 +1,32 @@
+.banner {
+    margin: 50px 0 109px 0;
+    padding-left: 160px;
+}
+.banner .personage {
+  
+}
+.banner .personage .personage-top {
+    display: flex;
+    height: 166px;
+    border-bottom: 1px solid #eee;
+}
+.banner .personage .personage-text {
+    width: 50%;
+    line-height: 30px;
+}
+.banner .personage .personage-img {
+    /* width: 30%; */
+    height: 150px;
+    width: 150px;
+}
+.banner .personage .personage-img img {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+.personage-bottom {
+    padding: 30px 0 ;
+}
+.personage-bottom p {
+    line-height: 24px;
+}

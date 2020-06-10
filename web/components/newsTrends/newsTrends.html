@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/web/css/newsTrends/newsTrends.css">
+    <link rel="stylesheet" href="/web/common/header/header.css">
+    <link rel="stylesheet" href="/web/css/reset.css">
+    <link rel="stylesheet" href="/web/css/common.css">
+    <script src="/web/js/jquery-1.11.3.js" type="text/javascript"></script>
+
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+
+<body>
+      <div class="center-erweima" id="box1" style="bottom:50%;right:10px;">
+        <div class="p">
+            <img src="/web/images/qrcode_for_gh_df993352a9a3_344.jpg" alt="">
+        <p>关注此公众号</p>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="zheceng" id="zheceng">
+    </div>
+    <div class="popup">
+        <div class="err">
+            <img src="/web/images/error.png" alt="">
+        </div>
+        
+        <div class="popup-bottom">
+            <div class="popup-footer">
+                <p> 
+                    <img src="/web/images/wx.png" alt="">
+                微信安全登录</p>
+            </div>
+            <div class="tab-item">
+                <div id="login_container">啊啊啊</div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-left">
+                    <marquee scrollAmount=3 height=25 direction="up" onmouseover=stop() onmouseout=start()>
+                        <div class="img"></div>
+                        <div class="text">
+                            <span>欢迎访问 --中国医师协会放射医师分会</span>
+                        </div>
+                    </marquee>
+                </div>
+                <div class="header-right">
+                    <div class="right-img">
+                        <img id="headerImg" src="/web/images/icon/my.png" alt="">
+                    </div>
+                    <div class="right-text">
+                        <div class="username">
+                            <ul>
+                                <li><a href="#">登录&nbsp;&nbsp;/注册</a></li>
+                            </ul>
+                            <img class="dengluImg" src="/web/images/icon/triangle.png" alt="">
+                        </div>
+                        <div class="personage">
+                            <div class="personage-top">
+                                <!-- <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p> -->
+                            </div>
+                            <div class="quit">
+                                <p class="quitCode"><a href="">退出登录</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="logo">
+        <div class="container">
+            <a href="/index.html">
+                <img src="/web/images/logo.jpg" alt="">
+            </a>
+        </div>
+
+    </div>
+    <div class="nav-li">
+        <div class="container">
+            <div class="lis">
+                <ul>
+                    <li>
+                        <h3><a href="/index.html">首页</a></h3>
+                    </li>
+                    <li class="hover-organization">
+                        <h3><a href="/web/components/organization/organization.html" target="_parent">组织架构</a></h3>
+                        <!--    -->
+                    </li>
+                    <li>
+                        <h3><a class="click-color" href="/web/components/newsTrends/newsTrends.html"
+                                target="_parent">新闻动态</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/notification/notification.html" target="_parent">通知公告</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/education/education.html">继续教育</a></h3>
+                        <ul class="sub-1">
+                            <li><a href="/web/components/education/education.html">典型案例</a></li>
+                            <li><a href="/web/components/Video/video.html">视频培训</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/cooperation/cooperation.html" target="_parent">战略合作</a></h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="container">
+            <div class="banner-left">
+                <div class="left-top">
+                    <p>
+                        当前位置： <a href="./newsTrends.html">新闻动态</a>
+                    </p>
+                </div>
+                <ul>
+                    <li class="common-li">
+                        <a href="./news/news_1.html">
+                            <div class="text">
+                                <h5>中青年影像医生“攀登计划”第四期第一轮遴选结果</h5>
+                                <span>2018-05-08 21:58</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_2.html">
+                            <div class="text">
+                                <h5>2019中青年影像医生“攀登计划”报名通知</h5>
+                                <span>2018-03-13 13:01</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_3.html">
+                            <div class="text">
+                                <h5>中国医师协会第十二次放射医师年会</h5>
+                                <span>2018-02-23 09:11</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_4.html">
+                            <div class="text">
+                                <h5>中青年影像医生“攀登计划”2017项目（第三期）第二轮遴选结果</h5>
+                                <span>2017-08-28 10:06</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_5.html">
+                            <div class="text">
+                                <h5>中青年影像医生“攀登计划”第一轮遴选结果</h5>
+                                <span>2017-08-14 08:14</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="line"></li>
+
+                    <li class="common-li">
+                        <a href="./news/news_6.html">
+                            <div class="text">
+                                <h5>中青年影像医生“攀登计划”</h5>
+                                <span>2017-07-17 14:47</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_7.html">
+                            <div class="text">
+                                <h5>中华国际医学交流基金会中国医师协会放射医师分会中青年影像医生“攀登计划”</h5>
+                                <span>2017-06-14 11:08</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_8.html">
+                            <div class="text">
+                                <h5>Balanced： 心脏亮血电影成像序列</h5>
+                                <span>2017-06-02 08:18</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_9.html">
+                            <div class="text">
+                                <h5>2017中国医师协会放射医师年会暨第十一届全国放射医师论坛第二轮会议通知</h5>
+                                <span>2017-05-26 17:20</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_10.html">
+                            <div class="text">
+                                <h5>显微CT之肺部低剂量筛查统治地位——写给拥有这台神器的用户</h5>
+                                <span>2017-05-21 08:58</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="common-li">
+                        <a href="./news/news_11.html">
+                            <div class="text">
+                                <h5>攀登计划(CUP)”第二期赴美参加AIRP体会（Part 4）</h5>
+                                <span>2017-04-15 19:19</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_12.html">
+                            <div class="text">
+                                <h5>青春策马 不负韶华 ---“攀登计划“第二期赴美参加AIRP第三周体会</h5>
+                                <span>2017-04-15 19:19</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_13.html">
+                            <div class="text">
+                                <h5>中国医师协会放射医师分会 第二期“攀登计划”AIRP培训第二周周报</h5>
+                                <span>2017-04-01 13:00</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_14.html">
+                            <div class="text">
+                                <h5>“攀登计划”第二期赴美参加AIRP第一周体会</h5>
+                                <span>2017-03-30 08:56</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_15.html">
+                            <div class="text">
+                                <h5>热烈祝贺北京积水潭医院程晓光教授当选“亚洲骨骼学会AMS”主席</h5>
+                                <span>2017-01-24 17:59</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="common-li">
+                        <a href="./news/news_16.html">
+                            <div class="text">
+                                <h5>中青年影像医生“攀登计划”2016项目第二轮遴选结果</h5>
+                                <span>2016-08-30 19:22</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_17.html">
+                            <div class="text">
+                                <h5>中青年影像医生攀登计划第一轮遴选结果</h5>
+                                <span>2016-07-28 22:04</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_18.html">
+                            <div class="text">
+                                <h5>中国医师协会关于举办放射科住院医师规范化培训师资培训班的通知</h5>
+                                <span>2016-07-15 11:50</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_19.html">
+                            <div class="text">
+                                <h5>住培心得——放射规培路漫漫，吾将上下而求索</h5>
+                                <span>2016-07-06 21:07</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_20.html">
+                            <div class="text">
+                                <h5>攀登计划报名截止通知</h5>
+                                <span>2016-07-06 20:51</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="common-li">
+                        <a href="./news/news_21.html">
+                            <div class="text">
+                                <h5>2016年住院医师规范化培训评估指标——放射科专业基地</h5>
+                                <span>2016-06-20 09:28</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_22.html">
+                            <div class="text">
+                                <h5>中美交流里程碑，放射住培新纪元 ——记中国放射医师协会与美国放射学院在华盛顿的双边会晤</h5>
+                                <span>2016-06-20 08:39</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_23.html">
+                            <div class="text">
+                                <h5>中华国际医学交流基金会中国医师协会放射医师分会中青年影像医生攀登计划</h5>
+                                <span>2016-06-13 16:14</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_24.html">
+                            <div class="text">
+                                <h5>中国医师协会住院医师规范化培训放射科专业委员会考察培训中心</h5>
+                                <span>2016-03-05 19:10</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_25.html">
+                            <div class="text">
+                                <h5>2015“西部放射医师继续教育项目”于南昌启动</h5>
+                                <span>2016-01-04 12:30</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="common-li">
+                        <a href="./news/news_26html">
+                            <div class="text">
+                                <h5>中国影像好医生病例集发布会</h5>
+                                <span>2015-09-02 14:41</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_27.html">
+                            <div class="text">
+                                <h5>《中国影像好医生病例集》发布会</h5>
+                                <span>2015-09-02 14:08</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_28.html">
+                            <div class="text">
+                                <h5>“中青年影像医生攀登计划”第二轮遴选面试结果</h5>
+                                <span>2015-09-01 09:36</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_29.html">
+                            <div class="text">
+                                <h5>2015中国放射住院医师规范化培训七方峰会</h5>
+                                <span>2015-08-31 15:01</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_30.html">
+                            <div class="text">
+                                <h5>中国医师协会放射医师分会2015年年会暨第九届全国放射医师论坛—大会总结</h5>
+                                <span>2015-08-31 14:44</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="common-li">
+                        <a href="./news/news_31.html">
+                            <div class="text">
+                                <h5>2015医师协会年会日程</h5>
+                                <span>2015-08-26 11:16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_32.html">
+                            <div class="text">
+                                <h5>2015中国医师协会放射医师年会通知</h5>
+                                <span>2015-08-26 11:03</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_33.html">
+                            <div class="text">
+                                <h5>“中青年影像医生攀登计划”第一轮遴选结果</h5>
+                                <span>2015-08-26 10:53</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_34.html">
+                            <div class="text">
+                                <h5>中国医师协会放射医师分会中青年影像医生攀登计划</h5>
+                                <span>2015-07-20 07:54</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="common-li">
+                        <a href="./news/news_35.html">
+                            <div class="text">
+                                <h5>热烈祝贺郭启勇教授荣获亚太腹部放射学会的金质奖章</h5>
+                                <span>2015-06-23 09:11</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="common-li">
+                        <a href="./news/news_36.html">
+                            <div class="text">
+                                <h5>“基层关爱”磁共振专题培训项目启动会圆满举行</h5>
+                                <span>2015-01-07 21:56</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_37.html">
+                            <div class="text">
+                                <h5>积水潭骨关节核磁高级研修班在银川顺利举行</h5>
+                                <span>2015-06-23 09:11</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_38.html">
+                            <div class="text">
+                                <h5>“磁共振兼容心脏植入器械应用培训项目”第一站在北京国宾酒店圆满召开</h5>
+                                <span>2015-01-06 22:23</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_39.html">
+                            <div class="text">
+                                <h5>中国医师协会放射医师分会（CAR）与美国放射医师协会（ACR）达成合作协议</h5>
+                                <span>2014-12-18 23:06</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="common-li">
+                        <a href="./news/news_40.html">
+                            <div class="text">
+                                <h5>北京积水潭医院放射科成功举办骨质疏松诊断新标准解读暨定量CT骨密度测量规范和临床应用学</h5>
+                                <span>2014-11-27 17:13</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_41.html">
+                            <div class="text">
+                                <h5>第三届东亚异种移植学术会议在中南大学举行</h5>
+                                <span>2014-11-27 16:21</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_42.html">
+                            <div class="text">
+                                <h5>第十四届全国磁共振学术年会暨湖南省第十六次放射学术年会胜利闭幕</h5>
+                                <span>2014-11-27 16:04</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_43.html">
+                            <div class="text">
+                                <h5>湖南省医学会影像技术专业委员会成立</h5>
+                                <span>2014-11-27 15:26</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_44.html">
+                            <div class="text">
+                                <h5>“肌骨影像进展学习班暨大连医学会放射分会2014年会”顺利召开</h5>
+                                <span>2014-11-27 15:21</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="common-li">
+                        <a href="./news/news_45.html">
+                            <div class="text">
+                                <h5>中国医师协会放射医师分会开展全国放射设备和人员调查</h5>
+                                <span>2014-11-14 12:52</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_46.html">
+                            <div class="text">
+                                <h5>中国医师协会放射医师分会2014年会在羊城召开</h5>
+                                <span>2014-09-11 15:31</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_47.html">
+                            <div class="text">
+                                <h5>中国医师协会放射医师分会第三届委员会</h5>
+                                <span>2014-08-29 12:25</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_47.html">
+                            <div class="text">
+                                <h5>中国医师协会放射医师分会第三届委员会</h5>
+                                <span>2014-08-29 12:25</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_48.html">
+                            <div class="text">
+                                <h5>“中国影像好医生”基层影像医生病例分析实战培训项目介绍</h5>
+                                <span>2014-07-24 10:32</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="common-li">
+                        <a href="./news/news_49.html">
+                            <div class="text">
+                                <h5>2014“西部放射医师继续教育项目”于西安启动</h5>
+                                <span>2014-07-24 10:32</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_50.html">
+                            <div class="text">
+                                <h5>飞利浦西部放射医师继续教育项目-开幕式日程安排</h5>
+                                <span>2014-07-23 11:54</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_51.html">
+                            <div class="text">
+                                <h5>第三届中国核医学医师年会召开</h5>
+                                <span>2014-07-17 00:09</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_52.html">
+                            <div class="text">
+                                <h5>第十七届全国介入心脏病学论坛在兰州成功举办</h5>
+                                <span>2014-07-17 00:08</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_53.html">
+                            <div class="text">
+                                <h5>2014中国超声医学学术大会在京召开</h5>
+                                <span>2014-07-17 00:08</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="common-li">
+                        <a href="./news/news_54.html">
+                            <div class="text">
+                                <h5>2014中国医师协会内分泌代谢科医师分会年会通知</h5>
+                                <span>2014-07-17 00:06</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_55.html">
+                            <div class="text">
+                                <h5>第十七届全国介入心脏病学论坛在兰州举办</h5>
+                                <span>2014-07-17 00:05</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_56.html">
+                            <div class="text">
+                                <h5>中国医师协会精神科医师分会第十届年会召开</h5>
+                                <span>2014-07-17 00:05</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_57.html">
+                            <div class="text">
+                                <h5>全国第八届输血医学学术年会通知（第二轮）</h5>
+                                <span>2014-07-17 00:03</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="common-li">
+                        <a href="./news/news_58.html">
+                            <div class="text">
+                                <h5>第七届中国外科医师年会在京召开</h5>
+                                <span>2014-07-17 00:01</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="line"></li>
+                    <li class="common-li">
+                        <a href="./news/news_59.html">
+                            <div class="text">
+                                <h5>为西部放射医师搭建网络培训服务平台</h5>
+                                <span>2014-07-16 23:59</span>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+                <div class="page_btn clear">
+                    <span class="page_box">
+                        <a class="prev goTop">上一页</a>
+                        <span class="num"><span class="current_page">1</span><span style="padding:0 3px;">/</span><span
+                                class="total"></span></span><a class="next goTop">下一页</a>
+                    </span>
+                </div>
+            </div>
+
+            <div class="banner-rg">
+                <div class="banner-title">推荐资讯</div>
+                <div class="banner-conter">
+                    <div class="banner-number">1</div>
+                    <div class="banner-text">
+                        <a href="/web/components/newsTrends/news/news_1.html">中青年影像医生“攀登计划”第四期第一轮遴选结果</a>
+                    </div>
+                </div>
+                <div class="banner-conter">
+                    <div class="banner-number">2</div>
+                    <div class="banner-text">
+                        <a href="/web/components/newsTrends/news/news_2.html">2019中青年影像医生“攀登计划”报名通知</a>
+                    </div>
+                </div>
+                <div class="banner-conter">
+                    <div class="banner-number">3</div>
+                    <div class="banner-text">
+                        <a href="/web/components/newsTrends/news/news_3.html">中国医师协会第十二次放射医师年会</a>
+                    </div>
+                </div>
+                <div class="banner-conter">
+                    <div class="banner-number">4</div>
+                    <div class="banner-text">
+                        <a href="/web/components/newsTrends/news/news_4.html">中青年影像医生“攀登计划”2017项目（第三期）第二轮遴选结果</a>
+                    </div>
+                </div>
+                <div class="banner-conter">
+                    <div class="banner-number">5</div>
+                    <div class="banner-text">
+                        <a href="/web/components/newsTrends/news/news_5.html">中青年影像医生“攀登计划”第一轮遴选结果</a>
+                    </div>
+                </div>
+                <div class="banner-conter">
+                    <div class="banner-number">6</div>
+                    <div class="banner-text">
+                        <a href="/web/components/newsTrends/news/news_6.html">中青年影像医生“攀登计划”</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <iframe src="/web/common/footer/footer.html" width="100%" ; height="127px" frameborder="0" scrolling="no"
+        name="footerFrame"></iframe>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".banner .banner-left ul li:gt(23)").hide();
+            var total_q = $(".banner ul li").length;
+            var current_page = 24;
+            var current_num = 1;
+            var total_page = Math.round((total_q / current_page) + 0.5);
+            var next = $(".next");
+            var prev = $(".prep");
+            $(".total").text(total_page);
+            $(".current_page").text(current_num); //当前的页数
+            // 下一页
+            $(".next").click(function () {
+                if (current_num > total_page) {
+                    return false;
+                } else {
+                    $(".current_page").text(++current_num);
+                    $.each($('.banner ul li'), function (index, item) {
+                        var start = current_page * (current_num - 1);
+                        var end = current_page * current_num;
+                        if (index >= start && index < end) {
+                            // $(".footer").css({"position":"absolute","bottom": "0px","right": "0px","left": "0px"})
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                    });
+                }
+            })
+            // 上一页
+            $(".prev").click(function () {
+                $(".footer").css({
+                    "position": "",
+                    "bottom": "0px",
+                    "right": "0px",
+                    "left": "0px"
+                })
+                if (current_num === 1) {
+                    return false;
+                    // $(".banner").load(location.href+" .banner ul");
+                } else {
+                    $(".current_page").text(--current_num);
+                    $.each($('.banner ul li'), function (index, item) {
+                        var start = current_page * (current_num - 1); //起始范围
+                        var end = current_page * current_num; //结束范围
+                        if (index >= start && index < end) { //如果索引值是在start和end之间的元素就显示，否则就隐藏
+                            // $(".footer").css({"position":"absolute","bottom": "0px","right": "0px","left": "0px"})
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                    });
+                }
+            })
+        })
+    </script>
+    <script src="/web/common/header/header.js"></script>
+    <script src="/web/common/header/header.js"></script>
+</body>
+
+</html>

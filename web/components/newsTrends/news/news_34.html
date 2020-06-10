@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/web/css/news/news_1.css">
+    <link rel="stylesheet" href="/web/common/header/header.css">
+    <link rel="stylesheet" href="/web/css/reset.css">
+    <link rel="stylesheet" href="/web/css/common.css">
+    <script src="/web/js/jquery-1.11.3.js"></script>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+
+<body>
+      <div class="center-erweima" id="box1" style="bottom:50%;right:10px;">
+        <div class="p">
+            <img src="/web/images/qrcode_for_gh_df993352a9a3_344.jpg" alt="">
+        <p>关注此公众号</p>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="zheceng" id="zheceng">
+    </div>
+    <div class="popup">
+        <div class="err">
+            <img src="/web/images/error.png" alt="">
+        </div>
+        <div class="popup-top">
+            <ul>
+                <li>登录</li>
+                <!-- <li>注册</li> -->
+            </ul>
+        </div>
+        <div class="popup-bottom">
+            <div class="tab-item">
+                <p>
+                    <span>*</span><label for="ipone"></label>
+                    <input type="text" id="ipone" placeholder="请输入手机号"></p>
+                <p><span>*</span><label for="passwodes"></label>
+                    <input type="text" id="passwodes" placeholder="请输入密码"></p>
+                <div class="agree"><input type="checkbox" checked>我已经阅读并同意<span>用户协议</span><span class="wangji">忘记密码
+                    </span></div>
+                <button type="button" id="btn">登录</button>
+            </div>
+            <!-- <div class="tab-item">注册</div> -->
+        </div>
+        <div class="popup-footer">
+            <p>使用第三方账号登录</p>
+            <p>
+                <a href="./wexin.html">
+                    <img src="/web/images/wx.png" alt="">
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-left">
+                    <marquee scrollAmount=3 height=25 direction="up" onmouseover=stop() onmouseout=start()>
+                        <div class="img"></div>
+                        <div class="text">
+                            <span>欢迎访问 --中国医师协会放射医师分会</span>
+                        </div>
+                    </marquee>
+                </div>
+                <div class="header-right">
+                    <div class="right-img">
+                        <img id="headerImg" src="/web/images/icon/my.png" alt="">
+                    </div>
+                    <div class="right-text">
+                        <div class="username">
+                            <ul>
+                                <li><a href="#">登录&nbsp;&nbsp;/注册</a></li>
+                            </ul>
+                            <img class="dengluImg" src="/web/images/icon/triangle.png" alt="">
+                        </div>
+                        <div class="personage">
+                            <div class="personage-top">
+                                <p><a href="">个人中心</a></p>
+                                <p><a href="">个人中心</a></p>
+                                <p><a href="">个人中心</a></p>
+                                <p><a href="">个人中心</a></p>
+                            </div>
+                            <div class="quit">
+                                <p class="quitCode"><a href="">退出登录</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="logo">
+        <div class="container">
+            <a href="/index.html">
+                <img src="/web/images/logo.jpg" alt="">
+            </a>
+        </div>
+
+    </div>
+    <div class="nav-li">
+        <div class="container">
+            <div class="lis">
+                <ul>
+                    <li>
+                        <h3><a href="/index.html">首页</a></h3>
+                    </li>
+                    <li class="hover-organization">
+                        <h3><a href="/web/components/organization/organization.html" target="_parent">组织架构</a></h3>
+                        <ul class="sub">
+                            <li><a href="/web/components/organization/organization.html">全国委员会</a></li>
+                            <li><a href="/web/components/organization/organization.html">专业委员会</a></li>
+                            <li><a href="/web/components/organization/organization.html">青年委员会</a></li>
+                            <li><a href="/web/components/organization/organization.html">历届委员会</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/newsTrends/newsTrends.html" target="_parent">新闻动态</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/notification/notification.html" target="_parent">通知公告</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/education/education.html">继续教育</a></h3>
+                        <ul class="sub-1">
+                            <li><a href="/web/components/education/education.html">case in point</a></li>
+                            <li><a href="/web/components/Video/video.html">视频培训</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/cooperation/cooperation.html" target="_parent">战略合作</a></h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="show">
+            <div class="show-lf">
+                <div class="text-lf">
+                    <span style="color:#333">新闻动态</span>&nbsp;>> &nbsp;正文
+                </div>
+                <h1 class="title">中国医师协会放射医师分会中青年影像医生攀登计划</h1>
+                <div class="info">
+                    发布日期：2020-04-22&nbsp;&nbsp;
+                    <!-- 浏览次数：<span id="hits">2087</span> -->
+                </div>
+                <div class="introduce">
+                    核心提示：[pagebreak][pagebreak] 攀登计划（Capacity Upgrading
+                    Program，简称CUP）由中国医师协会放射医师分会发起，江苏恒瑞医药股份有限公司独家支持，旨在为中国医学影像领域培养具有较好临床能力和卓越领导力的影像学专家，该项目培训合作机构是美国放射学领导力学院（由美国放射学院American
+                    College of Radiology创办）。入选医生将获得规范化专科培训及管理能力培训的机会。
+                </div>
+                <!-- <div class="conter" id="article"></div> -->
+                <div class="conter" id="article">
+                    <div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+                            style="font-size: 12pt">攀登计划（Capacity Upgrading
+                            Program，简称CUP）由中国医师协会放射医师分会发起，江苏恒瑞医药股份有限公司独家支持，旨在为中国医学影像领域培养具有较好临床能力和卓越领导力的影像学专家，该项目培训合作机构是美国放射学领导力学院（由美国放射学院American
+                            College of Radiology创办）。入选医生将获得规范化专科培训及管理能力培训的机会。</span></div>
+                    <div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp;
+                            攀登计划每年从全国甄选15～20位中青年医学影像医生到美国放射领导力学院参加培训，培训时间为期4～6周。攀登计划的监管与甄选机构是中国医师协会放射医师分会成立的项目评审委员会。</span>
+                    </div>
+                    <div><b><span style="font-size: 12pt">具体报名要求如下：</span></b></div>
+                    <div><span>1、</span><span style="font-size: 12pt">影像医学专业的医学博士学位</span></div>
+                    <div><span>2、</span><span style="font-size: 12pt">年龄35～45岁之间</span></div>
+                    <div><span>3、</span><span style="font-size: 12pt">在大型三甲教学医院从事影像诊断一线临床工作至少5年以上</span></div>
+                    <div><span>4、</span><span style="font-size: 12pt">具有副高级以上专业技术职称</span></div>
+                    <div><span>5、</span><span style="font-size: 12pt">具有一定的行政管理经验优先考虑（科室主任、副主任、科室秘书）</span></div>
+                    <div><span>6、</span><span style="font-size: 12pt">英语水平高，能用英语就业务或研究领域进行交流；有既往的海外留学或培训经历</span></div>
+                    <div><span>7、</span><span
+                            style="font-size: 12pt">教学能力强，担任《医学影像学》本科、研究生课程的主讲授课教师；或参与国家级、省级本行业协会/学会的继续教育培训讲师</span>
+                    </div>
+                    <div><span>8、</span><span style="font-size: 12pt">在本专业具有一定的科研能力</span></div>
+                    <div><b><span style="font-size: 12pt">中青年医学影像医生攀登计划遴选流程如下：</span></b></div>
+                    <div><span style="font-size: 12pt; sans-serif: ; 1、: ">&nbsp;&nbsp;&nbsp;
+                            候选人将电子版申请表（附件一）发至中国医师协会放射医师分会设立项目专用邮箱：car_cup2015@163.com进行报名，报名截止日期为：2015年8月14日。</span>
+                    </div>
+                    <div><span style="font-size: 12pt; sans-serif: ; 2、: ">&nbsp;&nbsp;&nbsp;
+                            所有报名信息均由专人分类管理，谨防泄密。</span></div>
+                    <div><span style="font-size: 12pt; sans-serif: ; 3、: ">&nbsp;&nbsp;&nbsp;
+                            经郭启勇会长提名放射医师分会专家成立项目评审委员会审核各位候选人资格</span></div>
+                    <div><span style="font-size: 12pt; sans-serif: ; 4、: ">&nbsp;&nbsp;&nbsp;
+                            通过第一轮资格审查（评分表见附件二）的候选人将于8月28~30日在南京召开的中国医师协会放射医师分会2015年会暨第九届全国放射医师论坛期间进行现场面试。面试环节由郭启勇会长提名成立专家评审团担任评委，现场面试将以分组抽签的方式进行，当场打分并公布成绩，按照总成绩排名从最高到低择优录取。</span>
+                    </div>
+                    <div><span style="font-size: 12pt; sans-serif: ; 5、: ">&nbsp;&nbsp;&nbsp;
+                            获胜候选人信息将在中国医师协会放射医师分会网站公示</span>。<br>
+                        &nbsp;</div>
+                    <div style="text-align: right"><span style="font-size: 12pt">中国医师协会放射医师分会</span></div>
+                    <div style="text-align: right"><span
+                            style="font-size: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015</span><span
+                            style="font-size: 12pt">年7月15日<br>
+                        </span></div>
+                    &nbsp;&nbsp;<br>
+                    &nbsp;<img border="0" alt="" width="16" align="absMiddle" height="16"
+                        src="http://www.chinaradiologists.org/member/fckeditor/editor/images/ext/doc.gif"> <a
+                        class="attach" rel="nofollow"
+                        href="http://www.chinaradiologists.org/api/attach.php?url=http://www.chinaradiologists.org/file/upload/201508/01/15-04-31-15-1.docx&amp;name=%E9%99%84%E4%BB%B6%E4%B8%80.docx">附件一.docx</a>&nbsp;&nbsp;<span
+                        style="font-size: 12pt">&nbsp;&nbsp;<img border="0" alt="" width="16" align="absMiddle"
+                            height="16"
+                            src="http://www.chinaradiologists.org/member/fckeditor/editor/images/ext/doc.gif"> <a
+                            class="attach" rel="nofollow"
+                            href="http://www.chinaradiologists.org/api/attach.php?url=http://www.chinaradiologists.org/file/upload/201508/01/15-04-38-42-1.docx&amp;name=%E9%99%84%E4%BB%B6%E4%BA%8C.docx">附件二.docx</a></span><br>
+                            <div class="np">
+                                <ul>
+                                    <li><strong>下一篇：</strong><a href="/web/components/newsTrends/news/news_35.html"
+                                            title="热烈祝贺郭启勇教授荣获亚太腹部放射学会的金质奖章">热烈祝贺郭启勇教授荣获亚太腹部放射学会的金质奖章</a>
+                                    </li>
+                                    <li><strong>上一篇：</strong><a href="/web/components/newsTrends/news/news_33.html"
+                                            title="“中青年影像医生攀登计划”第一轮遴选结果">“中青年影像医生攀登计划”第一轮遴选结果</a>
+                                    </li>
+                                </ul>
+                            </div>
+                </div>
+            </div>
+            <div style="width: 20px;float: left;">&nbsp</div>
+            <div class="show-rg">
+                <div class="show-text">
+                    <div><strong>推荐图文</strong></div>
+                </div>
+                <div class="box_body">
+                    <table width="100%">
+                        <tbody>
+                            <tr align="center">
+                                <td width="50%" valign="top"><a
+                                        href="http://www.chinaradiologists.org/news/show.php?itemid=87">
+                                        <img src="http://www.chinaradiologists.org/file/upload/201706/14/11-12-11-96-1.jpg"
+                                            width="120" height="90" alt="中华国际医学交流基金会中国医师协会放射医师分会中青年影像医生“攀登计划”"></a>
+                                    <ul>
+                                        <li><a href="http://www.chinaradiologists.org/news/show.php?itemid=87"
+                                                title="中华国际医学交流基金会中国医师协会放射医师分会中青年影像医生“攀登计划”">中华国际医学交流基金</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box_head">
+                    <div><strong>推荐资讯</strong></div>
+                </div>
+                <div class="box_body">
+                    <ul class="ul">
+                        <li>
+                            <a href="/web/components/newsTrends/news/news_1.html"
+                                title="第十二次放射医师年会论文汇编">第十二次放射医师年会论文汇编</a>
+                        </li>
+                        <li>
+                            <a href="/web/components/newsTrends/news/news_2.html"
+                                title="2019中青年影像医生“攀登计划”报名通知">2019中青年影像医生“攀登计划”报名通知</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <iframe src="/web/common/footer/footer.html" width="100%" ; height="127px" frameborder="0" scrolling="no"
+        name="footerFrame"></iframe>
+    <script src="/web/common/header/header.js"></script>
+</body>
+
+</html>

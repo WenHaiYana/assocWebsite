@@ -1,0 +1,243 @@
+.videoTop {
+  text-align: center;
+}
+
+.videoTop video {
+  margin: 50px 0;
+}
+
+.videoBottom {
+  margin-bottom: 100px;
+}
+
+.videoBottom #videoIntroduce {
+  /* margin: 0 0 30px 0;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 0 0 10px 0; */
+
+}
+
+.videoBottom #videoIntroduce p {
+  line-height: 59px;
+}
+
+.videoBottom #videoLecturer {
+  overflow: hidden;
+}
+.videoBottom #videoLecturer .takeOffice {
+  margin-top: 88px;
+  font-size: 12px;
+}
+.videoBottom #videoLecturer .takeOffice h2 {
+  text-align: left;
+  font-weight: 700;
+}
+.videoBottom #videoLecturer .takeOffice pre {
+  /* text-indent: 2rem; */
+  padding: 15px 0 0 20px;
+  line-height: 24px;
+ 
+}
+
+.videoBottom #videoLecturer .synopsis {
+  margin-top: 10px;
+  font-size: 12px;
+}
+.videoBottom #videoLecturer .synopsis h2 {
+  text-align: left;
+  font-weight: 700;
+}
+.videoBottom #videoLecturer .synopsis pre {
+  /* text-indent: 2rem; */
+  padding: 15px 0 0 20px;
+  line-height: 24px;
+ 
+}
+
+.videoBottom #videoComment {
+
+}
+.videoBottom #videoComment p {
+  position: relative;
+}
+.videoBottom #videoComment p textarea {
+   padding: 5px;
+}
+.videoBottom #videoComment p span {
+  position: absolute;
+  top: 18px;
+  left: 217px;
+}
+.videoBottom #videoComment span {
+  background-color: #372788;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin: 0 0 15px 15px;
+  line-height: 25px;
+}
+
+.videoBottom #videoComment #pinglun_text {}
+
+.videoBottom #videoComment #pinglun_text li {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding: 5px;
+  height: 73px;
+}
+.videoBottom #videoComment #pinglun_text li .li_top {
+  margin-right: 57px;
+}
+.videoBottom #videoComment #pinglun_text li .pinglun-left {
+  width: 50px;
+  height: 50px;
+}
+
+.videoBottom #videoComment #pinglun_text li .pinglun-left img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.videoBottom #videoComment #pinglun_text li .pinglun-right .pinglun_content {
+  color: #ababab;
+ margin-top: 10px;
+
+}
+.videoBottom #videoLecturer h2 {
+  /* margin: 0 0 30px 0;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 0 0 10px 0;
+  padding-left: 20px; */
+}
+
+.videoBottom #videoLecturer .videoLecturer-top {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin-right: 100px;
+}
+
+.videoBottom #videoLecturer .videoLecturer-top img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.videoBottom #videoLecturer .videoLecturer-bottom {
+  padding: 10px 0 0 0;
+  line-height: 20px;
+}
+.videoBottom #videoLecturer .videoLecturer-bottom h2 {
+  font-weight: 700;
+}
+.videoBottom #videoLecturer .videoLecturer-bottom h2 span {
+  margin-left: 23px;
+  font-weight: 400;
+}
+.common-color {
+  font-weight: 700;
+  border-left: 5px solid #372788;
+  /* padding-left: 20px; */
+  margin: 0 0 30px 0;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 0 0 10px 20px;
+
+}
+
+.common-discuss {
+  font-weight: 700;
+  border-left: 5px solid #372788;
+  /* padding-left: 20px; */
+  margin: 40px 0 30px 0;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 0 0 10px 20px;
+}
+
+.education-video-2-item2 {
+  margin-bottom: 100px;
+}
+
+#videoTaxtTop {
+  width: 1000px;
+  padding: 30px 100px;
+}
+
+#videoTaxtTop .videoTaxtTopLi {
+  margin-right: 75px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+#videoTaxtTop li .case-top {
+  position: relative;
+  line-height: 40px;
+  min-height: 40px;
+  height: auto !important;
+  height: 40px;
+  overflow: visible;
+  border-bottom: 1px solid #eee;
+}
+
+#videoTaxtTop li .case-top .more {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#videoTaxtTop li .case-bottom {
+  margin: 20px 0 10px 0;
+}
+
+#videoTaxtTop li .case-bottom ul li {
+  float: left;
+  width: 153px;
+  margin-right: 77px;
+  overflow: hidden;
+  margin: 0 77px 50px 0;
+}
+
+#videoTaxtTop li .case-bottom ul li .left-img {
+  width: 153px;
+  height: 100px;
+}
+
+#videoTaxtTop li .case-bottom ul li .left-img img {
+  width: 100%;
+  height: 100%;
+}
+
+#videoTaxtTop li .case-bottom ul li .right-text {
+  line-height: 20px;
+}
+
+#videoTaxtTop li .case-bottom ul li .right-text .right-title {
+
+  font-size: 13px;
+  width: 160px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
+  /* height: 28px; */
+  font-size: 16px;
+  color: #666;
+}
+
+#videoTaxtTop li .case-bottom ul li .right-text p {
+  font-size: 12px;
+}
+
+#videoTaxtTop li .case-bottom .text-top h3 {
+  position: relative;
+  padding: 5px 0 10px 0;
+  border-bottom: 1px solid #eee;
+  margin: 0 0 20px 0;
+}
+
+#videoTaxtTop li .case-bottom .text-top span {
+  position: absolute;
+  right: 0;
+  font-size: 12px;
+  color: #ababab;
+  /* top: 0; */
+}

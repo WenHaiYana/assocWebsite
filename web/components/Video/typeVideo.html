@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/web/common/header/header.css">
+    <link rel="stylesheet" href="./typeVideo.css">
+    <link rel="stylesheet" href="/web/css/reset.css">
+    <link rel="stylesheet" href="/web/css/common.css">
+    <script src="/web/js/jquery-1.11.3.js"></script>
+
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+
+<body>
+      <div class="center-erweima" id="box1" style="bottom:50%;right:10px;">
+        <div class="p">
+            <img src="/web/images/qrcode_for_gh_df993352a9a3_344.jpg" alt="">
+        <p>关注此公众号</p>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="zheceng" id="zheceng">
+    </div>
+    <div class="popup">
+        <div class="err">
+            <img src="/web/images/error.png" alt="">
+        </div>
+        
+        <div class="popup-bottom">
+            <div class="popup-footer">
+                <p> 
+                    <img src="/web/images/wx.png" alt="">
+                微信安全登录</p>
+            </div>
+            <div class="tab-item">
+                <div id="login_container">啊啊啊</div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-left">
+                    <marquee scrollAmount=3 height=25 direction="up" onmouseover=stop() onmouseout=start()>
+                        <div class="img"></div>
+                        <div class="text">
+                            <span>欢迎访问 --中国医师协会放射医师分会</span>
+                        </div>
+                    </marquee>
+                </div>
+                <div class="header-right">
+                    <div class="right-img">
+                        <img id="headerImg" src="/web/images/icon/my.png" alt="">
+                    </div>
+                    <div class="right-text">
+                        <div class="username">
+                            <ul>
+                                <li><a href="#">登录&nbsp;&nbsp;/注册</a></li>
+                            </ul>
+                            <img class="dengluImg" src="/web/images/icon/triangle.png" alt="">
+                        </div>
+                        <div class="personage">
+                            <div class="personage-top">
+                                <!-- <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p> -->
+                            </div>
+                            <div class="quit">
+                                <p class="quitCode"><a href="">退出登录</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="logo">
+        <div class="container">
+            <a href="/index.html">
+                <img src="/web/images/logo.jpg" alt="">
+            </a>
+        </div>
+
+    </div>
+    <div class="nav-li">
+        <div class="container">
+            <div class="lis">
+                <ul>
+                    <li>
+                        <h3><a href="/index.html">首页</a></h3>
+                    </li>
+                    <li class="hover-organization">
+                        <h3><a href="/web/components/organization/organization.html" target="_parent">组织架构</a></h3>
+                          
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/newsTrends/newsTrends.html" target="_parent">新闻动态</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/notification/notification.html" target="_parent">通知公告</a></h3>
+                    </li>
+                    <li>
+                        <h3><a class="click-color" href="/web/components/education/education.html">继续教育</a></h3>
+                        <ul class="sub-1">
+                            <li><a href="/web/components/education/education.html">典型案例</a></li>
+                            <li><a href="/web/components/Video/video.html">视频培训</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/cooperation/cooperation.html" target="_parent">战略合作</a></h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <div class="education-video-1">
+            </div>
+            <div class="education-video-2">
+                <div class="education-video-2-item1">
+                    
+                </div>
+                <div class="education-video-2-item2">
+                    <div>
+                        <ul id="videoTaxtTop"></ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 底部 -->
+    <iframe src="/web/common/footer/footer.html" width="100%" ; height="127px" frameborder="0" scrolling="no"
+        name="footerFrame"></iframe>
+        <script type="text/javascript">
+            if (localStorage.userinfo === undefined) {
+                $(".err").click(function () { })
+                $(".popup").css('display', 'block')
+                $(".zheceng").css('display', 'block')
+                var local = window.location.href;
+                // getUrlCode().code
+                function getUrlCode() {
+                    var url = location.search;
+                    this.winUrl = url;
+                    var theRequest = new Object();
+                    if (url.indexOf("?") != -1) {
+                        var str = url.substr(1);
+                        var strs = str.split("&");
+                        for (var i = 0; i < strs.length; i++) {
+                            theRequest[strs[i].split("=")[0]] = strs[i].split("=")[1];
+                        }
+                    }
+                    return theRequest;
+                }
+                getUrlCode(local)
+                var code = getUrlCode(local).code;
+                var state = getUrlCode(local).state;
+                $.ajax({
+                    type: 'get',
+                    url: 'http://114.115.216.211/scan/scanBack',
+                    data: {
+                        code: code,
+                        state: state
+                    },
+                    success: function (data) {
+                        if (data.rows.headimgurl != null) {
+                            localStorage.userinfo = JSON.stringify(data.rows);
+                            var headimgurl = data.rows.headimgurl;
+                            var username = data.rows.username;
+                            $("#headerImg").attr('src', headimgurl);
+                            $(".right-text .username ul li").html(username)
+                            $('.dengluImg').css('display', 'block')
+                            window.location.href = window.location.href;
+                            $(".popup").css('display', 'none')
+                            $(".zheceng").css('display', 'none')
+                            $('.quitCode').click(function () {
+                                window.localStorage.removeItem('userinfo')
+                            })
+                        }
+                        $('.right-text').mouseenter(function () {
+                            $('.personage').css('display', 'block')
+                        })
+                        $('.right-text').mouseleave(function () {
+                            $('.personage').css('display', 'none')
+                        })
+    
+                    }
+                })
+            } else {
+                let userinfo = JSON.parse(localStorage.userinfo);
+                let headimgurl = userinfo.headimgurl;
+                let username = userinfo.username
+                $("#headerImg").attr('src', headimgurl);
+                $(".right-text .username ul li").html(username)
+                $('.dengluImg').css('display', 'block')
+    
+                // $('.personage').css('display', 'block')
+                $('.right-text').mouseenter(function () {
+                    $('.personage').css('display', 'block')
+                })
+                $('.right-text').mouseleave(function () {
+                    $('.personage').css('display', 'none')
+                })
+                $(".popup").css('display', 'none')
+                $(".zheceng").css('display', 'none')
+            }
+        </script>
+        <script type="text/javascript">
+            //扫码登录代码
+            $(document).ready(function () {
+                var obj = new WxLogin({
+                    id: "login_container", //div的id
+                    appid: "wxab72ceaf1de3a381",
+                    scope: "snsapi_login", //写死
+                    redirect_uri: "http%3A%2F%2Fwww.crahim.cn%3A8080%2F",
+                    state: "",
+                    style: "black", //二维码黑白风格        
+                    href: "data:text/css;base64,LmltcG93ZXJCb3ggLnFyY29kZSB7CiAgICB3aWR0aDogMjgwcHg7CiAgICBtYXJnaW4tdG9wOiAxNXB4OwogICAgYm9yZGVyOiAxcHggc29saWQgI0UyRTJFMjsKfQoKLmltcG93ZXJCb3ggLnRpdGxlIHsKICAgIHRleHQtYWxpZ246IGNlbnRlcjsKICAgIGZvbnQtc2l6ZTogMjBweDsKICAgIGNvbG9yOiAjZmZmOwp9CgouaW1wb3dlckJveCAuaW5mbyB7CiAgICB3aWR0aDogMjE5cHg7Cn0KCi5zdGF0dXNfaWNvbiB7CiAgICBkaXNwbGF5OiBub25lCn0KCi5pbXBvd2VyQm94IC5zdGF0dXMgewogICAgdGV4dC1hbGlnbjogY2VudGVyOwogICAgbWFyZ2luLXRvcDogMTFweDsKICAgIGJhY2tncm91bmQtY29sb3I6ICMyMzIzMjM7CiAgICBib3JkZXItcmFkaXVzOiAxMDBweDsKICAgIC1tb3otYm9yZGVyLXJhZGl1czogMTAwcHg7CiAgICAtd2Via2l0LWJvcmRlci1yYWRpdXM6IDEwMHB4OwogICAgYm94LXNoYWRvdzogaW5zZXQgMCA1cHggMTBweCAtNXB4ICMxOTE5MTksIDAgMXB4IDAgMCAjNDQ0OwogICAgLW1vei1ib3gtc2hhZG93OiBpbnNldCAwIDVweCAxMHB4IC01cHggIzE5MTkxOSwgMCAxcHggMCAwICM0NDQ7CiAgICAtd2Via2l0LWJveC1zaGFkb3c6IGluc2V0IDAgNXB4IDEwcHggLTVweCAjMTkxOTE5LCAwIDFweCAwIDAgIzQ0NDsKICAgIHdpZHRoOiAxOTZweDsKICAgIGhlaWdodDogMzZweDsKICAgIGNvbG9yOiAjZmZmOwp9Cgpib2R5IHsKICAgIC8qIGJhY2tncm91bmQtY29sb3I6IHJnYig1MSwgNTEsIDUxKTsKICAgIHBhZGRpbmc6IDUwcHg7CiAgICBmb250LWZhbWlseTogIk1pY3Jvc29mdCBZYWhlaSI7CiAgICBjb2xvcjogI2ZmZjsgKi8KfQoKLm9sZC10ZW1wbGF0ZSB7CiAgICBjb2xvcjogI2ZmZiAhaW1wb3J0YW50Owp9"
+                });
+            });
+        </script>
+</body>
+
+</html>

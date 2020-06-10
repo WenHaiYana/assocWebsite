@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+    <!-- <link rel="stylesheet" href="./header.css"> -->
+    <link rel="stylesheet" href="/web/css/reset.css">
+    <script type="text/javascript" src="/web/js/jquery-1.11.3.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .header {
+            height: 25px;
+            line-height: 25px;
+            background: #e8ecec;
+            font-size: 12px;
+        }
+
+        .header .header-top {
+            position: relative;
+        }
+
+        .header .header-top .header-left {
+            float: left;
+            overflow: hidden;
+            height: 25px;
+        }
+
+        @keyframes marqueeTransform {
+            /* 0%   { transform: translate(0, 0); }
+    30%   { transform: translate(100%, 0); }
+    100% { transform: translate(0, 0); } */
+            /* 70%   { transform: translate(100%, 0); } */
+        }
+
+        .header .header-top .header-left .text {
+            padding-left: 20px;
+            animation: marqueeTransform 10s linear infinite;
+        }
+
+        .header .header-top .header-left .text span::before {
+            content: " ";
+            display: block;
+            background: url(../../images/icon/laba.png) no-repeat;
+            width: 16px;
+            height: 16px;
+            background-size: 16px;
+            position: absolute;
+            top: 5px;
+            left: 0;
+        }
+
+        .header .header-top .header-right {
+            float: right;
+            position: relative;
+        }
+
+        .header .header-top .header-right::before {
+            content: " ";
+            display: block;
+            background: url(../../images/icon/my.png) no-repeat;
+            width: 16px;
+            height: 16px;
+            background-size: 16px;
+            position: absolute;
+            top: 5px;
+            left: -22px;
+        }
+
+
+        .header .header-top .header-right .right-text ul li {
+            float: left;
+            width: 45px;
+        }
+
+        .logo {
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            border-bottom: 2px solid rgb(81, 56, 211);
+        }
+
+        .nav-li {
+            width: 100%;
+            height: 52px;
+            line-height: 52px;
+            text-align: center;
+            box-shadow: 3px -2px 10px rgb(240, 240, 240);
+        }
+
+        .nav-li .lis {
+            /* padding: 0 85px; */
+            height: 52px;
+        }
+
+        .nav-li .lis ul li {
+            float: left;
+            width: 170px;
+        }
+
+        .nav-li .lis ul li h3 a {
+            display: block;
+        }
+
+        .nav-li .lis ul li:hover h3 a {
+            color: rgb(81, 56, 211);
+        }
+
+        .nav-li .lis ul li.hover-organization {
+            position: relative;
+        }
+
+        .nav-li .lis ul li.hover-organization .sub {
+            display: none;
+            position: absolute;
+            left: 22px;
+            top: 50px;
+            z-index: 1;
+            width: 137px;
+            border: 1px solid rgb(240, 240, 240);
+            border-top: 0;
+            background: #fff;
+            /* padding-bottom: 15px; */
+            padding: 10px 0;
+            font-size: 14px;
+            line-height: 27px;
+
+        }
+
+        .nav-li .lis ul li.hover-organization .sub li {
+            width: 100%;
+        }
+
+        .nav-li .lis ul li.hover-organization:hover .sub {
+            display: block;
+            z-index: 999;
+        }
+
+        /* 
+.nav .logo a {
+    display: block;
+}
+
+
+.nav .logo a img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav .nav-li {
+    height: 52px;
+    text-align: center;
+}
+.nav .nav-li ul {
+    width: 100%;
+    height: 100%;
+}
+.nav .nav-li ul li {
+    float: left;
+    width: 170px;
+} */
+    </style>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-left">
+                    <marquee scrollAmount=3 height=25 direction="up" onmouseover=stop() onmouseout=start()>
+                        <div class="img"></div>
+                        <div class="text">
+                            <span>欢迎访问 --中国医师协会放射医师分会</span>
+                        </div>
+                    </marquee>
+                </div>
+                <div class="header-right">
+                    <div class="right-img">
+                        <img id="headerImg" src="/web/images/icon/my.png" alt="">
+                        <div class="right-text">
+                            <ul>
+                                <li><a href="">登录&nbsp;&nbsp;/</a></li>
+                                <li><a href="">注册</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="logo">
+            <div class="container">
+                <a href="/index.html">
+                    <img src="/web/images/logo.jpg" alt="">
+                </a>
+            </div>
+
+        </div>
+        <div class="nav-li">
+            <div class="container">
+                <div class="lis">
+                    <ul>
+                        <li>
+                            <h3><a class="click-color" href="/index.html">首页</a></h3>
+                        </li>
+                        <li class="hover-organization click-color">
+                            <h3><a href="/web/components/organization/organization.html" target="_parent">组织架构</a></h3>
+                            <ul class="sub">
+                                <li><a href="">全国委员会</a></li>
+                                <li><a href="">专业委员会</a></li>
+                                <li><a href="">青年委员会</a></li>
+                                <li><a href="one18">历届委员会</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3><a href="/web/components/newsTrends/newsTrends.html" target="_parent">新闻动态</a></h3>
+                        </li>
+                        <li>
+                            <h3><a href="" target="_parent">通知公告</a></h3>
+                        </li>
+                        <li>
+                            <h3><a href="">继续教育</a></h3>
+                        </li>
+                        <li>
+                            <h3><a href="/web/components/cooperation/cooperation.html" target="_parent">战略合作</a></h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+<script src="/web/common/header/header.js"></script>
+</body>
+
+</html>

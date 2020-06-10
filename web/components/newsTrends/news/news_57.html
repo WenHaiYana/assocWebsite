@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/web/css/news/news_1.css">
+    <link rel="stylesheet" href="/web/common/header/header.css">
+    <link rel="stylesheet" href="/web/css/reset.css">
+    <link rel="stylesheet" href="/web/css/common.css">
+    <script src="/web/js/jquery-1.11.3.js"></script>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+
+<body>
+      <div class="center-erweima" id="box1" style="bottom:50%;right:10px;">
+        <div class="p">
+            <img src="/web/images/qrcode_for_gh_df993352a9a3_344.jpg" alt="">
+        <p>关注此公众号</p>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="zheceng" id="zheceng">
+    </div>
+    <div class="popup">
+        <div class="err">
+            <img src="/web/images/error.png" alt="">
+        </div>
+        <div class="popup-top">
+            <ul>
+                <li>登录</li>
+                <!-- <li>注册</li> -->
+            </ul>
+        </div>
+        <div class="popup-bottom">
+            <div class="tab-item">
+                <p>
+                    <span>*</span><label for="ipone"></label>
+                    <input type="text" id="ipone" placeholder="请输入手机号"></p>
+                <p><span>*</span><label for="passwodes"></label>
+                    <input type="text" id="passwodes" placeholder="请输入密码"></p>
+                <div class="agree"><input type="checkbox" checked>我已经阅读并同意<span>用户协议</span><span class="wangji">忘记密码
+                    </span></div>
+                <button type="button" id="btn">登录</button>
+            </div>
+            <!-- <div class="tab-item">注册</div> -->
+        </div>
+        <div class="popup-footer">
+            <p>使用第三方账号登录</p>
+            <p>
+                <a href="./wexin.html">
+                    <img src="/web/images/wx.png" alt="">
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-left">
+                    <marquee scrollAmount=3 height=25 direction="up" onmouseover=stop() onmouseout=start()>
+                        <div class="img"></div>
+                        <div class="text">
+                            <span>欢迎访问 --中国医师协会放射医师分会</span>
+                        </div>
+                    </marquee>
+                </div>
+                <div class="header-right">
+                    <div class="right-img">
+                        <img id="headerImg" src="/web/images/icon/my.png" alt="">
+                    </div>
+                    <div class="right-text">
+                        <div class="username">
+                            <ul>
+                                <li><a href="#">登录&nbsp;&nbsp;/注册</a></li>
+                            </ul>
+                            <img class="dengluImg" src="/web/images/icon/triangle.png" alt="">
+                        </div>
+                        <div class="personage">
+                            <div class="personage-top">
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                            </div>
+                            <div class="quit">
+                                <p class="quitCode"><a href="">退出登录</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="logo">
+        <div class="container">
+            <a href="/index.html">
+                <img src="/web/images/logo.jpg" alt="">
+            </a>
+        </div>
+
+    </div>
+    <div class="nav-li">
+        <div class="container">
+            <div class="lis">
+                <ul>
+                    <li>
+                        <h3><a href="/index.html">首页</a></h3>
+                    </li>
+                    <li class="hover-organization">
+                        <h3><a href="/web/components/organization/organization.html" target="_parent">组织架构</a></h3>
+                        <ul class="sub">
+                            <li><a href="/web/components/organization/organization.html">全国委员会</a></li>
+                            <li><a href="/web/components/organization/organization.html">专业委员会</a></li>
+                            <li><a href="/web/components/organization/organization.html">青年委员会</a></li>
+                            <li><a href="/web/components/organization/organization.html">历届委员会</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/newsTrends/newsTrends.html" target="_parent">新闻动态</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/notification/notification.html" target="_parent">通知公告</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/education/education.html">继续教育</a></h3>
+                        <ul class="sub-1">
+                            <li><a href="/web/components/education/education.html">case in point</a></li>
+                            <li><a href="/web/components/Video/video.html">视频培训</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/cooperation/cooperation.html" target="_parent">战略合作</a></h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="show">
+            <div class="show-lf">
+                <div class="text-lf">
+                    <span style="color:#333">新闻动态</span>&nbsp;>> &nbsp;正文
+                </div>
+                <h1 class="title">全国第八届输血医学学术年会通知（第二轮）</h1>
+                <div class="info">
+                    发布日期：2020-04-22&nbsp;&nbsp;
+                    <!-- 浏览次数：<span id="hits">2087</span> -->
+                </div>
+                <div class="introduce">
+                    核心提示：　　锐意创新，破解血荒，实现临床科学安全有效输血梦。中国医师协会输血科医师分会与中华医学会临床输血学分会强强联合，定于2019
+                </div>
+                <!-- <div class="conter" id="article"></div> -->
+                <div class="conter" id="article"><p>　　锐意创新，破解血荒，实现临床科学安全有效输血梦。中国医师协会输血科医师分会与中华医学会临床输血学分会强强联合，定于2014年6月12日至6月17日在江苏省江阴市举办“全国第八届输血医学学术年会”暨“自身免疫性溶血性贫血(以下简称AIHA)输血前试验及输血治疗共识专题研讨会”。</p>
+                    <p>　　会议热诚欢迎全国医院输血科(血库)和血液中心(血站)同道;院长及医院职能部门领导;以及与输血相关临床科室、麻醉科、检验科医务人员;输血科研院所研究人员;输血产品研发等相关人士参加本届大会。参会代表将获得国家级I类继续医学教育学分10分。</p>
+                    <p>　　现将会议有关事宜通知如下：</p>
+                    <p>　　一、年会专题讲座</p>
+                    <p>　　⒈ 我国血液标准体系的构架及研究思路</p>
+                    <p>　　⒉ 后冷战格局中全球临床输血现状及未来发展憧憬</p>
+                    <p>　　⒊ 世界输血医学研究最新进展</p>
+                    <p>　　⒋ 新时期临床输血精细化管理与发展</p>
+                    <p>　　⒌ 自身免疫性溶血性贫血(AIHA)实验室检测与临床输血</p>
+                    <p>　　⒍ 输血管理信息化建设的协同与超越</p>
+                    <p>　　⒎ 破解血荒～深入开拓自体输血新视野</p>
+                    <p>　　⒏ 科学管理血液，安全有效破解血荒</p>
+                    <p>　　二、年会大会发言</p>
+                    <p>　　组委会将从会议投稿中推选出高质量具有创新和普遍指导意义的文章作大会发言，如“指导科学安全有效输血破解血荒的新举措”、“血小板低温保存技术与临床应用系列研究”等优秀文章，专家组进行点评，参会代表可现场互动进行提问。</p>
+                    <p>　　三、自身免疫性溶血性贫血(AIHA)输血前试验及输血治疗共识专题研讨会</p>
+                    <p>　　年会结束后将继续召开“自身免疫性溶血性贫血(AIHA)输血前试验及输血治疗共识专题研讨会”，通过对AIHA输血前试验推荐方案的说明，以及全体代表对AIHA病人应如何正确配发血和输血的研讨，达成基本共识，在此基础上制定一个统一的、大家认可的、具有可操作性的科学先进的最佳治疗方案，达到对AIHA患者输血前试验统一化、规范化、标准化之目的。</p>
+                    <p>　　四、具体事宜安排</p>
+                    <p>　　⒈ 报到时间：2014年6月12日(8:30～22:30)</p>
+                    <p>　　⒉ 报到地点：</p>
+                    <p>　　8:30～18:00：江阴大剧院，地址：江阴市澄江中路128号;</p>
+                    <p>　　18:00～22:30： 戴斯国际酒店大堂，地址：位于大剧院斜对面(晚餐至20:30结束);</p>
+                    <p>　　⒊  接送参会代表：报到日6月12日8:00～20:30，会务组安排班车与工作人员在无锡苏南硕放机场、常州火车站和常州火车站北站统一接参会代表。在会议全部结束后，会务组在参会代表下榻的各酒店安排班车(届时详见酒店大堂班车时间表)，负责将代表送至常州、无锡的相关乘车站点返程。报到日接站人员联系方式：</p>
+                    <p>　　接站总负责人：顾晓华 13861603600</p>
+                    <p>　　接站无锡苏南硕放机场：史文虎 15961538030</p>
+                    <p>　　接站常州火车站：冯兴伟 15949283557</p>
+                    <p>　　接站常州火车站北站：孟文浩 15961658317</p>
+                    <p>　　⒋ 住宿宾馆及住宿收费标准详见通知后附件1;</p>
+                    <p>　　⒌ 会务费收费标准：1280元/人</p>
+                    <p>　　⒍ 食宿统一安排，交通费、住宿费自理;</p>
+                    <p>　　⒎  参会确认：请参会代表务必于5月底前，以电话、传真、短信、电子邮件等方式，与会务组崔浩进行参会确认(未进行确认者无法保证安排饭店住房)。确认内容包括：姓名、性别、职务/职称、单位、通信地址、邮编、联系电话、电子邮箱、乘坐航班或车次信息，预定您需要的酒店房间数或床位数以及是否有特殊饮食要求等。</p>
+                    <p>　　⒏【自行前往江阴大剧院路线】详见通知后附件2;</p>
+                    <div class="np">
+                        <ul>
+                            <li><strong>下一篇：</strong><a href="/web/components/newsTrends/news/news_58.html"
+                                    title="第七届中国外科医师年会在京召开">第七届中国外科医师年会在京召开</a>
+                            </li>
+                            <li><strong>上一篇：</strong><a href="/web/components/newsTrends/news/news_56.html"
+                                    title="中国医师协会精神科医师分会第十届年会召开">中国医师协会精神科医师分会第十届年会召开</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 20px;float: left;">&nbsp</div>
+            <div class="show-rg">
+                <div class="show-text">
+                    <div><strong>推荐图文</strong></div>
+                </div>
+                <div class="box_body">
+                    <table width="100%">
+                        <tbody>
+                            <tr align="center">
+                                <td width="50%" valign="top"><a
+                                        href="http://www.chinaradiologists.org/news/show.php?itemid=87">
+                                        <img src="http://www.chinaradiologists.org/file/upload/201706/14/11-12-11-96-1.jpg"
+                                            width="120" height="90" alt="中华国际医学交流基金会中国医师协会放射医师分会中青年影像医生“攀登计划”"></a>
+                                    <ul>
+                                        <li><a href="http://www.chinaradiologists.org/news/show.php?itemid=87"
+                                                title="中华国际医学交流基金会中国医师协会放射医师分会中青年影像医生“攀登计划”">中华国际医学交流基金</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box_head">
+                    <div><strong>推荐资讯</strong></div>
+                </div>
+                <div class="box_body">
+                    <ul class="ul">
+                        <li>
+                            <a href="/web/components/newsTrends/news/news_1.html"
+                                title="第十二次放射医师年会论文汇编">第十二次放射医师年会论文汇编</a>
+                        </li>
+                        <li>
+                            <a href="/web/components/newsTrends/news/news_2.html"
+                                title="2019中青年影像医生“攀登计划”报名通知">2019中青年影像医生“攀登计划”报名通知</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <iframe src="/web/common/footer/footer.html" width="100%" ; height="127px" frameborder="0" scrolling="no"
+        name="footerFrame"></iframe>
+    <script src="/web/common/header/header.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+.purple {
+    color: rgb(81, 56, 211);
+}
+
+.submit {
+    display: none;
+    position: fixed;
+    width: 200px;
+    height: 100px;
+    background-color: #fff;
+    right: 50%;
+    top: 50%;
+    margin-right: -100px;
+    padding: 10px;
+    text-align: center;
+    /* box-shadow: 0 15px 30px rgba(0,0,0,.1); */
+    margin-top: -100px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 21px rgba(0,0,0,.3);
+    z-index: 999;
+}
+.submit p {
+    margin-bottom: 28px;
+}
+.submit button {
+    width: 73px;
+    height: 28px;
+    background-color: green;
+    border:none;
+    border-radius: 3px;
+}
+
+.content #textId {
+    font-size: 13px;
+    padding: 20px;
+    border: 1px solid #eee;
+    line-height: 28px;
+    overflow: hidden;
+}
+
+.content #textId p {
+    font-size: 12px;
+    color: rgb(120, 120, 120);
+}
+
+.content #textId img {
+    width: 200px;
+    height: 200px;
+    /* float: left; */
+}
+
+.content #topicId {
+    padding: 20px;
+    border: 1px solid #eee;
+}
+
+.content #topicId #topicBottom li {
+    width: 365px;
+    padding: 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    /* height: 20px; */
+    font-size: 12px;
+    background-color: #F1F1F1;
+    margin-bottom: 21px;
+
+    cursor: pointer;
+
+}
+
+.content #topicId #commit {}
+
+.content #topicId #commit button {
+    cursor: pointer;
+}
+
+.content #topicId #analysis {
+    margin-top: 20px;
+}
+
+.content #topicId #analysis h2,
+.content #topicId #analysis h3 {
+    line-height: 30px;
+}
+
+.content #topicId #analysis p {
+    line-height: 30px;
+}
+
+.content #topicId #analysis .zhunajia_top {}
+
+.content #topicId #analysis .zhunajia_top .zhuanjia-img {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+.content #topicId #analysis .zhunajia_top .zhuanjia {
+    width: 400px;
+    /* height: px; */
+    float: left;
+}
+
+.content #topicId #commit button {
+
+    border: none;
+    background-color: transparent;
+    outline: none;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.content #pinglun {
+    margin: 30px 0;
+}
+
+.content #pinglun h2 {
+    margin: 24px 0;
+}
+
+.content #pinglun p {
+    overflow: hidden;
+}
+
+.content #pinglun p textarea {
+    height: 47px;
+    line-height: 40px;
+    padding: 0 10px;
+    width: 340px;
+    float: left;
+    margin: 0 50px 0 0;
+}
+
+.content #pinglun p span {
+    line-height: 40px;
+    /* width: 110px; */
+    /* height: 30px; */
+    background-color: rgb(81, 56, 211);
+    /* font-size: 15px; */
+    /* line-height: 25px; */
+    color: white;
+    /* display: block; */
+    padding: 13px 13px;
+    border-radius: 13px;
+}
+
+#pinglun_text {
+    padding: 20px;
+    overflow: hidden;
+}
+
+#pinglun_text li {
+    margin-bottom: 20px;
+    height: 70px;
+    border-top: 1px solid #f1f1f1;
+    width: 600px;
+    padding: 10px;
+}
+
+#pinglun_text li .li_top {
+    height: 100%;
+    overflow: hidden;
+}
+
+#pinglun_text .pinglun-left {
+    float: left;
+    width: 150px;
+    height: 100%;
+}
+
+#pinglun_text .pinglun-left img {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+#pinglun_text .pinglun-right {
+    float: left;
+    width: 300px;
+    height: 100%;
+}
+
+#pinglun_text .pinglun-right .username {
+    font-weight: 700;
+}
+
+#pinglun_text li .pinglun_content {
+    padding: 0 0 0 50px;
+    width: 300px;
+    float: left;
+}
+
+.createTime {
+    color: #8a9aa9;
+}
+
+.selectedCss {
+    background-color: green;
+}

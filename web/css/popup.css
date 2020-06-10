@@ -1,0 +1,31 @@
+.popup {
+    position: absolute;
+    width: 410px;
+    height: 500px;
+    right: 50%;
+    top: 50%;
+    margin-right: -205px;
+    margin-top: -250px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.popup .popup-top {
+    border: 1px solid white;
+    height: 80px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(220, 220, 220);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.popup .popup-top ul li {
+    float: left;
+    font-size: 18px;
+    line-height: 25px;
+    width: 150px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    height: 80px;
+    padding-top: 42px;
+}

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/web/css/notification/notifica/notifica_1.css">
+    <link rel="stylesheet" href="/web/common/header/header.css">
+    <link rel="stylesheet" href="/web/css/reset.css">
+    <link rel="stylesheet" href="/web/css/common.css">
+    <script src="/web/js/jquery-1.11.3.js"></script>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+
+<body>
+      <div class="center-erweima" id="box1" style="bottom:50%;right:10px;">
+        <div class="p">
+            <img src="/web/images/qrcode_for_gh_df993352a9a3_344.jpg" alt="">
+        <p>关注此公众号</p>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="zheceng" id="zheceng">
+    </div>
+    <div class="popup">
+        <div class="err">
+            <img src="/web/images/error.png" alt="">
+        </div>
+        
+        <div class="popup-bottom">
+            <div class="popup-footer">
+                <p> 
+                    <img src="/web/images/wx.png" alt="">
+                微信安全登录</p>
+            </div>
+            <div class="tab-item">
+                <div id="login_container">啊啊啊</div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-left">
+                    <marquee scrollAmount=3 height=25 direction="up" onmouseover=stop() onmouseout=start()>
+                        <div class="img"></div>
+                        <div class="text">
+                            <span>欢迎访问 --中国医师协会放射医师分会</span>
+                        </div>
+                    </marquee>
+                </div>
+                <div class="header-right">
+                    <div class="right-img">
+                        <img id="headerImg" src="/web/images/icon/my.png" alt="">
+                    </div>
+                    <div class="right-text">
+                        <div class="username">
+                            <ul>
+                                <li><a href="#">登录&nbsp;&nbsp;/注册</a></li>
+                            </ul>
+                            <img class="dengluImg" src="/web/images/icon/triangle.png" alt="">
+                        </div>
+                        <div class="personage">
+                            <div class="personage-top">
+                                    <!-- <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p> -->
+                            </div>
+                            <div class="quit">
+                                <p class="quitCode"><a href="">退出登录</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="logo">
+        <div class="container">
+            <a href="/index.html">
+                <img src="/web/images/logo.jpg" alt="">
+            </a>
+        </div>
+
+    </div>
+    <div class="nav-li">
+        <div class="container">
+            <div class="lis">
+                <ul>
+                    <li>
+                        <h3><a href="/index.html">首页</a></h3>
+                    </li>
+                    <li class="hover-organization">
+                        <h3><a href="/web/components/organization/organization.html" target="_parent">组织架构</a></h3>
+                          
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/newsTrends/newsTrends.html" target="_parent">新闻动态</a></h3>
+                    </li>
+                    <li>
+                        <h3><a  class="click-color"  href="/web/components/notification/notification.html" target="_parent">通知公告</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/education/education.html">继续教育</a></h3>
+                        <ul class="sub-1">
+                            <li><a href="/web/components/education/education.html">典型案例</a></li>
+                            <li><a href="/web/components/Video/video.html">视频培训</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/cooperation/cooperation.html" target="_parent">战略合作</a></h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div class="content">
+            <div class="container">
+                <div class="show">
+                    <div class="show-lf">
+                        <div class="text-lf">
+                            <span style="color:#333">通知公告</span>&nbsp;>> &nbsp;正文
+                        </div>
+                        <h1 class="title">中国医师协会放射分会2016年全国年会隆重开幕！</h1>
+                        <div class="info">
+                            发布日期：2020-04-22&nbsp;&nbsp;
+                            <!-- 浏览次数：<span id="hits">2087</span> -->
+                        </div>
+                        <div class="introduce">
+                            核心提示：由中国医师协会、中国医师协会放射医师分会、河南省医学会、河南省医师协会主办的中国医师协会放射分会2016年全国年会、第十届中国放射医师论坛、第四届中原医学影像高峰论坛、河南省医学会放射学分会第二十二次年会、河南省医师协会放射分会第十次年会在郑州嵩山饭店隆重开幕！
+                            本次大会秉承中国医师协会 学习、服务、求实、奉献 的精神，围绕探索、创新、发展的主题进行。
+                        </div>
+                        <!-- <div class="conter">
+                         
+                    </div> -->
+                        <div class="conter" id="article">
+                            <p><span style="font-family: 宋体;"><span
+                                        style="font-size: 20px;">由中国医师协会、中国医师协会放射医师分会、河南省医学会、河南省医师协会主办的“中国医师协会放射分会2016年全国年会、第十届中国放射医师论坛、第四届中原医学影像高峰论坛、河南省医学会放射学分会第二十二次年会、河南省医师协会放射分会第十次年会”在郑州嵩山饭店隆重开幕！<br>
+                                        <br>
+                                        &nbsp; 本次大会秉承中国医师协会" 学习、服务、求实、奉献"
+                                        的精神，围绕“探索、创新、发展”的主题进行。大会由中国医科大学副校长、盛京医院院长郭启勇教授担任主席，河南省放射学分会主委程敬亮教授、河南省医师协会会长史大鹏教授担任大会执行主席。<br>
+                                        <br>
+                                        &nbsp;
+                                        中国医师协会放射分会全国年会每年举办一届，今年已是第十届，参会代表达到了上千人。会议邀请了上百位国内外相关领域的专家学者围绕放射学科建设、医师队伍人才培养、医学影像质量控制和放射医师职业教育（影像诊断技能）、放射诊断研究等多个会议主题进行了精彩的学术报告以及专题讨论。<br>
+                                        <br>
+                                        &nbsp;
+                                        同期举办的还有2016中国医师协会放射科住院医师规范化培训师资培训班。这是由放射科住培专委会成立以来首次举办的放射科住院医师规范化培训师资培训班，为融合去年峰会的成功经验，再次邀请了海外专家举行主题论坛。<br>
+                                        <br>
+                                        &nbsp;
+                                        今年高峰论坛的主题为“各国放射医师的考核与认证”，会议安排了美国、日本、韩国、德国、香港等国家和地区的学者参与探讨，同时郭启勇教授为大家分享了“中国放射科医师的考核与认证”专题讲座。<br>
+                                        <br>
+                                        &nbsp; 专题讲座上午8:00整，在程敬亮教授、史大鹏教授两位主持人走上主席台并发表讲话，大会开幕式正式启动！</span></span></p>
+                            <div>&nbsp;</div>
+                            <div style="text-align: center;">&nbsp;</div>
+                            <span style="font-family: 宋体;"><span style="font-size: 20px;">
+                                    <div style="text-align: center;">主持人</div>
+                                    <div style="text-align: center;"><img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-46-54-24-1.jpg"
+                                            width="716" height="359" alt="" title="点击打开原图"><br>
+                                        &nbsp;</div>
+                                    <div style="text-align: center;"><img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-47-06-83-1.jpg"
+                                            width="716" height="477" alt="" title="点击打开原图"><br>
+                                        &nbsp;</div>
+                                    <div style="text-align: left;">&nbsp;
+                                        大会主席郭启勇教授为本次会议致开幕词。他强调：通过此次大会，借鉴国内外优秀的培训经验，找到合适我们的培训方案，提高我国放射医师规范化培训水平，祝贺本届大会圆满成功。
+                                    </div>
+                                    <div style="text-align: center;"><img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-47-32-94-1.jpg"
+                                            width="716" height="477" alt="" title="点击打开原图"></div>
+                                    <div style="text-align: center;">郭启勇教授</div>
+                                    <div style="text-align: center;">&nbsp;</div>
+                                    <div style="text-align: left;">&nbsp;
+                                        河南省人民医院院长顾建钦表示，这次是三会融于一会，论坛同时举行，是影像专业的一次盛会，这次会议大会主题内容广泛，热点众多，来自多个国家的专家同道支持。为放射专业住院医师、专科医师培训规范化考核标准、基地建设、师资培养
+                                        等重大问题开展深入交流，同时，也准备医学影像指南规范、质量控制、人才培养等进入深入的探讨，这是一次国内放射学界的学术盛宴，是一次非常难得的学习与提高机会。<br>
+                                        &nbsp;</div>
+                                    <div style="text-align: center;"><img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-47-47-76-1.jpg"
+                                            width="716" height="499" alt="" title="点击打开原图"></div>
+                                    <div style="text-align: center;">河南省人民医院院长顾建钦</div>
+                                    <div style="text-align: center;"><br>
+                                        &nbsp;
+                                        戴建平教授在本次会议说到，中国医师协会放射学会团结了我们未来领导，集合了大家的信心，开展了国内的工作，严肃做了国际的交流，中华放射的未来在医师的身上，给与了中国医师协会放射分会极大地肯定。<br>
+                                        &nbsp;</div>
+                                    <div style="text-align: center;"><img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-48-18-72-1.jpg"
+                                            width="716" height="477" alt="" title="点击打开原图"></div>
+                                    <div style="text-align: center;">戴建平教授</div>
+                                    <div style="text-align: center;">&nbsp;</div>
+                                    <div style="text-align: left;">&nbsp;
+                                        中国医师协会学术会务部主任李明霞主任在会议中谈到，作为医师协会的活动，贯彻四化内容，做到学科规范化，科室进修，人才培养、临床诊疗的标准化等在共识、指南、教材形成标准划体系化内容，做积极的推进。<br>
+                                        &nbsp;</div>
+                                    <div style="text-align: center;"><img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-48-29-23-1.jpg"
+                                            width="597" height="569" alt=""></div>
+                                    <div style="text-align: center;">李明霞主任<br>
+                                        &nbsp;</div>
+                                    <div style="text-align: left;">&nbsp;
+                                        河南省卫计委党组成员黄玮副主任表示：中国医师协会放射医师分会学术年会是我国放射领域最高水平的学术盛会，规模大、影响广、知名度高，非常感谢中国医师协会对河南省的信任和支持，也是对省放射医学工作的充分肯定。这次年会，为国内外放射医学专业、同行搭建了开放、互动、丰富的学习交流平台。<br>
+                                        &nbsp;</div>
+                                    <div style="text-align: center;"><img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-48-49-65-1.jpg"
+                                            width="716" height="477" alt="" title="点击打开原图"></div>
+                                    <div style="text-align: center;">河南省卫计委党组成员黄玮副主任<br>
+                                        &nbsp;</div>
+                                    <div style="text-align: center;"><img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-48-59-18-1.jpg"
+                                            width="716" height="477" alt="" title="点击打开原图"></div>
+                                    <div style="text-align: center;">程敬亮教授</div>
+                                    <div style="text-align: center;"><br>
+                                        <b> </b></div>
+                                    <div style="text-align: left;">&nbsp;
+                                        程敬亮教授表示，以郭启勇为会长的第三届中国放射医师协会自2014年成立之始，就重点规划了全国二级以上医院放射从业人员和放射影像设备的调查统计工作。经过近2年的辛勤工作，2015年12月我国31省（直辖市、自治区）放射人员和设备调查的数据上交完毕，又经过近半年的数据整理与统计分析，终于完成了《2015年全国二级以上医院放射人员及设备调查报告》，并在郑州举行的这次全国年会上予以公布。可以说，这一艰巨任务的完成，凝聚了全国放射同道的心血，特别是31个省、直辖市、自治区调查负责人和工作秘书的辛苦。<br>
+                                        <br>
+                                        &nbsp;
+                                        中国医师协会放射分会会长郭启勇教授、中国医师协会学术会务部主任李明霞主任为各省调查负责人表彰颁奖。感谢他们为完成全国二级以上医院放射人员及设备调查工作所做出的主要成绩和贡献。<br>
+                                        &nbsp;</div>
+                                    <div style="text-align: left;"><b>表彰颁奖<br>
+                                        </b></div>
+                                    <div style="text-align: center;"><img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-49-25-11-1.jpg"
+                                            width="716" height="477" alt="" title="点击打开原图"></div>
+                                    <div style="text-align: center;"><b> </b>突出贡献奖<br>
+                                        &nbsp;</div>
+                                    <div style="text-align: center;"><img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-49-35-34-1.jpg"
+                                            width="716" height="477" alt="" title="点击打开原图"></div>
+                                    <div style="text-align: center;">突出贡献奖<br>
+                                        &nbsp;</div>
+                                    <div style="text-align: center;"><img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-49-44-14-1.jpg"
+                                            width="716" height="477" alt="" title="点击打开原图"></div>
+                                    <div style="text-align: center;">突出贡献奖<br>
+                                        &nbsp;</div>
+                                    <div style="text-align: center;"><img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-49-53-82-1.jpg"
+                                            width="716" height="477" alt="" title="点击打开原图"></div>
+                                    <div style="text-align: center;">突出贡献奖<br>
+                                        &nbsp;</div>
+                                    <div style="text-align: center;"><img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-50-03-80-1.jpg"
+                                            width="716" height="477" alt="" title="点击打开原图"></div>
+                                    <div style="text-align: center;">突出贡献奖<br>
+                                        &nbsp;</div>
+                                    <div style="text-align: center;"><img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-50-13-45-1.jpg"
+                                            width="716" height="539" alt="" title="点击打开原图"></div>
+                                    <div style="text-align: center;">千人盛会<br>
+                                        &nbsp;</div>
+                                    <div style="text-align: center;"><img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-50-23-35-1.jpg"
+                                            width="716" height="477" alt="" title="点击打开原图"></div>
+                                    <div style="text-align: center;">精彩瞬间</div>
+                                    <div style="text-align: left;"><br>
+                                        &nbsp; 各位领导的致辞引发了主会场大礼堂内的热烈掌声，在与会专家的热情中，中国医师协会放射分会2016年全国年会拉开序幕，精彩不断！</div>
+                                    <div style="text-align: center;"><b><br>
+                                            各国专家分享国际化的医师管理经验的精彩片段</b></div>
+                                    <div style="text-align: center;"><img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-50-35-34-1.jpg"
+                                            width="716" height="477" alt="" title="点击打开原图"></div>
+                                    <div style="text-align: center;">美国放射学会Kay&nbsp;H.&nbsp;Vydareny, M.D.<br>
+                                        &nbsp;</div>
+                                    <div style="text-align: center;"><img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-50-44-73-1.jpg"
+                                            width="716" height="477" alt="" title="点击打开原图"></div>
+                                    <div style="text-align: center;">德国放射学会前任主席 &nbsp;Michael Forsting, M.D.,
+                                        Professor<br>
+                                        &nbsp;</div>
+                                    <div style="text-align: center;"><img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-50-53-12-1.jpg"
+                                            width="716" height="477" alt="" title="点击打开原图"></div>
+                                    <div style="text-align: center;">日本放射医师协会 &nbsp;Noriyuki&nbsp;Tomiyama, M.D.,
+                                        Ph.D.<br>
+                                        &nbsp;</div>
+                                    <div style="text-align: center;"><img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-51-01-56-1.jpg"
+                                            width="716" height="477" alt="" title="点击打开原图"></div>
+                                    <div style="text-align: center;">香港放射医师学院创始院长和前任 &nbsp;Dr. Lilian L Y Leong, MBBS,
+                                        D.Sc, DMRD, FRCR, FHKCR, FHKAM, MBA<br>
+                                        &nbsp;</div>
+                                    <div style="text-align: center;"><img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-51-10-72-1.jpg"
+                                            width="716" height="477" alt="" title="点击打开原图"></div>
+                                    <div style="text-align: center;">韩国放射学会 &nbsp;Wing P. Chan, M.D.</div>
+                                </span></span>
+                            <div style="text-align: center;">&nbsp;</div>
+                            <span style="font-size: 20px;">
+                                <div style="text-align: center;">&nbsp;</div>
+                            </span>
+                            <div style="text-align: center;"><span style="font-family: 宋体;"><span
+                                        style="font-size: 20px;"> <img
+                                            src="http://www.chinaradiologists.org/file/upload/201608/28/09-51-22-66-1.jpg"
+                                            width="716" height="477" alt="" title="点击打开原图"><br>
+                                    </span></span></div>
+                            <div style="text-align: center;"><span style="font-family: 宋体;"><span
+                                        style="font-size: 20px;"> 美国放射学会&nbsp;Bibb Allen,&nbsp;M.D., F.A.C.R.<br>
+                                    </span></span></div>
+                            <span style="font-family: 宋体;"><span style="font-size: 20px;"><br>
+                                    <span style="text-indent: 2em;">&nbsp;
+                                        本次会议设置了住培师资培训分会场、主题论坛、继续教育分会场、管理与质控分会场、河南省内会场等多个分会场以及多个专题，为参会代表带来了一场又一场学术盛筵。</span><br>
+                                    <br>
+                                </span></span> <br type="_moz">
+                            <div class="np">
+                                <ul>
+                                    <li><strong>下一篇：</strong><a
+                                            href="/web/components/notification/notifica/notifica_7.html"
+                                            title="2016中国放射住院医师规范化培训六方峰会">2016中国放射住院医师规范化培训六方峰会</a>
+                                    </li>
+                                    <li><strong>上一篇：</strong><a
+                                            href="/web/components/notification/notifica/notifica_5.html"
+                                            title="2016中国医师协会放射专业住院医师规范化培训师资培训班顺利召开">2016中国医师协会放射专业住院医师规范化培训师资培训班顺利召开</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                      
+                    <div class="show-rg">
+                        <div class="show-text">
+                            <div><strong>推荐图文</strong></div>
+                        </div>
+                        <div class="box_body">
+                            <table width="100%">
+                                <tbody>
+                                    <tr align="center">
+                                        <td width="50%" valign="top"><a
+                                                href="/web/components/notification/notifica/notifica_1.html">
+                                                <img src="http://www.chinaradiologists.org/file/upload/201706/14/11-12-11-96-1.jpg"
+                                                    width="120" height="90" alt="中青年影像医生“攀登计划”第四期第一轮遴选结果”"></a>
+                                            <ul>
+                                                <li><a href="/web/components/notification/notifica/notifica_1.html"
+                                                        title="中青年影像医生“攀登计划”第四期第一轮遴选结果">中华国际医学交流基金</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="box_head">
+                            <div><strong>推荐资讯</strong></div>
+                        </div>
+                        <div class="box_body">
+                            <ul class="ul">
+                                <li>
+                                    <a href="//web/components/notification/notifica/notifica_1.html"
+                                        title="第十三次放射医师年会【参会攻略】">第十三次放射医师年会【参会攻略】</a>
+                                </li>
+                                <li>
+                                    <a href="/web/components/notification/notifica/notifica_2.html"
+                                        title="第十二次放射医师年会论文汇编">关于中青年影像医生“攀登计划”紧急通知及温馨提醒</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <iframe src="/web/common/footer/footer.html" width="100%" ; height="127px" frameborder="0" scrolling="no"
+            name="footerFrame"></iframe>
+        <script src="/web/common/header/header.js"></script>
+<script src="/web/common/header/header.js"></script>
+</body>
+
+</html>

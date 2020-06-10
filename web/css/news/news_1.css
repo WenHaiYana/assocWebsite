@@ -1,0 +1,111 @@
+.content{
+  width: 100%;
+  color: #666;
+}
+.show{
+  width: 1200px;
+  margin: 0 auto;
+}
+.show .show-lf{
+  border: #DDDDDD 1px solid;
+  width: 64%;
+  float: left;
+  margin-bottom: 40px;
+}
+.show-lf .info{
+  margin: 0 15px 0 15px;
+  padding: 4px 10px 4px 10px;
+  border-top: #D0D0D0 1px solid;
+  border-bottom: #D0D0D0 1px solid;
+  font-size: 12px;
+}
+.text-lf{
+  padding: 0 10px 0 10px;
+  line-height: 31px;
+  background: #EEEEEE;
+  font-size: 12px;
+  /* color: #666; */
+}
+.show-lf .title{
+  height: 38px;
+  font-size: 20px;
+  text-align: center;
+  font-family: \9ED1\4F53;
+  font-weight: normal;
+  margin-top: 18px;
+  /* color: #666; */
+}
+.introduce{
+  margin: 10px 15px 10px 15px;
+  padding: 8px 12px 8px 12px;
+  line-height: 180%;
+  font-size: 14px;
+  background: #F1F1F1;
+}
+.show-lf .conter{
+  font-size: 14px;
+  line-height: 180%;
+  padding: 10px 20px 10px 20px;
+  /* color: #666; */
+}
+.show-lf .conter p{
+  text-indent: 2em;
+  line-height: 32px;
+}
+.show-lf .conter a:link, .content a:visited, .content a:active {
+  color: #333333;
+  text-decoration: none;
+  /* #e8be36 */
+}
+.show-lf .conter a:hover{
+  color:  #e8be36;
+}
+.c_b{
+  clear: both;
+  height: 10px;
+  font-size: 1px;
+}
+.np{
+  padding: 20px 30px 20px 50px;
+  line-height: 25px;
+}
+.show .show-rg{
+  width: 25%;
+  float: left;
+}
+.show-rg .show-text{
+  border: #DDDDDD 1px solid;
+  border-bottom: none;
+  height: 31px;
+  line-height: 31px;
+  overflow: hidden;
+  padding: 0 10px 0 10px;
+  background: #EEEEEE;
+  font-size: 14px;
+}
+.show-rg .box_body{
+  border: #DDDDDD 1px solid;
+  border-top: none;
+  padding: 5px 0 5px 0;
+}
+.show-rg .box_head{
+  border: #DDDDDD 1px solid;
+  border-bottom: none;
+  height: 31px;
+  line-height: 31px;
+  overflow: hidden;
+  padding: 0 10px 0 10px;
+  background: #EEEEEE;
+  margin-top: 10px;
+}
+.show-rg .box_body .ul>li{
+  list-style: inside;
+  padding-left: 20px;
+}
+.show-rg .box_body .ul>li>a:link{
+  color: #333333;
+  text-decoration: none;
+}
+.show-rg .box_body .ul>li a:hover{
+  color:  #e8be36;
+}

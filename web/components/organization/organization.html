@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./organization.css">
+    <link rel="stylesheet" href="/web/common/header/header.css">
+    <link rel="stylesheet" href="/web/css/reset.css">
+    <link rel="stylesheet" href="/web/css/common.css">
+    <script type="text/javascript" src="/web/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/web/js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="/web/layui-v2.5.6/layui/layui.all.js"></script>
+    <script type="text/javascript" src="/web/layui-v2.5.6/layui/layui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/web/layui-v2.5.6/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="/web/layui-v2.5.6/layui/css/layui.mobile.css">
+    <script type="text/javascript" src="/web/layer-v3.1.1/layer/layer.js"></script>
+    <script type="text/javascript" src="/web/js/organization/organization.js"></script>
+    <script type="text/javascript">
+        function setTabOne(name, cursel, n) {
+            $("#association_top").css('display', 'none');
+            $("#association_bottom").css('display', 'none');
+            $("#ceshi").css('display', 'none');
+            $("#yscxPage").css('display', 'none')
+
+            for (i = 1; i <= n; i++) {
+                var menu = document.getElementById(name + i);
+                var con = document.getElementById("con_" + name + "_" + i);
+                menu.className = i == cursel ? "hover" : "";
+                con.style.display = i == cursel ? "block" : "none";
+            }
+        }
+
+        function setTab(tp, ceshi) {
+            var this_name = ceshi;
+            $("#association_top").css('display', 'block');
+            $("#association_bottom").css('display', 'block');
+            $("#ceshi").css('display', 'block');
+            $("#yscxPage").css('display', 'none')
+            $.ajax({
+                type: "get",
+                url: "http://114.115.216.211/doctor/list",
+                data: {
+                    tp: tp
+                },
+                success: function (data) {
+                    var association_top_text = "";
+                    var association_bottom_text = "";
+                    var ceshi = '<p>' + this_name + '</p>'
+                    for (i = 0; i < data.length; i++) {
+                        // if (data[i].professionPosition === null) {
+                            // data[i].professionPosition = ""
+                        // } else 
+                        if (data[i].professionPosition === "副主任委员" || data[i].professionPosition ===
+                            "主任委员" || data[i].professionPosition === "副主委" || data[i].professionPosition ==="主委") 
+                            {
+                            association_top_text +=
+                                '<div class="lvli">' +
+                                '<div class="association-left">' +
+                                '<img src="' + data[i].img + '" alt="">' +
+                                '</div>' +
+                                '<ul class="association-right">' +
+                                '<li>' + "姓名：" + data[i].name + '</li>' +
+                                '<li>' + "职务：" + data[i]
+                                .professionPosition + '</li>' +
+                                '<li>' + "医院：" + data[i].company + '</li>' +
+                                '<li>' + "职称：" + data[i].professionTitle + '</li>' + 
+                                '<li>' + "个人履历：" + data[i].des + '<a href="">'+ "更多" + '</a>' +
+                                '</li>' +
+                                '</ul>' +
+                                '</div>'
+                        } else {
+                            // if (data[i].professionPosition) {
+
+                            //     association_bottom_text += '<tr>' +
+                            //         '<td>' + data[i].name + '</td>' +
+                            //         '<td>' + data[i].professionPosition + '</td>' +
+                            //         '<td>' + data[i].company + '</td>' +
+                            //         '</tr>'
+                            // }
+                            // if (data[i].professionTitle) {
+                                association_bottom_text += '<tr>' +
+                                    '<td>' + "<span class='name'>" + data[i].name + "</span>" + '</td>' +
+                                    '<td>' + "<span class='professionTitle'>" + data[i].professionTitle + "</span>" + '</td>' +
+                                    '<td class="company">'  + data[i].company  +  '</td>' +
+                                    '</tr>'
+                            // }
+                        }
+                    }
+                    $("#association_top").html(association_top_text)
+                    $("#tbody").html(association_bottom_text)
+                    $("#ceshi").html(ceshi)
+                }
+            })
+        }
+    </script>
+    <script type="text/javascript">
+        // var records
+        getListData(1, false);
+
+        function getListData(pageNo, isClickFirstPager) {
+            $.ajax({
+                type: "get",
+                url: "http://114.115.216.211/doctor/findDoctorWidthPage",
+                data: {
+                    tp: 1,
+                    pageSize: 5,
+                    pageNum: pageNo
+                },
+                success: function (datas) {
+                    // alldata = datas.records;
+                    var records = datas.rows;
+                    if (isClickFirstPager === false) {
+                        renderPager(datas, pageNo, isClickFirstPager)
+                    }
+                    page = 1;
+                    $("#Tbody").html("");
+                    var records_text = "";
+                    var ceshi = '<p>' + "全国委员会" + '</p>'
+                    for (var i = 0; i < records.length; i++) {
+                        records_text +=
+                            '<div class="lvli" id="weiyuan_1">' +
+                            '<div class="association-left">' +
+                            '<img src="' + records[i].img + '" alt="">' +
+                            '</div>' +
+                            '<ul class="association-right">' +
+                            '<li>' + "姓名：" + records[i]
+                            .name +  '</li>' +
+                            '<li>' + "职务：" + records[i]
+                            .professionPosition + '</li>' +
+                            '<li>' + "医院：" + records[i]
+                            .company + '</li>' +
+                            '<li>' + "职称：" + records[i]
+                            .professionTitle + '</li>' +
+                            '<li>' + "个人履历：" + records[i].des +
+                            '<a href="./organizationDetail.html?id='+ records[i].id + '">' + "更多" +'</a>'+
+                            '</li>' +
+                            '</ul>' +
+                            '</div>'
+                    }
+                    // $("#Tbody").append(records_text);
+                    $("#association_top").html(records_text)
+                    $("#ceshi").html(ceshi)
+                },
+            })
+        }
+
+        function renderPager(datas, pageNo) {
+            layui.use(['laypage', 'layer'], function () {
+                var laypage = layui.laypage,
+                    layer = layui.layer;
+                var laypage = layui.laypage;
+                if (pageNo === 1) {
+                    laypage.render({
+                        elem: 'yscxPage',
+                        groups: 3,
+                        count: datas.total,
+                        jump: function (obj, first) {
+                            $("#pager").html(obj.curr)
+                            if (obj.curr !== 1) {
+                                getListData(obj.curr)
+                            } else {
+                                getListData(1, true)
+                            }
+                        }
+                    })
+                }
+            })
+        }
+    </script>
+
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+
+<body>
+      <div class="center-erweima" id="box1" style="bottom:50%;right:10px;">
+        <div class="p">
+            <img src="/web/images/qrcode_for_gh_df993352a9a3_344.jpg" alt="">
+        <p>关注此公众号</p>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="zheceng" id="zheceng">
+    </div>
+    <div class="popup">
+        <div class="err">
+            <img src="/web/images/error.png" alt="">
+        </div>
+        
+        <div class="popup-bottom">
+            <div class="popup-footer">
+                <p> 
+                    <img src="/web/images/wx.png" alt="">
+                微信安全登录</p>
+            </div>
+            <div class="tab-item">
+                <div id="login_container">啊啊啊</div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-left">
+                    <marquee scrollAmount=3 height=25 direction="up" onmouseover=stop() onmouseout=start()>
+                        <div class="img"></div>
+                        <div class="text">
+                            <span>欢迎访问 --中国医师协会放射医师分会</span>
+                        </div>
+                    </marquee>
+                </div>
+                <div class="header-right">
+                    <div class="right-img">
+                        <img id="headerImg" src="/web/images/icon/my.png" alt="">
+                    </div>
+                    <div class="right-text">
+                        <div class="username">
+                            <ul>
+                                <li><a href="#">登录&nbsp;&nbsp;/注册</a></li>
+                            </ul>
+                            <img class="dengluImg" src="/web/images/icon/triangle.png" alt="">
+                        </div>
+                        <div class="personage">
+                            <div class="personage-top">
+                                <!-- <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p>
+                                    <p><a href="">个人中心</a></p> -->
+                            </div>
+                            <div class="quit">
+                                <p class="quitCode"><a href="">退出登录</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="logo">
+        <div class="container">
+            <a href="/index.html">
+                <img src="/web/images/logo.jpg" alt="">
+            </a>
+        </div>
+
+    </div>
+    <div class="nav-li">
+        <div class="container">
+            <div class="lis">
+                <ul>
+                    <li>
+                        <h3><a href="/index.html">首页</a></h3>
+                    </li>
+                    <li class="hover-organization">
+                        <h3><a class="click-color" href="/web/components/organization/organization.html"
+                                target="_parent">组织架构</a></h3>
+
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/newsTrends/newsTrends.html" target="_parent">新闻动态</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/notification/notification.html" target="_parent">通知公告</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/education/education.html">继续教育</a></h3>
+                        <ul class="sub-1">
+                            <li><a href="/web/components/education/education.html">典型案例</a></li>
+                            <li><a href="/web/components/Video/video.html">视频培训</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="/web/components/cooperation/cooperation.html" target="_parent">战略合作</a></h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="form">
+        <div class="container">
+            <div class="lib_Menubox_sx">
+                <ul>
+                    <li id="one99" class="fontWeight common-color" onclick="getListData()">全国委员会
+                        <!-- <ul class="hidden hidden_1">
+                            <li id="one1" onclick="setTab('one',1,20)">名誉理事会</li>
+                            <li id="one2" onclick="setTab('one',2,20)">理事长</li>
+                            <li id="one3" onclick="setTab('one',3,20)">执行理事长</li>
+                            <li id="one4" onclick="setTab('one',4,20)">副理事长</li>
+                            <li id="one5" onclick="setTab('one',5,20)">秘书长</li>
+                            <li id="one6" onclick="setTab('one',6,20)">副秘书长</li>
+                            <li id="one7" onclick="setTab('one',7,20)">常务理事</li>
+                            <li id="one8" onclick="setTab('one',8,20)">理事</li>
+                        </ul> -->
+                    </li>
+                    <li class="innovation">
+                    </li>
+                    <!-- <div class="line"></div> -->
+                    <!-- <ul class="hidden hidden_2"> -->
+                    <li id="major" class="fontWeight common-color">专业委员会</li>
+                    <li id="one98" onclick="setTab('3', '对比剂委员会')" class="common-color"><span>- </span>对比剂委员会
+                    </li>
+                    <li id="one97" onclick="setTab('4', '儿科委员会')" class="common-color"><span>- </span>儿科委员会</li>
+                    <li id="one4" onclick="setTab('5', '感染委员会')" class="common-color"><span>- </span>感染委员会</li>
+                    <li id="one5" onclick="setTab('6', '呼吸委员会')" class="common-color"><span>- </span>呼吸委员会</li>
+                    <li id="one6" onclick="setTab('7', '泌尿委员会')" class="common-color"><span>- </span>泌尿委员会</li>
+                    <li id="one7" onclick="setTab('8', '神经委员会')" class="common-color"><span>- </span>神经委员会</li>
+                    <li id="one8" onclick="setTab('10', '头颅委员会')" class="common-color"><span>- </span>头颈委员会</li>
+                    <li id="one9" onclick="setTab('9','乳腺委员会')" class="common-color"><span>- </span>乳腺委员会</li>
+                    <li id="one10" onclick="setTab('11','消化委员会')" class="common-color goTop">
+                        <span>- </span>消化委员会</li>
+                    <li id="one11" onclick="setTab('13', '骨肌委员会')" class="common-color goTop">
+                        <span>- </span>骨肌委员会</li>
+                    <li id="one12" onclick="setTab('12', '心血管委员会')" class="common-color goTop">
+                        <span>- </span>心血管委员会</li>
+                    <li id="one13" onclick="setTab('17', '运动创伤委员会')" class="common-color goTop">
+                        <span>- </span>运动损伤委员会</li>
+                    <li id="one14" onclick="setTab('18', '人工智能委员会')" class="common-color goTop">
+                        <span>- </span>人工智能委员会</li>
+                    <li id="one15" onclick="setTab('15','医学影像质量控制委员会')" class="common-color goTop">
+                        <span>- </span>影像质控委员会
+                    </li>
+                    <li id="one16" onclick="setTab('16','互联网委员会')" class="common-color goTop">
+                        <span>- </span>互联网委员会</li>
+                    <li id="one17" onclick="setTab('19','护理委员会')" class="common-color goTop">
+                        <span>- </span>护理委员会</li>
+                    <li id="one18" name="one18" onclick="setTab('14', '急诊委员会')" class="common-color goTop">
+                        <span>- </span>急诊委员会</li>
+
+                    <li id="one177" name="one17" onclick="setTab('2', '青年委员会')" class="fontWeight common-color goTop">
+                        青年委员会
+                    </li>
+                    <li id="allPrevious" onclick="setTab('20','第一届委员会')"  class="fontWeight goTop common-color">历届委员会
+
+                    </li>
+                    <li id="one1" onclick="setTab('20','第一届委员会')" class="goTop common-color"><span>- </span>第一届委员会</li>
+                    <li id="one2" onclick="setTab('21','第二届委员会')" class="goTop common-color"><span>- </span>第二届委员会</li>
+                    <li id="one3"  onclick="setTab('22','第三届委员会')"  class="goTop common-color"><span>- </span>第三届委员会</li>
+                </ul>
+            </div>
+            <div id="ceshi"></div>
+            <div class="lib_Contentbox_sx">
+                <div id="association_top" style="display: block;"></div>
+                <div id="yscxPage"></div>
+                <div id="association_bottom" style="display: none;">
+                    <table>
+                        <thead id="thead">
+                            <td>姓名</td>
+                            <td>职称</td>
+                            <td>医院</td>
+                        </thead>
+                        <tbody id="tbody">
+
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <iframe src="/web/common/footer/footer.html" width="100%" ; height="127px" frameborder="0" scrolling="no"
+        name="footerFrame"></iframe>
+    <script src="/web/common/header/header.js"></script>
+    <script src="/web/js/goTop.js"></script>
+<script src="/web/common/header/header.js"></script>
+</body>
+
+</html>
